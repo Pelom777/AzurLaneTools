@@ -1,0 +1,67 @@
+@import "@/styles/variables.scss";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, Arial, sans-serif;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.el-container,
+.el-main {
+  width: 100%
+}
+
+.el-container,
+.el-aside,
+.el-main {
+  height: 100%;
+}
+
+.el-header {
+  display: flex;
+  z-index: 1;
+}
+
+#echarts {
+  width: 100%;
+  height: 100%;
+}
