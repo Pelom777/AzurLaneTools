@@ -1,29 +1,41 @@
 <script lang="ts" setup>
+import { ref } from 'vue'
 import { dataStore } from '@/store'
 import { load } from '@/axios/data'
 
 const data = dataStore()
 
-data.cg = data.cg ?? load('ui', 'cg')
+data.cg = data.cg ?? await load('ui', 'cg')
+
+const page = ref(1)
 </script>
 
 <template>
   <el-row>
     <el-col
       :span="6"
-      v-for="(url, index) in data.cg"
+      v-for="(url, index) in data.cg.slice(page * 40 - 40, page * 40)"
     >
-      <el-card>
+      <el-card :key="page * 40 - 40 + index">
         <el-image
           :src="url"
           loading="lazy"
           :preview-src-list="data.cg"
-          :initial-index="index"
+          :initial-index="page * 40 - 40 + index"
           hide-on-click-modal
         />
       </el-card>
     </el-col>
   </el-row>
+  <el-divider />
+  <el-pagination
+    layout="prev, pager, next"
+    v-model:current-page="page"
+    :total="data.cg.length"
+    :page-size="40"
+    pager-count="21"
+    background
+  />
 </template>
 
 <style lang="scss" scoped>
@@ -53,5 +65,9 @@ data.cg = data.cg ?? load('ui', 'cg')
   & .el-image {
     border: 3px solid white;
   }
+}
+
+.el-pagination {
+  justify-content: space-evenly;
 }
 </style>
