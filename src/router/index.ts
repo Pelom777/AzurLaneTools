@@ -27,9 +27,6 @@ const routes: Array<RouteRecordRaw> = [
         path: '/catalogue/:name',
         name: 'profile',
         component: () => import('@/views/profile/index.vue'),
-        beforeEnter: () => {
-          store.sidebarType = true
-        }
       },
       {
         path: '/rank',
