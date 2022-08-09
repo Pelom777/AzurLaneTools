@@ -1,27 +1,32 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
-import { dataStore } from '@/store'
+import { ref, watchEffect } from 'vue'
+import { useStore, dataStore } from '@/store'
 import { load } from '@/axios/data'
 
+const store = useStore()
 const data = dataStore()
 
 data.cg = data.cg ?? await load('ui', 'cg')
 
-const page = ref(1)
+const cg = ref([])
+
+watchEffect(() => {
+  cg.value = data.cg.slice(store.page * 40 - 40, store.page * 40)
+})
 </script>
 
 <template>
   <el-row>
     <el-col
       :span="6"
-      v-for="(url, index) in data.cg.slice(page * 40 - 40, page * 40)"
+      v-for="(url, index) in cg"
     >
-      <el-card :key="page * 40 - 40 + index">
+      <el-card :key="store.page * 40 - 40 + index">
         <el-image
           :src="url"
           loading="lazy"
-          :preview-src-list="data.cg"
-          :initial-index="page * 40 - 40 + index"
+          :preview-src-list="cg"
+          :initial-index="index"
           hide-on-click-modal
         />
       </el-card>
@@ -30,10 +35,10 @@ const page = ref(1)
   <el-divider />
   <el-pagination
     layout="prev, pager, next"
-    v-model:current-page="page"
+    v-model:current-page="store.page"
     :total="data.cg.length"
     :page-size="40"
-    pager-count="21"
+    :pager-count="21"
     background
   />
 </template>

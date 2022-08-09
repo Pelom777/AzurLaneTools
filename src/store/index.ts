@@ -14,6 +14,7 @@ export const useStore = defineStore('store', {
       showSkin: false,
       showBack: false,
       showFrame: false,
+      page: 1,
       rankType: 0,
       serverId: 0,
       rank: [[], [], []]
