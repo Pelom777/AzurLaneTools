@@ -5,7 +5,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { useStore, dataStore } from '@/store'
 import { load } from '@/axios/data'
-import { Application, Container, Sprite } from 'pixi.js'
+import { Application, Sprite, Container } from './pixi'
 import { Spine } from '@pixi-spine/all-3.8'
 
 const route = useRoute()
@@ -16,37 +16,26 @@ data.ship = data.ship ?? await load('ui', 'ship')
 data.skin = data.skin ?? await load('ui', 'skin')
 const name = route.params.name as string
 const [, , rarity,] = data.ship[name]
+let currentName: string
 const option = ref([])
 
 const app = new Application({ resolution: 2 })
-let container: HTMLElement, back: Sprite, spine: Container, base: Sprite, char: Spine
+const spine = new Container()
+let container: HTMLElement, back: Sprite, base: Sprite, char: Spine
 
-const handleSwitch = (name: string, rarity: number) => {
-  app.stage.removeChildren()
-  app.renderer.resize(container.offsetWidth, container.offsetHeight)
+const handleSwitch = (name: string) => {
+  if (name == currentName)
+    return
   app.loader
     .reset()
-    .add('back', `https://ui.al.pelom.cn/assets/shipbackground/${rarity}.png`)
     .add('char', `https://sd.al.pelom.cn/assets/spine/${name}/${name}.skel`)
-    .add('base', `https://ui.al.pelom.cn/assets/spinebase/${rarity > 6 ? rarity - 2 : rarity}.png`)
     .load((loader, resources) => {
-      back = new Sprite(resources.back.texture)
-      back.anchor.set(0.5)
-      back.scale.set(app.screen.width / back.width)
-      back.position.set(app.screen.width / 2, app.screen.height / 2)
-      app.stage.addChild(back)
-
-      spine = new Container()
-      base = new Sprite(resources.base.texture)
+      char?.destroy()
       char = new Spine(resources.char.spineData)
-      spine.addChild(base)
       char.scale.set(0.5)
       char.position.set(spine.width / 2, spine.height - 25)
       spine.addChild(char)
-      spine.position.set(160, app.screen.height - 100)
-      app.stage.addChild(spine)
       char.state.setAnimation(0, 'stand', true)
-
       char.interactive = true
       char.on('pointertap', () => {
         base.visible = false
@@ -57,6 +46,7 @@ const handleSwitch = (name: string, rarity: number) => {
           return item.name
         })
       })
+      currentName = name
     })
 }
 
@@ -75,7 +65,25 @@ const handleAction = (opt: string) => {
 onMounted(() => {
   container = document.getElementById('pixi')
   container.appendChild(app.view)
-  handleSwitch(name, rarity)
+  app.renderer.resize(container.offsetWidth, container.offsetHeight)
+  app.loader
+    .add('back', `https://ui.al.pelom.cn/shipbackground/${rarity}.png`)
+    .add('base', `https://ui.al.pelom.cn/spinebase/${rarity > 6 ? rarity - 2 : rarity}.png`)
+    .load((loader, resources) => {
+      back = new Sprite(resources.back.texture)
+      back.anchor.set(0.5)
+      back.scale.set(app.screen.width / back.width)
+      back.position.set(app.screen.width / 2, app.screen.height / 2)
+      app.stage.addChild(back)
+      
+      base = new Sprite(resources.base.texture)
+      base.position.set(spine.width / 2, spine.height)
+      spine.addChild(base)
+      spine.position.set(160, app.screen.height - 100)
+      app.stage.addChild(spine)
+
+      handleSwitch(name)
+    })
 })
 
 onUnmounted(() => {
@@ -119,5 +127,30 @@ onUnmounted(() => {
   display: flex;
   width: 100%;
   height: 100%;
+
+  &:deep(.el-card) {
+    background: #fff8;
+    backdrop-filter: blur(5px);
+    
+    & .el-card__header {
+      background: #fffa;
+    }
+
+    & .el-card__body {
+      overflow-y: scroll;
+      
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    & .el-col {
+      padding: 5px;
+    }
+
+    & .el-button {
+      width: 100%;
+    }
+  }
 }
 </style>

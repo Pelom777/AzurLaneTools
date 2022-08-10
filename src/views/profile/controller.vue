@@ -33,24 +33,9 @@ const props = defineProps<{
 .el-card {
   width: 24vw;
   margin: auto 4vw auto auto;
-  background: #fff8;
-  backdrop-filter: blur(5px);
-
-  &:deep(.el-card__header) {
-    background: #fffa;
-  }
 
   &:deep(.el-card__body) {
     height: 75vh;
-    overflow: scroll;
   }
-}
-
-.el-col {
-  padding: 5px;
-}
-
-.el-button {
-  width: 100%;
 }
 </style>

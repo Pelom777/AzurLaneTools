@@ -5,7 +5,7 @@ const props = defineProps<{
   name: string
 }>()
 const data = dataStore()
-const [name_cn, type, rarity, nationality] = data.ship[props.name]
+const [name_cn, , ,] = data.ship[props.name]
 const skin = data.skin[props.name]
 </script>
 
@@ -18,7 +18,7 @@ const skin = data.skin[props.name]
     <el-col :span="24">
       <el-button
         size="large"
-        @click="$emit('switch', item[0], item[0].match(/_g$/) ? rarity + 1 : rarity)"
+        @click="$emit('switch', item[0])"
       >
         {{ item[1] }}
       </el-button>
@@ -31,25 +31,10 @@ const skin = data.skin[props.name]
 .el-card {
   width: 20vw;
   margin: 10vh 0 auto;
-  background: #fff8;
-  backdrop-filter: blur(5px);
-
-  &:deep(.el-card__header) {
-    background: #fffa;
-  }
 
   &:deep(.el-card__body) {
-    height: 25vh;
+    max-height: 25vh;
     padding: 0;
-    overflow: scroll;
   }
-}
-
-.el-col {
-  padding: 5px;
-}
-
-.el-button {
-  width: 100%;
 }
 </style>
