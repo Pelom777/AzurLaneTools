@@ -1,28 +1,26 @@
 <script lang="ts" setup>
+import { dataStore } from '@/store'
+
 const props = defineProps<{
-  option: string[]
+  name: string
 }>()
+const data = dataStore()
+const [name_cn, type, rarity, nationality] = data.ship[props.name]
+const skin = data.skin[props.name]
 </script>
 
 <template>
 <el-card>
   <template #header>
-    <el-page-header
-      title="返回"
-      content="Spine"
-      @back="$emit('back')"
-    />
+    {{ name_cn }}
   </template>
-  <el-row>
-    <el-col
-      :span="12"
-      v-for="opt in option"
-    >
+  <el-row v-for="item in skin">
+    <el-col :span="24">
       <el-button
         size="large"
-        @click="$emit('action', opt)"
+        @click="$emit('switch', item[0], item[0].match(/_g$/) ? rarity + 1 : rarity)"
       >
-        {{ opt }}
+        {{ item[1] }}
       </el-button>
     </el-col>
   </el-row>
@@ -31,8 +29,8 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 .el-card {
-  width: 24vw;
-  margin: auto 4vw auto auto;
+  width: 20vw;
+  margin: 10vh 0 auto;
   background: #fff8;
   backdrop-filter: blur(5px);
 
@@ -41,7 +39,8 @@ const props = defineProps<{
   }
 
   &:deep(.el-card__body) {
-    height: 75vh;
+    height: 25vh;
+    padding: 0;
     overflow: scroll;
   }
 }

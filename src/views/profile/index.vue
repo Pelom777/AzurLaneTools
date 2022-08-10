@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import selector from './selector.vue'
 import controller from './controller.vue'
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useRoute } from 'vue-router'
@@ -12,19 +13,19 @@ const store = useStore()
 const data = dataStore()
 
 data.ship = data.ship ?? await load('ui', 'ship')
-data.skin = data.ship ?? await load('ui', 'skin')
+data.skin = data.skin ?? await load('ui', 'skin')
 const name = route.params.name as string
-const [name_cn, type, rarity, nationality] = data.ship[name]
+const [, , rarity,] = data.ship[name]
 const option = ref([])
 
 const app = new Application({ resolution: 2 })
 let container: HTMLElement, back: Sprite, spine: Container, base: Sprite, char: Spine
 
-onMounted(() => {
-  container = document.getElementById('pixi')
-  container.appendChild(app.view)
+const handleSwitch = (name: string, rarity: number) => {
+  app.stage.removeChildren()
   app.renderer.resize(container.offsetWidth, container.offsetHeight)
   app.loader
+    .reset()
     .add('back', `https://ui.al.pelom.cn/assets/shipbackground/${rarity}.png`)
     .add('char', `https://sd.al.pelom.cn/assets/spine/${name}/${name}.skel`)
     .add('base', `https://ui.al.pelom.cn/assets/spinebase/${rarity > 6 ? rarity - 2 : rarity}.png`)
@@ -57,11 +58,7 @@ onMounted(() => {
         })
       })
     })
-})
-
-onUnmounted(() => {
-  app.destroy(true, true)
-})
+}
 
 const handleBack = () => {
   option.value = []
@@ -74,12 +71,28 @@ const handleBack = () => {
 const handleAction = (opt: string) => {
   char.state.setAnimation(0, opt, true)
 }
+
+onMounted(() => {
+  container = document.getElementById('pixi')
+  container.appendChild(app.view)
+  handleSwitch(name, rarity)
+})
+
+onUnmounted(() => {
+  app.destroy(true, true)
+})
 </script>
 
 <template>
   <div id="pixi"></div>
-  <div id="ui" v-show="option.length != 0">
+  <div id="ui">
+    <selector
+      v-show="option.length == 0"
+      :name="name"
+      @switch="handleSwitch"
+    />
     <controller
+      v-show="option.length != 0"
       :option="option as []"
       @back="handleBack"
       @action="handleAction"
@@ -98,7 +111,7 @@ const handleAction = (opt: string) => {
 
   &:deep(canvas) {
     transform-origin: 0 0;
-    scale: 0.5;
+    scale: .5;
   }
 }
 
