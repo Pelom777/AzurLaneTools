@@ -29,6 +29,11 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/profile/index.vue'),
       },
       {
+        path: '/calculator',
+        name: 'calculator',
+        component: () => import('@/views/calculator/index.vue'),
+      },
+      {
         path: '/rank',
         name: 'rank',
         component: () => import('@/views/rank/index.vue'),

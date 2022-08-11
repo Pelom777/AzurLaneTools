@@ -7,6 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    ElAffix: typeof import('element-plus/es')['ElAffix']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElBadge: typeof import('element-plus/es')['ElBadge']
@@ -43,6 +44,8 @@ declare module '@vue/runtime-core' {
     ElTimelineItem: typeof import('element-plus/es')['ElTimelineItem']
     IEpArrowDownBold: typeof import('~icons/ep/arrow-down-bold')['default']
     IEpArrowUpBold: typeof import('~icons/ep/arrow-up-bold')['default']
+    IEpCellphone: typeof import('~icons/ep/cellphone')['default']
+    IEpDataLine: typeof import('~icons/ep/data-line')['default']
     IEpElementPlus: typeof import('~icons/ep/element-plus')['default']
     IEpExpand: typeof import('~icons/ep/expand')['default']
     IEpFilter: typeof import('~icons/ep/filter')['default']
@@ -53,11 +56,11 @@ declare module '@vue/runtime-core' {
     IEpList: typeof import('~icons/ep/list')['default']
     IEpMagicStick: typeof import('~icons/ep/magic-stick')['default']
     IEpManagement: typeof import('~icons/ep/management')['default']
+    IEpMenu: typeof import('~icons/ep/menu')['default']
     IEpPicture: typeof import('~icons/ep/picture')['default']
     IEpPictureFilled: typeof import('~icons/ep/picture-filled')['default']
     IEpSearch: typeof import('~icons/ep/search')['default']
     IEpStarFilled: typeof import('~icons/ep/star-filled')['default']
-    IEpTrendCharts: typeof import('~icons/ep/trend-charts')['default']
     IEpTrophy: typeof import('~icons/ep/trophy')['default']
     ILogosDockerIcon: typeof import('~icons/logos/docker-icon')['default']
     ILogosFlask: typeof import('~icons/logos/flask')['default']

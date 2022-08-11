@@ -24,7 +24,7 @@ watchEffect(() => {
 <template>
   <el-row>
     <el-col
-      :span="3"
+      :xs="8" :sm="6" :md="4" :lg="3" :xl="2"
       v-for="(value, name) in data.ship as {}"
       v-show="store.ship.includes(name)"
     >

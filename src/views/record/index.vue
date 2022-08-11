@@ -22,7 +22,10 @@ const name = {'cn': '国服', 'jp': '日服', 'en': '国际服'}
           size="large"
         >
           <el-row :gutter="40">
-            <el-col :span="6" v-for="(winner, region) in value">
+            <el-col
+              :xs="24" :sm="12" :md="8" :lg="6" :xl="3"
+              v-for="(winner, region) in value"
+            >
               <el-card
                 :style="{ backgroundImage: `url(https://ui.al.pelom.cn/assets/voteicon/${winner}.png)` }"
                 @click="$router.push({
@@ -40,7 +43,7 @@ const name = {'cn': '国服', 'jp': '日服', 'en': '国际服'}
     <el-collapse-item>
       <template #title>
         <h1>
-          <el-icon><i-ep-TrendCharts /></el-icon>
+          <el-icon><i-ep-DataLine /></el-icon>
           统计
         </h1> 
       </template>

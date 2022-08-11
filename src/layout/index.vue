@@ -20,6 +20,15 @@ const store = useStore()
         </router-view>
       </suspense>
     </el-main>
+    <el-affix>
+      <el-button
+        type="primary"
+        circle
+        @click="store.sidebarType=!store.sidebarType"
+      >
+        <el-icon><i-ep-menu /></el-icon>
+      </el-button>
+    </el-affix>
   </el-container>
 </template>
 
@@ -39,5 +48,28 @@ $hideSidebarWidth: 63.2px;
 
 .el-main {
   position: relative;
+}
+
+.el-affix {
+  display: none;
+  position: absolute;
+  margin: 5px;
+  z-index: 99;
+}
+
+@media screen and (max-width: 768px) {
+  .el-aside {
+    position: absolute;
+    margin-left: 0;
+    z-index: 100;
+
+    &.hideSidebar {
+      margin-left: -100%;
+    }
+  }
+
+  .el-affix {
+    display: block;
+  }
 }
 </style>

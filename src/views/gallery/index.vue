@@ -18,7 +18,7 @@ watchEffect(() => {
 <template>
   <el-row>
     <el-col
-      :span="6"
+      :xs="24" :sm="12" :md="8" :lg="6" :xl="3"
       v-for="(url, index) in cg"
     >
       <el-card :key="store.page * 40 - 40 + index">
