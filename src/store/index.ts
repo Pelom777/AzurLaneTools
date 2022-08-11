@@ -1,10 +1,12 @@
 import { createPinia, defineStore } from 'pinia'
+import { ElLoading } from 'element-plus'
 
 export const pinia = createPinia()
 
 export const useStore = defineStore('store', {
   state: () => {
     return {
+      loading: null,
       sidebarType: false,
       headerType: true,
       input: '',
@@ -21,7 +23,18 @@ export const useStore = defineStore('store', {
     }
   },
   getters: {},
-  actions: {}
+  actions: {
+    startLoading() {
+      this.loading?.close()
+      this.loading = ElLoading.service({
+        target: '.el-main',
+        lock: true
+      })
+    },
+    endLoading() {
+      this.loading?.close()
+    }
+  }
 })
 
 export const dataStore = defineStore('data', {

@@ -59,6 +59,10 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
-});
+})
+router.beforeEach((to, from, next) => {
+  store.endLoading()
+  next()
+})
 
 export default router

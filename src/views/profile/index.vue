@@ -26,6 +26,8 @@ let container: HTMLElement, back: Sprite, base: Sprite, char: Spine
 const handleSwitch = (name: string) => {
   if (name == currentName)
     return
+  currentName = name
+  store.startLoading()
   app.loader
     .reset()
     .add('char', `https://sd.al.pelom.cn/assets/spine/${name}/${name}.skel`)
@@ -46,7 +48,7 @@ const handleSwitch = (name: string) => {
           return item.name
         })
       })
-      currentName = name
+      store.endLoading()
     })
 }
 
@@ -63,12 +65,13 @@ const handleAction = (opt: string) => {
 }
 
 onMounted(() => {
+  store.startLoading()
   container = document.getElementById('pixi')
   container.appendChild(app.view)
   app.renderer.resize(container.offsetWidth, container.offsetHeight)
   app.loader
-    .add('back', `https://ui.al.pelom.cn/shipbackground/${rarity}.png`)
-    .add('base', `https://ui.al.pelom.cn/spinebase/${rarity > 6 ? rarity - 2 : rarity}.png`)
+    .add('back', `https://ui.al.pelom.cn/assets/shipbackground/${rarity}.png`)
+    .add('base', `https://ui.al.pelom.cn/assets/spinebase/${rarity > 6 ? rarity - 2 : rarity}.png`)
     .load((loader, resources) => {
       back = new Sprite(resources.back.texture)
       back.anchor.set(0.5)
