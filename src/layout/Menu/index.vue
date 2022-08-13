@@ -1,7 +1,8 @@
 <script lang="ts" setup>
-import { useStore } from '@/store'
-
-const store = useStore()
+const props = defineProps<{
+  hide: boolean
+}>()
+const emits = defineEmits(['update:hide'])
 </script>
 
 <template>
@@ -10,7 +11,7 @@ const store = useStore()
     background-color="#4d5f75"
     :default-active="`/${$route.path.split('/')[1]}`"
     text-color="#bfcbd9"
-    :collapse="store.sidebarType"
+    :collapse="hide"
     router
   >
     <el-menu-item index="/home">
@@ -41,10 +42,10 @@ const store = useStore()
       <el-icon><i-ep-InfoFilled /></el-icon>
       <span>关于</span>
     </el-menu-item>
-    <el-menu-item index="" @click="store.sidebarType=!store.sidebarType">
+    <el-menu-item index="" @click="$emit('update:hide', !hide)">
       <el-icon>
-        <i-ep-Fold v-show="!store.sidebarType"/>
-        <i-ep-Expand v-show="store.sidebarType"/>
+        <i-ep-Fold v-show="!hide"/>
+        <i-ep-Expand v-show="hide"/>
       </el-icon>
       <span>收起菜单</span>
     </el-menu-item>

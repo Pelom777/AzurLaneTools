@@ -1,12 +1,11 @@
 <script lang="ts" setup>
-import { dataStore } from '@/store'
+import { ref } from 'vue'
 import { load } from '@/axios/data'
 
-const data = dataStore()
-
-data.cg = data.cg ?? await load('ui', 'cg')
-
-const cg = data.cg.slice(0, 5)
+const cg = ref()
+;(async () => {
+  cg.value = (await load('ui', 'cg') as any).slice(0, 5)
+})()
 </script>
 
 <template>

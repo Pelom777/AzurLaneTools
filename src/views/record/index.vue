@@ -1,7 +1,11 @@
 <script lang="ts" setup>
+import { ref } from 'vue'
 import { load } from '@/axios/data'
 
-const vote = await load('vote', 'vote')
+const vote = ref({})
+;(async () => {
+  vote.value = await load('vote', 'vote')
+})()
 const name = {'cn': '国服', 'jp': '日服', 'en': '国际服'}
 </script>
 

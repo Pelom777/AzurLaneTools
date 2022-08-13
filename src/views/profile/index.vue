@@ -3,31 +3,50 @@ import selector from './selector.vue'
 import controller from './controller.vue'
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useRoute } from 'vue-router'
-import { useStore, dataStore } from '@/store'
+import { useStore } from '@/store'
 import { load } from '@/axios/data'
 import { Application, Sprite, Container } from './pixi'
 import { Spine } from '@pixi-spine/all-3.8'
 
 const route = useRoute()
-const store = useStore()
-const data = dataStore()
-
-data.ship = data.ship ?? await load('ui', 'ship')
-data.skin = data.skin ?? await load('ui', 'skin')
+const { state } = useStore()
+const ship = ref(), skin = ref()
 const name = route.params.name as string
-const [, , rarity,] = data.ship[name]
 let currentName: string
 const option = ref([])
-
 const app = new Application({ resolution: 2 })
 const spine = new Container()
 let container: HTMLElement, back: Sprite, base: Sprite, char: Spine
+
+;(async () => {
+  ship.value = await load('ui', 'ship')
+  skin.value = await load('ui', 'skin')
+  const [, , rarity,] = ship.value[name]
+  app.loader
+    .add('back', `https://ui.al.pelom.cn/assets/shipbackground/${rarity}.png`)
+    .add('base', `https://ui.al.pelom.cn/assets/spinebase/${rarity > 6 ? rarity - 2 : rarity}.png`)
+    .load((loader, resources) => {
+      back = new Sprite(resources.back.texture)
+      back.anchor.set(0.5)
+      back.scale.set(app.screen.width / back.width)
+      back.position.set(app.screen.width / 2, app.screen.height / 2)
+      app.stage.addChild(back)
+      
+      base = new Sprite(resources.base.texture)
+      base.position.set(spine.width / 2, spine.height)
+      spine.addChild(base)
+      spine.position.set(160, app.screen.height - 100)
+      app.stage.addChild(spine)
+
+      handleSwitch(name)
+    })
+})()
 
 const handleSwitch = (name: string) => {
   if (name == currentName)
     return
   currentName = name
-  store.startLoading()
+  state.startLoading()
   app.loader
     .reset()
     .add('char', `https://sd.al.pelom.cn/assets/spine/${name}/${name}.skel`)
@@ -48,7 +67,7 @@ const handleSwitch = (name: string) => {
           return item.name
         })
       })
-      store.endLoading()
+      state.endLoading()
     })
 }
 
@@ -65,28 +84,10 @@ const handleAction = (opt: string) => {
 }
 
 onMounted(() => {
-  store.startLoading()
+  state.startLoading()
   container = document.getElementById('pixi')
   container.appendChild(app.view)
   app.renderer.resize(container.offsetWidth, container.offsetHeight)
-  app.loader
-    .add('back', `https://ui.al.pelom.cn/assets/shipbackground/${rarity}.png`)
-    .add('base', `https://ui.al.pelom.cn/assets/spinebase/${rarity > 6 ? rarity - 2 : rarity}.png`)
-    .load((loader, resources) => {
-      back = new Sprite(resources.back.texture)
-      back.anchor.set(0.5)
-      back.scale.set(app.screen.width / back.width)
-      back.position.set(app.screen.width / 2, app.screen.height / 2)
-      app.stage.addChild(back)
-      
-      base = new Sprite(resources.base.texture)
-      base.position.set(spine.width / 2, spine.height)
-      spine.addChild(base)
-      spine.position.set(160, app.screen.height - 100)
-      app.stage.addChild(spine)
-
-      handleSwitch(name)
-    })
 })
 
 onUnmounted(() => {
@@ -100,6 +101,8 @@ onUnmounted(() => {
     <selector
       v-show="option.length == 0"
       :name="name"
+      :name_cn="ship?.[name][0]"
+      :skin="skin?.[name]"
       @switch="handleSwitch"
     />
     <controller

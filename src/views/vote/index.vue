@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { onMounted } from 'vue'
 import { useRoute } from 'vue-router'
-import { dataStore } from '@/store'
 import { load } from '@/axios/data'
 import * as echarts from 'echarts/core'
 import { DatasetComponent, DatasetComponentOption, GraphicComponent, GraphicComponentOption, GridComponent, GridComponentOption } from 'echarts/components'
@@ -9,11 +8,7 @@ import { BarChart, BarSeriesOption } from 'echarts/charts'
 import { CanvasRenderer } from 'echarts/renderers'
 
 const route = useRoute()
-const data = dataStore()
-
 const { year, region } = route.params
-data.ship = data.ship ?? await load('ui', 'ship')
-const vote = await load('vote', `${year}-${region}`)
 
 echarts.use([DatasetComponent, GraphicComponent, GridComponent, BarChart, CanvasRenderer])
 
@@ -68,15 +63,20 @@ const option: EChartsOption = {
 onMounted(() => {
   const myChart = echarts.init(document.getElementById('echarts')!)
 
-  Object.keys(vote).forEach((k, i) => {
-    setTimeout(() => {
-      option.dataset[0].source = vote[k].map((d: [string, number]) => {
-        return [data.ship[d[0]][0], d[1]]
-      });
-      (option as any).graphic.elements[0].style.text = k.replace(' ', '\n')
-      myChart.setOption(option)
-    }, i * 1000)
-  })
+  ;(async () => {
+    const ship = await load('ui', 'ship')
+    const vote = await load('vote', `${year}-${region}`)
+
+    Object.keys(vote).forEach((k, i) => {
+      setTimeout(() => {
+        option.dataset[0].source = vote[k].map((d: [string, number]) => {
+          return [ship[d[0]][0], d[1]]
+        });
+        (option as any).graphic.elements[0].style.text = k.replace(' ', '\n')
+        myChart.setOption(option)
+      }, i * 1000)
+    })
+  })()
 })
 </script>
 

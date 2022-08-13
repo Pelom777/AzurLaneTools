@@ -1,12 +1,14 @@
 <script lang="ts" setup>
 import chart from './chart.vue'
-import { useStore, dataStore } from '@/store'
+import { ref } from 'vue'
 import { load } from '@/axios/data'
 
-const store = useStore()
-const data = dataStore()
+const server = ref()
+;(async () => {
+  server.value = await load('/', 'server')
+})()
 
-data.server = data.server ?? await load('/', 'server')
+const serverId = ref(0), rankType = ref(0)
 </script>
 
 <template>
@@ -15,18 +17,18 @@ data.server = data.server ?? await load('/', 'server')
       <el-select
         size="large"
         filterable
-        v-model.number="store.serverId"
+        v-model.number="serverId"
       >
         <template #prefix>服务器</template>
         <el-option
-          v-for="item in data.server"
+          v-for="item in server"
           :label="item[1]"
           :value="item[0]"
         />
       </el-select>
       <el-radio-group
         size="large"
-        v-model.number="store.rankType"
+        v-model.number="rankType"
       >
         <el-radio-button label="0">舰队实力</el-radio-button>
         <el-radio-button label="1">活动排行</el-radio-button>
@@ -34,7 +36,11 @@ data.server = data.server ?? await load('/', 'server')
       </el-radio-group>
     </el-header>
     <el-main>
-      <chart />
+      <chart
+        :server="server as []"
+        :serverId="serverId"
+        :rankType="rankType"
+      />
     </el-main>
   </el-container>
 </template>

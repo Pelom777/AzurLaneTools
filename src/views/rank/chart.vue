@@ -1,14 +1,16 @@
 <script lang="ts" setup>
 import { onMounted, watchEffect } from 'vue'
-import { useStore, dataStore } from '@/store'
 import { rank } from '@/axios/api'
 import * as echarts from 'echarts/core'
 import { DatasetComponent, DatasetComponentOption, TooltipComponent, TooltipComponentOption, GridComponent, GridComponentOption } from 'echarts/components'
 import { BarChart, BarSeriesOption } from 'echarts/charts'
 import { CanvasRenderer } from 'echarts/renderers'
 
-const store = useStore()
-const data = dataStore()
+const props = defineProps<{
+  server: [],
+  serverId: number,
+  rankType: number
+}>()
 
 echarts.use([DatasetComponent, TooltipComponent, GridComponent, BarChart, CanvasRenderer])
 
@@ -23,7 +25,7 @@ const option: EChartsOption = {
     },
     formatter: (params) => {
       var t = params[0].value
-      return `${t[1]} lv.${t[3]}<br/>${data.server[t[0]][1]}<br/>${params[0].marker}${t[2]}`
+      return `${t[1]} lv.${t[3]}<br/>${props.server[t[0]][1]}<br/>${params[0].marker}${t[2]}`
     }
   },
   xAxis: {
@@ -50,9 +52,10 @@ onMounted(() => {
   const myChart = echarts.init(document.getElementById('echarts')!)
   
   watchEffect(async () => {
-    option.dataset[0].source = store.rank[store.rankType][store.serverId]
-      || (store.rank[store.rankType][store.serverId] = await rank({ rankType: store.rankType, serverId: store.serverId }))
-    option && myChart.setOption(option)
+    ;(async () => {
+      option.dataset[0].source = await rank({ rankType: props.rankType, serverId: props.serverId })
+      option && myChart.setOption(option)
+    })()
   })
 })
 </script>

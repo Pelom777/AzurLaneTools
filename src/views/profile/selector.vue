@@ -1,12 +1,9 @@
 <script lang="ts" setup>
-import { dataStore } from '@/store'
-
 const props = defineProps<{
-  name: string
+  name: string,
+  name_cn?: string,
+  skin?: []
 }>()
-const data = dataStore()
-const [name_cn, , ,] = data.ship[props.name]
-const skin = data.skin[props.name]
 </script>
 
 <template>

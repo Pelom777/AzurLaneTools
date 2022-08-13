@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import { pinia, useStore } from '@/store'
+import { useStore } from '@/store'
 
-const store = useStore(pinia)
+const { state } = useStore()
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -31,6 +31,9 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/calculator',
         name: 'calculator',
+        meta: {
+          keepAlive: true
+        },
         component: () => import('@/views/calculator/index.vue'),
       },
       {
@@ -66,7 +69,7 @@ const router = createRouter({
   routes,
 })
 router.beforeEach((to, from, next) => {
-  store.endLoading()
+  state.endLoading()
   next()
 })
 

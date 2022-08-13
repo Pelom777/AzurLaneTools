@@ -1,30 +1,28 @@
 <script lang="ts" setup>
 import Menu from './Menu/index.vue'
-import { useStore } from '@/store'
+import { ref } from 'vue'
 
-const store = useStore()
+const hideSidebar = ref(false)
 </script>
 
 <template>
   <el-container>
-    <el-aside :class="{ hideSidebar: store.sidebarType }">
-      <Menu />
+    <el-aside :class="{ hideSidebar: hideSidebar }">
+      <Menu v-model:hide="hideSidebar" />
     </el-aside>
     <el-main>
-      <suspense>
-        <router-view v-slot="{ Component }">
-          <keep-alive>
-            <component :is="Component" v-if="$route.meta.keepAlive" />
-          </keep-alive>
-          <component :is="Component" v-if="!$route.meta.keepAlive" />
-        </router-view>
-      </suspense>
+      <router-view v-slot="{ Component }">
+        <keep-alive>
+          <component :is="Component" :key="$route.path" v-if="$route.meta.keepAlive" />
+        </keep-alive>
+        <component :is="Component" v-if="!$route.meta.keepAlive" />
+      </router-view>
     </el-main>
     <el-affix>
       <el-button
         type="primary"
         circle
-        @click="store.sidebarType=!store.sidebarType"
+        @click="hideSidebar=!hideSidebar"
       >
         <el-icon><i-ep-menu /></el-icon>
       </el-button>
