@@ -1,18 +1,16 @@
 <script lang="ts" setup>
 import { ref, watchEffect } from 'vue'
-import { useStore } from '@/store'
 import { load } from '@/axios/data'
-
-const { state } = useStore()
 
 const cg = ref()
 ;(async () => {
   cg.value = await load('ui', 'cg')
 })()
+const page = ref(1)
 const list = ref([])
 
 watchEffect(() => {
-  list.value = cg.value?.slice(state.page * 40 - 40, state.page * 40)
+  list.value = cg.value?.slice(page.value * 40 - 40, page.value * 40)
 })
 </script>
 
@@ -22,7 +20,7 @@ watchEffect(() => {
       :xs="24" :sm="12" :md="8" :lg="6" :xl="3"
       v-for="(url, index) in list"
     >
-      <el-card :key="state.page * 40 - 40 + index">
+      <el-card :key="page * 40 - 40 + index">
         <el-image
           :src="url"
           loading="lazy"
@@ -36,7 +34,7 @@ watchEffect(() => {
   <el-divider />
   <el-pagination
     layout="prev, pager, next"
-    v-model:current-page="state.page"
+    v-model:current-page="page"
     :total="cg?.length ?? 0"
     :page-size="40"
     :pager-count="21"

@@ -5,16 +5,6 @@ const useStateStore = defineStore('state', {
   state: () => {
     return {
       loading: null,
-      input: '',
-      filter: [[], [], []],
-      ship: null,
-      count: 0,
-      showSkin: false,
-      showBack: false,
-      showFrame: false,
-      page: 1,
-      rankType: 0,
-      serverId: 0,
     }
   },
   getters: {},
