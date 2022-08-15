@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { onMounted } from 'vue'
-import { useRoute } from 'vue-router'
 import { load } from '@/axios/data'
 import * as echarts from 'echarts/core'
 import { DatasetComponent, DatasetComponentOption, GraphicComponent, GraphicComponentOption, GridComponent, GridComponentOption } from 'echarts/components'

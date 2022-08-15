@@ -1,12 +1,11 @@
 <script lang="ts" setup>
-import { computed, ref } from 'vue'
 import { useStore } from '@/store'
 
 const props = defineProps<{
   name: string,
   index: string,
-  ship?: [string, number, number, number],
-  exp?: [][]
+  ship: [string, number, number, number],
+  exp: [][]
 }>()
 const { user } = useStore()
 const type = props.ship[2] > 6 ? 1 : 0

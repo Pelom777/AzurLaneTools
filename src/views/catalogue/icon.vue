@@ -1,10 +1,8 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
-
 const props = defineProps<{
   name: string,
-  ship?: [string, number, number, number],
-  skin?: [string, number][]
+  ship: [string, number, number, number],
+  skin: [string, number][]
 }>()
 const [name_cn, type, rarity, nationality] = props.ship
 const cdn = 'https://ui.al.pelom.cn'

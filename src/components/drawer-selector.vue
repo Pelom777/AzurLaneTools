@@ -1,10 +1,8 @@
 <script lang="ts" setup>
-import { computed, ref, watchEffect } from 'vue'
-
 const props = defineProps<{
   show: boolean,
-  option?: object,
-  list?: object
+  option: {},
+  list: {}
 }>()
 const emits = defineEmits(['update:show', 'check'])
 const show = computed({
@@ -41,10 +39,9 @@ watchEffect(() => {
         <el-row justify="space-between">
           <el-col :xs="20" :lg="10">
             <el-input
-              clearable
-              v-model="input"
-              placeholder="Type something"
               v-model.lazy="input"
+              clearable
+              placeholder="Type something"
             >
               <template #prefix>
                 <el-icon><i-ep-Search /></el-icon>

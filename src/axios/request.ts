@@ -1,18 +1,13 @@
-import axios from 'axios'
+import axios, { AxiosRequestConfig } from 'axios'
 
-const service = axios.create({
+const instance = axios.create({
   baseURL: '/',
   timeout: 5000
 })
 
-service.interceptors.response.use(response => {
-  if (response.status === 200) {
-    return response.data
-  } else {
-    return Promise.reject(new Error())
-  }
-}, error => {
-  return Promise.reject(error)
-})
+const request = async <T = any>(config: AxiosRequestConfig): Promise<T> => {
+  const { data } = await instance.request<T>(config)
+  return data
+}
 
-export default service
+export default request

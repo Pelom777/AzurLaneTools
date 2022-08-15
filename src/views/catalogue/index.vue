@@ -1,9 +1,8 @@
 <script lang="ts" setup>
 import icon from './icon.vue'
-import { ref, watchEffect } from 'vue'
 import { load } from '@/axios/data'
 
-const option = ref(), ship = ref(), skin = ref()
+const option = ref({}), ship = ref({}), skin = ref({})
 ;(async () => {
   option.value = await load('ui', 'option')
   ship.value = await load('ui', 'ship')
@@ -122,8 +121,8 @@ const showSkin = ref(false), showBack = ref(false), showFrame = ref(false)
         >
           <icon
             :name="name"
-            :ship="ship?.[name]"
-            :skin="skin?.[name]"
+            :ship="ship[name]"
+            :skin="skin[name]"
           />
         </el-col>
       </el-row>

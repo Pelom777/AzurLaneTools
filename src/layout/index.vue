@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import Menu from './Menu/index.vue'
-import { ref } from 'vue'
 
 const hideSidebar = ref(false)
 </script>

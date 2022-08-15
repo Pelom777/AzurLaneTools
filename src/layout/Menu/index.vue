@@ -22,6 +22,10 @@ const emits = defineEmits(['update:hide'])
       <el-icon><i-ep-Management /></el-icon>
       <span>图鉴</span>
     </el-menu-item>
+    <el-menu-item index="/collection">
+      <el-icon><i-ep-FolderOpened /></el-icon>
+      <span>收藏</span>
+    </el-menu-item>
     <el-menu-item index="/calculator">
       <el-icon><i-ep-Cellphone /></el-icon>
       <span>计算器</span>
@@ -29,10 +33,6 @@ const emits = defineEmits(['update:hide'])
     <el-menu-item index="/rank">
       <el-icon><i-ep-Histogram /></el-icon>
       <span>排行榜</span>
-    </el-menu-item>
-    <el-menu-item index="/gallery">
-      <el-icon><i-ep-PictureFilled /></el-icon>
-      <span>画廊</span>
     </el-menu-item>
     <el-menu-item index="/record">
       <el-icon><i-ep-List /></el-icon>

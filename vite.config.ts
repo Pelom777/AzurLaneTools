@@ -12,7 +12,7 @@ export default defineConfig({
   plugins: [
     vue(),
     AutoImport({
-      imports: ['vue'],
+      imports: ['vue', 'vue-router'],
       resolvers: [
         ElementPlusResolver(),
         IconsResolver({

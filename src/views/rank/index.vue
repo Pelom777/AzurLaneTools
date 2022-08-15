@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import chart from './chart.vue'
-import { ref } from 'vue'
 import { load } from '@/axios/data'
 
 const server = ref()

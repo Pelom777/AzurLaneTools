@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 const props = defineProps<{
   name: string,
-  name_cn?: string,
-  skin?: []
+  name_cn: string,
+  skin: []
 }>()
 </script>
 

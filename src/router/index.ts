@@ -1,7 +1,4 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import { useStore } from '@/store'
-
-const { state } = useStore()
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -29,6 +26,21 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/profile/index.vue'),
       },
       {
+        path: '/collection',
+        name: 'collection',
+        component: () => import('@/views/collection/index.vue'),
+      },
+      {
+        path: '/collection/illustration',
+        name: 'illustration',
+        component: () => import('@/views/illustration/index.vue'),
+      },
+      {
+        path: '/collection/music',
+        name: 'music',
+        component: () => import('@/views/music/index.vue'),
+      },
+      {
         path: '/calculator',
         name: 'calculator',
         meta: {
@@ -40,11 +52,6 @@ const routes: Array<RouteRecordRaw> = [
         path: '/rank',
         name: 'rank',
         component: () => import('@/views/rank/index.vue'),
-      },
-      {
-        path: '/gallery',
-        name: 'gallery',
-        component: () => import('@/views/gallery/index.vue'),
       },
       {
         path: '/record',
@@ -67,10 +74,6 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
-})
-router.beforeEach((to, from, next) => {
-  state.endLoading()
-  next()
 })
 
 export default router

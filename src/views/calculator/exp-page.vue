@@ -1,12 +1,11 @@
 <script lang="ts" setup>
 import drawerSelector from '@/components/drawer-selector.vue'
 import expCard from './exp-card.vue'
-import { ref } from 'vue'
 import { useStore } from '@/store'
 import { load } from '@/axios/data'
 
 const { user } = useStore()
-const option = ref(), ship = ref(), exp = ref()
+const option = ref({}), ship = ref({}), exp = ref([])
 ;(async () => {
   option.value = await load('ui', 'option')
   ship.value = await load('ui', 'ship')

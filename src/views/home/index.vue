@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
 import { load } from '@/axios/data'
 
 const cg = ref()

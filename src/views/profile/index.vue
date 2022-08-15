@@ -1,16 +1,13 @@
 <script lang="ts" setup>
 import selector from './selector.vue'
 import controller from './controller.vue'
-import { ref, onMounted, onUnmounted } from 'vue'
-import { useRoute } from 'vue-router'
-import { useStore } from '@/store'
 import { load } from '@/axios/data'
 import { Application, Sprite, Container } from './pixi'
 import { Spine } from '@pixi-spine/all-3.8'
 
 const route = useRoute()
-const { state } = useStore()
-const ship = ref(), skin = ref()
+const loading = ref(true)
+const ship = ref({}), skin = ref({})
 const name = route.params.name as string
 let currentName: string
 const option = ref([])
@@ -46,7 +43,7 @@ const handleSwitch = (name: string) => {
   if (name == currentName)
     return
   currentName = name
-  state.startLoading()
+  loading.value = true
   app.loader
     .reset()
     .add('char', `https://sd.al.pelom.cn/assets/spine/${name}/${name}.skel`)
@@ -67,7 +64,7 @@ const handleSwitch = (name: string) => {
           return item.name
         })
       })
-      state.endLoading()
+      loading.value = false
     })
 }
 
@@ -84,7 +81,6 @@ const handleAction = (opt: string) => {
 }
 
 onMounted(() => {
-  state.startLoading()
   container = document.getElementById('pixi')
   container.appendChild(app.view)
   app.renderer.resize(container.offsetWidth, container.offsetHeight)
@@ -97,17 +93,17 @@ onUnmounted(() => {
 
 <template>
   <div id="pixi"></div>
-  <div id="ui">
+  <div id="ui" v-loading="loading">
     <selector
       v-show="option.length == 0"
       :name="name"
-      :name_cn="ship?.[name][0]"
-      :skin="skin?.[name]"
+      :name_cn="ship[name]?.[0] ?? ''"
+      :skin="skin[name] ?? []"
       @switch="handleSwitch"
     />
     <controller
       v-show="option.length != 0"
-      :option="option as []"
+      :option="option"
       @back="handleBack"
       @action="handleAction"
     />

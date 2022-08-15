@@ -58,7 +58,9 @@ declare module '@vue/runtime-core' {
     IEpExpand: typeof import('~icons/ep/expand')['default']
     IEpFilter: typeof import('~icons/ep/filter')['default']
     IEpFold: typeof import('~icons/ep/fold')['default']
+    IEpFolderOpened: typeof import('~icons/ep/folder-opened')['default']
     IEpFullScreen: typeof import('~icons/ep/full-screen')['default']
+    IEpHeadset: typeof import('~icons/ep/headset')['default']
     IEpHistogram: typeof import('~icons/ep/histogram')['default']
     IEpInfoFilled: typeof import('~icons/ep/info-filled')['default']
     IEpList: typeof import('~icons/ep/list')['default']
@@ -72,6 +74,8 @@ declare module '@vue/runtime-core' {
     IEpSetting: typeof import('~icons/ep/setting')['default']
     IEpStarFilled: typeof import('~icons/ep/star-filled')['default']
     IEpTrophy: typeof import('~icons/ep/trophy')['default']
+    IEpVideoPause: typeof import('~icons/ep/video-pause')['default']
+    IEpVideoPlay: typeof import('~icons/ep/video-play')['default']
     ILogosDockerIcon: typeof import('~icons/logos/docker-icon')['default']
     ILogosFlask: typeof import('~icons/logos/flask')['default']
     ILogosGithubIcon: typeof import('~icons/logos/github-icon')['default']
@@ -85,7 +89,11 @@ declare module '@vue/runtime-core' {
     ILogosVitejs: typeof import('~icons/logos/vitejs')['default']
     ILogosVue: typeof import('~icons/logos/vue')['default']
     ISimpleIconsApacheecharts: typeof import('~icons/simple-icons/apacheecharts')['default']
+    MusicPlayer: typeof import('./src/components/music-player.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+  }
+  export interface ComponentCustomProperties {
+    vLoading: typeof import('element-plus/es')['ElLoadingDirective']
   }
 }

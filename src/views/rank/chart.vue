@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { onMounted, watchEffect } from 'vue'
 import { rank } from '@/axios/api'
 import * as echarts from 'echarts/core'
 import { DatasetComponent, DatasetComponentOption, TooltipComponent, TooltipComponentOption, GridComponent, GridComponentOption } from 'echarts/components'

@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { ref, watchEffect } from 'vue'
 import { load } from '@/axios/data'
 
 const cg = ref()
@@ -37,7 +36,6 @@ watchEffect(() => {
     v-model:current-page="page"
     :total="cg?.length ?? 0"
     :page-size="40"
-    :pager-count="21"
     background
   />
 </template>
