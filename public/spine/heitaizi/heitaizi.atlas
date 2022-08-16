@@ -1,0 +1,244 @@
+
+heitaizi.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: true
+  xy: 437, 33
+  size: 69, 74
+  orig: 69, 74
+  offset: 0, 0
+  index: -1
+body_w
+  rotate: false
+  xy: 513, 38
+  size: 45, 48
+  orig: 45, 48
+  offset: 0, 0
+  index: -1
+ear
+  rotate: false
+  xy: 864, 100
+  size: 25, 30
+  orig: 25, 30
+  offset: 0, 0
+  index: -1
+eye_1
+  rotate: false
+  xy: 665, 98
+  size: 95, 34
+  orig: 95, 34
+  offset: 0, 0
+  index: -1
+eye_6
+  rotate: false
+  xy: 530, 88
+  size: 92, 17
+  orig: 92, 17
+  offset: 0, 0
+  index: -1
+eye_7
+  rotate: false
+  xy: 351, 2
+  size: 75, 38
+  orig: 75, 38
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 530, 107
+  size: 133, 138
+  orig: 133, 138
+  offset: 0, 0
+  index: -1
+hair_B
+  rotate: true
+  xy: 198, 111
+  size: 134, 168
+  orig: 134, 168
+  offset: 0, 0
+  index: -1
+hair_B2
+  rotate: false
+  xy: 665, 134
+  size: 115, 111
+  orig: 115, 111
+  offset: 0, 0
+  index: -1
+hair_F
+  rotate: false
+  xy: 2, 112
+  size: 194, 133
+  orig: 194, 133
+  offset: 0, 0
+  index: -1
+hand_L1
+  rotate: true
+  xy: 482, 5
+  size: 26, 33
+  orig: 26, 33
+  offset: 0, 0
+  index: -1
+hand_L2
+  rotate: true
+  xy: 937, 92
+  size: 26, 37
+  orig: 26, 37
+  offset: 0, 0
+  index: -1
+hand_R1
+  rotate: true
+  xy: 624, 80
+  size: 25, 34
+  orig: 25, 34
+  offset: 0, 0
+  index: -1
+hand_R2
+  rotate: true
+  xy: 517, 8
+  size: 28, 34
+  orig: 28, 34
+  offset: 0, 0
+  index: -1
+hat1
+  rotate: false
+  xy: 2, 8
+  size: 126, 102
+  orig: 126, 102
+  offset: 0, 0
+  index: -1
+hat2
+  rotate: false
+  xy: 891, 120
+  size: 83, 66
+  orig: 83, 66
+  offset: 0, 0
+  index: -1
+jianzhuang1
+  rotate: false
+  xy: 191, 5
+  size: 58, 104
+  orig: 58, 104
+  offset: 0, 0
+  index: -1
+jianzhuang2
+  rotate: true
+  xy: 251, 2
+  size: 47, 98
+  orig: 47, 98
+  offset: 0, 0
+  index: -1
+leg_L1
+  rotate: true
+  xy: 891, 93
+  size: 25, 44
+  orig: 25, 44
+  offset: 0, 0
+  index: -1
+leg_L2
+  rotate: true
+  xy: 553, 7
+  size: 22, 30
+  orig: 22, 30
+  offset: 0, 0
+  index: -1
+leg_R1
+  rotate: true
+  xy: 816, 104
+  size: 26, 46
+  orig: 26, 46
+  offset: 0, 0
+  index: -1
+leg_R2
+  rotate: false
+  xy: 560, 57
+  size: 53, 29
+  orig: 53, 29
+  offset: 0, 0
+  index: -1
+maojin
+  rotate: false
+  xy: 782, 192
+  size: 120, 53
+  orig: 120, 53
+  offset: 0, 0
+  index: -1
+meimao_1
+  rotate: false
+  xy: 251, 51
+  size: 102, 58
+  orig: 102, 58
+  offset: 0, 0
+  index: -1
+meimao_2
+  rotate: true
+  xy: 130, 4
+  size: 106, 59
+  orig: 106, 59
+  offset: 0, 0
+  index: -1
+meimao_3
+  rotate: false
+  xy: 355, 42
+  size: 80, 60
+  orig: 80, 60
+  offset: 0, 0
+  index: -1
+meimao_4
+  rotate: false
+  xy: 904, 188
+  size: 105, 57
+  orig: 105, 57
+  offset: 0, 0
+  index: -1
+meimao_5
+  rotate: false
+  xy: 782, 132
+  size: 107, 58
+  orig: 107, 58
+  offset: 0, 0
+  index: -1
+meimao_6
+  rotate: true
+  xy: 368, 104
+  size: 141, 160
+  orig: 141, 160
+  offset: 0, 0
+  index: -1
+sleep6
+  rotate: true
+  xy: 976, 100
+  size: 86, 40
+  orig: 86, 40
+  offset: 0, 0
+  index: -1
+weapon1
+  rotate: false
+  xy: 560, 31
+  size: 52, 24
+  orig: 52, 24
+  offset: 0, 0
+  index: -1
+weapon4
+  rotate: false
+  xy: 560, 31
+  size: 52, 24
+  orig: 52, 24
+  offset: 0, 0
+  index: -1
+weapon2
+  rotate: false
+  xy: 428, 7
+  size: 52, 24
+  orig: 52, 24
+  offset: 0, 0
+  index: -1
+weapon3
+  rotate: false
+  xy: 762, 107
+  size: 52, 23
+  orig: 52, 23
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,258 @@
+
+aikesaite_g.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 240, 135
+  size: 55, 73
+  orig: 55, 73
+  offset: 0, 0
+  index: -1
+body_w
+  rotate: false
+  xy: 400, 274
+  size: 45, 48
+  orig: 45, 48
+  offset: 0, 0
+  index: -1
+eye_1_1
+  rotate: false
+  xy: 243, 96
+  size: 45, 37
+  orig: 45, 37
+  offset: 0, 0
+  index: -1
+eye_1_2
+  rotate: false
+  xy: 469, 413
+  size: 30, 39
+  orig: 30, 39
+  offset: 0, 0
+  index: -1
+eye_2_1
+  rotate: true
+  xy: 159, 304
+  size: 37, 17
+  orig: 37, 17
+  offset: 0, 0
+  index: -1
+eye_2_2
+  rotate: false
+  xy: 400, 255
+  size: 26, 17
+  orig: 26, 17
+  offset: 0, 0
+  index: -1
+eye_3_1
+  rotate: true
+  xy: 355, 190
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_3_2
+  rotate: false
+  xy: 297, 132
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_5_1
+  rotate: false
+  xy: 447, 262
+  size: 49, 27
+  orig: 49, 27
+  offset: 0, 0
+  index: -1
+eye_5_2
+  rotate: true
+  xy: 290, 96
+  size: 34, 26
+  orig: 34, 26
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 2, 343
+  size: 177, 167
+  orig: 177, 167
+  offset: 0, 0
+  index: -1
+hair_B2
+  rotate: false
+  xy: 181, 372
+  size: 130, 138
+  orig: 130, 138
+  offset: 0, 0
+  index: -1
+hair_F
+  rotate: false
+  xy: 2, 222
+  size: 155, 119
+  orig: 155, 119
+  offset: 0, 0
+  index: -1
+hair_L
+  rotate: true
+  xy: 181, 302
+  size: 68, 121
+  orig: 68, 121
+  offset: 0, 0
+  index: -1
+hair_R
+  rotate: false
+  xy: 90, 65
+  size: 62, 155
+  orig: 62, 155
+  offset: 0, 0
+  index: -1
+hand_L1
+  rotate: false
+  xy: 324, 180
+  size: 29, 36
+  orig: 29, 36
+  offset: 0, 0
+  index: -1
+hand_L2
+  rotate: false
+  xy: 283, 59
+  size: 26, 35
+  orig: 26, 35
+  offset: 0, 0
+  index: -1
+hand_R1
+  rotate: false
+  xy: 243, 56
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+hand_R2
+  rotate: true
+  xy: 325, 148
+  size: 30, 29
+  orig: 30, 29
+  offset: 0, 0
+  index: -1
+hat
+  rotate: false
+  xy: 154, 53
+  size: 87, 70
+  orig: 87, 70
+  offset: 0, 0
+  index: -1
+jianzhuang
+  rotate: true
+  xy: 313, 324
+  size: 86, 132
+  orig: 86, 132
+  offset: 0, 0
+  index: -1
+leg_L1
+  rotate: false
+  xy: 297, 172
+  size: 25, 42
+  orig: 25, 42
+  offset: 0, 0
+  index: -1
+leg_L2
+  rotate: true
+  xy: 325, 124
+  size: 22, 30
+  orig: 22, 30
+  offset: 0, 0
+  index: -1
+leg_R1
+  rotate: false
+  xy: 74, 5
+  size: 26, 43
+  orig: 26, 43
+  offset: 0, 0
+  index: -1
+leg_R2
+  rotate: true
+  xy: 318, 100
+  size: 22, 29
+  orig: 22, 29
+  offset: 0, 0
+  index: -1
+mao
+  rotate: true
+  xy: 447, 291
+  size: 22, 63
+  orig: 22, 63
+  offset: 0, 0
+  index: -1
+meimao_1
+  rotate: true
+  xy: 447, 315
+  size: 95, 63
+  orig: 95, 63
+  offset: 0, 0
+  index: -1
+meimao_3
+  rotate: false
+  xy: 318, 262
+  size: 80, 60
+  orig: 80, 60
+  offset: 0, 0
+  index: -1
+paopao1
+  rotate: true
+  xy: 2, 50
+  size: 170, 86
+  orig: 170, 86
+  offset: 0, 0
+  index: -1
+pifeng
+  rotate: true
+  xy: 469, 454
+  size: 56, 30
+  orig: 56, 30
+  offset: 0, 0
+  index: -1
+pifeng_B
+  rotate: false
+  xy: 154, 125
+  size: 84, 83
+  orig: 84, 83
+  offset: 0, 0
+  index: -1
+sleep4
+  rotate: true
+  xy: 266, 216
+  size: 84, 50
+  orig: 84, 50
+  offset: 0, 0
+  index: -1
+sleep7
+  rotate: false
+  xy: 313, 412
+  size: 154, 98
+  orig: 154, 98
+  offset: 0, 0
+  index: -1
+weapon1
+  rotate: false
+  xy: 159, 210
+  size: 105, 90
+  orig: 105, 90
+  offset: 0, 0
+  index: -1
+weapon2
+  rotate: false
+  xy: 2, 2
+  size: 70, 46
+  orig: 70, 46
+  offset: 0, 0
+  index: -1
+weapon3
+  rotate: false
+  xy: 318, 218
+  size: 76, 42
+  orig: 76, 42
+  offset: 0, 0
+  index: -1

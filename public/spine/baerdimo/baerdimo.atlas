@@ -1,0 +1,258 @@
+
+baerdimo.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: true
+  xy: 254, 21
+  size: 90, 100
+  orig: 90, 100
+  offset: 0, 0
+  index: -1
+body_w
+  rotate: true
+  xy: 445, 112
+  size: 45, 48
+  orig: 45, 48
+  offset: 0, 0
+  index: -1
+daimao
+  rotate: false
+  xy: 397, 117
+  size: 46, 49
+  orig: 46, 49
+  offset: 0, 0
+  index: -1
+eye_1_1
+  rotate: false
+  xy: 495, 124
+  size: 45, 33
+  orig: 45, 33
+  offset: 0, 0
+  index: -1
+eye_1_2
+  rotate: true
+  xy: 912, 102
+  size: 35, 30
+  orig: 35, 30
+  offset: 0, 0
+  index: -1
+eye_2_1
+  rotate: false
+  xy: 144, 2
+  size: 37, 17
+  orig: 37, 17
+  offset: 0, 0
+  index: -1
+eye_2_2
+  rotate: false
+  xy: 183, 2
+  size: 26, 17
+  orig: 26, 17
+  offset: 0, 0
+  index: -1
+eye_3_1
+  rotate: true
+  xy: 944, 129
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_3_2
+  rotate: true
+  xy: 984, 129
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_4_1
+  rotate: false
+  xy: 485, 76
+  size: 29, 22
+  orig: 29, 22
+  offset: 0, 0
+  index: -1
+eye_4_2
+  rotate: false
+  xy: 527, 100
+  size: 23, 22
+  orig: 23, 22
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 142, 116
+  size: 133, 138
+  orig: 133, 138
+  offset: 0, 0
+  index: -1
+hair_B
+  rotate: false
+  xy: 2, 108
+  size: 138, 146
+  orig: 138, 146
+  offset: 0, 0
+  index: -1
+hair_B2
+  rotate: true
+  xy: 449, 159
+  size: 95, 140
+  orig: 95, 140
+  offset: 0, 0
+  index: -1
+hair_F
+  rotate: true
+  xy: 723, 174
+  size: 80, 106
+  orig: 80, 106
+  offset: 0, 0
+  index: -1
+hair_L
+  rotate: true
+  xy: 2, 8
+  size: 98, 140
+  orig: 98, 140
+  offset: 0, 0
+  index: -1
+hair_R
+  rotate: true
+  xy: 591, 174
+  size: 80, 130
+  orig: 80, 130
+  offset: 0, 0
+  index: -1
+hand_L1
+  rotate: false
+  xy: 412, 77
+  size: 31, 38
+  orig: 31, 38
+  offset: 0, 0
+  index: -1
+hand_L2
+  rotate: true
+  xy: 412, 2
+  size: 27, 37
+  orig: 27, 37
+  offset: 0, 0
+  index: -1
+hand_R1
+  rotate: true
+  xy: 445, 79
+  size: 31, 38
+  orig: 31, 38
+  offset: 0, 0
+  index: -1
+hand_R2
+  rotate: true
+  xy: 944, 98
+  size: 29, 34
+  orig: 29, 34
+  offset: 0, 0
+  index: -1
+leg_L1
+  rotate: false
+  xy: 412, 31
+  size: 26, 44
+  orig: 26, 44
+  offset: 0, 0
+  index: -1
+leg_L2
+  rotate: true
+  xy: 980, 104
+  size: 23, 30
+  orig: 23, 30
+  offset: 0, 0
+  index: -1
+leg_R1
+  rotate: true
+  xy: 542, 131
+  size: 26, 46
+  orig: 26, 46
+  offset: 0, 0
+  index: -1
+leg_R2
+  rotate: true
+  xy: 495, 100
+  size: 22, 30
+  orig: 22, 30
+  offset: 0, 0
+  index: -1
+meimao_1
+  rotate: true
+  xy: 947, 157
+  size: 97, 62
+  orig: 97, 62
+  offset: 0, 0
+  index: -1
+meimao_2
+  rotate: true
+  xy: 356, 14
+  size: 97, 54
+  orig: 97, 54
+  offset: 0, 0
+  index: -1
+meimao_3
+  rotate: false
+  xy: 773, 112
+  size: 80, 60
+  orig: 80, 60
+  offset: 0, 0
+  index: -1
+meimao_4
+  rotate: false
+  xy: 144, 21
+  size: 108, 93
+  orig: 108, 93
+  offset: 0, 0
+  index: -1
+meimao_5
+  rotate: false
+  xy: 591, 119
+  size: 92, 53
+  orig: 92, 53
+  offset: 0, 0
+  index: -1
+paopao1
+  rotate: false
+  xy: 277, 168
+  size: 170, 86
+  orig: 170, 86
+  offset: 0, 0
+  index: -1
+pifeng
+  rotate: false
+  xy: 855, 139
+  size: 87, 42
+  orig: 87, 42
+  offset: 0, 0
+  index: -1
+sleep5
+  rotate: false
+  xy: 685, 124
+  size: 86, 48
+  orig: 86, 48
+  offset: 0, 0
+  index: -1
+tie
+  rotate: false
+  xy: 855, 117
+  size: 55, 20
+  orig: 55, 20
+  offset: 0, 0
+  index: -1
+weapon1
+  rotate: true
+  xy: 277, 113
+  size: 53, 118
+  orig: 53, 118
+  offset: 0, 0
+  index: -1
+weapon2
+  rotate: true
+  xy: 831, 183
+  size: 71, 114
+  orig: 71, 114
+  offset: 0, 0
+  index: -1

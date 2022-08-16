@@ -7,7 +7,7 @@ const audio = ref<HTMLAudioElement>()
 const show = ref(false), progress = ref(0), max = ref(0), paused = ref(true)
 
 watch(props, () => {
-  audio.value.src = `http://music.163.com/song/media/outer/url?id=${props.id}.mp3`
+  audio.value.src = `https://music.163.com/song/media/outer/url?id=${props.id}.mp3`
   show.value = true
   paused.value = false
 })

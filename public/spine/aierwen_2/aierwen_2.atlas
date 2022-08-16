@@ -1,0 +1,272 @@
+
+aierwen_2.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bag
+  rotate: false
+  xy: 470, 39
+  size: 43, 62
+  orig: 43, 62
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 154, 4
+  size: 94, 87
+  orig: 94, 87
+  offset: 0, 0
+  index: -1
+body_w
+  rotate: false
+  xy: 515, 53
+  size: 45, 48
+  orig: 45, 48
+  offset: 0, 0
+  index: -1
+ear
+  rotate: false
+  xy: 456, 2
+  size: 24, 30
+  orig: 24, 30
+  offset: 0, 0
+  index: -1
+eye_1_1
+  rotate: true
+  xy: 963, 145
+  size: 42, 30
+  orig: 42, 30
+  offset: 0, 0
+  index: -1
+eye_1_2
+  rotate: true
+  xy: 482, 3
+  size: 34, 29
+  orig: 34, 29
+  offset: 0, 0
+  index: -1
+eye_2_1
+  rotate: false
+  xy: 515, 34
+  size: 37, 17
+  orig: 37, 17
+  offset: 0, 0
+  index: -1
+eye_2_2
+  rotate: false
+  xy: 693, 161
+  size: 26, 17
+  orig: 26, 17
+  offset: 0, 0
+  index: -1
+eye_3_1
+  rotate: false
+  xy: 995, 168
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_3_2
+  rotate: true
+  xy: 416, 7
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_4_1
+  rotate: false
+  xy: 963, 121
+  size: 29, 22
+  orig: 29, 22
+  offset: 0, 0
+  index: -1
+eye_4_2
+  rotate: false
+  xy: 668, 156
+  size: 23, 22
+  orig: 23, 22
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 2, 116
+  size: 133, 138
+  orig: 133, 138
+  offset: 0, 0
+  index: -1
+hair_B
+  rotate: false
+  xy: 863, 189
+  size: 130, 65
+  orig: 130, 65
+  offset: 0, 0
+  index: -1
+hair_F
+  rotate: false
+  xy: 2, 2
+  size: 150, 112
+  orig: 150, 112
+  offset: 0, 0
+  index: -1
+hair_L
+  rotate: true
+  xy: 596, 180
+  size: 74, 141
+  orig: 74, 141
+  offset: 0, 0
+  index: -1
+hair_L2
+  rotate: true
+  xy: 455, 169
+  size: 85, 139
+  orig: 85, 139
+  offset: 0, 0
+  index: -1
+hair_R
+  rotate: true
+  xy: 739, 177
+  size: 77, 122
+  orig: 77, 122
+  offset: 0, 0
+  index: -1
+hair_R2
+  rotate: true
+  xy: 309, 165
+  size: 89, 144
+  orig: 89, 144
+  offset: 0, 0
+  index: -1
+hand_L1
+  rotate: false
+  xy: 995, 132
+  size: 26, 34
+  orig: 26, 34
+  offset: 0, 0
+  index: -1
+hand_L2
+  rotate: true
+  xy: 376, 5
+  size: 28, 38
+  orig: 28, 38
+  offset: 0, 0
+  index: -1
+hand_R1
+  rotate: true
+  xy: 596, 152
+  size: 26, 34
+  orig: 26, 34
+  offset: 0, 0
+  index: -1
+hand_R2
+  rotate: true
+  xy: 632, 149
+  size: 29, 34
+  orig: 29, 34
+  offset: 0, 0
+  index: -1
+leg_L1
+  rotate: false
+  xy: 567, 123
+  size: 25, 44
+  orig: 25, 44
+  offset: 0, 0
+  index: -1
+leg_L2
+  rotate: false
+  xy: 513, 2
+  size: 22, 30
+  orig: 22, 30
+  offset: 0, 0
+  index: -1
+leg_R1
+  rotate: false
+  xy: 995, 208
+  size: 26, 46
+  orig: 26, 46
+  offset: 0, 0
+  index: -1
+leg_R2
+  rotate: false
+  xy: 537, 2
+  size: 22, 30
+  orig: 22, 30
+  offset: 0, 0
+  index: -1
+manju1
+  rotate: false
+  xy: 340, 2
+  size: 34, 36
+  orig: 34, 36
+  offset: 0, 0
+  index: -1
+manju2
+  rotate: false
+  xy: 300, 2
+  size: 38, 36
+  orig: 38, 36
+  offset: 0, 0
+  index: -1
+meimao1
+  rotate: false
+  xy: 270, 97
+  size: 97, 66
+  orig: 97, 66
+  offset: 0, 0
+  index: -1
+meimao2
+  rotate: false
+  xy: 467, 103
+  size: 98, 64
+  orig: 98, 64
+  offset: 0, 0
+  index: -1
+meimao4
+  rotate: false
+  xy: 863, 128
+  size: 98, 59
+  orig: 98, 59
+  offset: 0, 0
+  index: -1
+meimao5
+  rotate: false
+  xy: 154, 93
+  size: 114, 73
+  orig: 114, 73
+  offset: 0, 0
+  index: -1
+meimao6
+  rotate: false
+  xy: 369, 97
+  size: 96, 66
+  orig: 96, 66
+  offset: 0, 0
+  index: -1
+meimao_3
+  rotate: false
+  xy: 388, 35
+  size: 80, 60
+  orig: 80, 60
+  offset: 0, 0
+  index: -1
+paopao1
+  rotate: false
+  xy: 137, 168
+  size: 170, 86
+  orig: 170, 86
+  offset: 0, 0
+  index: -1
+qunbai
+  rotate: false
+  xy: 300, 40
+  size: 86, 55
+  orig: 86, 55
+  offset: 0, 0
+  index: -1
+sleep5
+  rotate: true
+  xy: 250, 5
+  size: 86, 48
+  orig: 86, 48
+  offset: 0, 0
+  index: -1

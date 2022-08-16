@@ -1,0 +1,286 @@
+
+ganraozhe.png
+size: 2048,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 1971, 173
+  size: 66, 81
+  orig: 66, 81
+  offset: 0, 0
+  index: -1
+eye_1
+  rotate: false
+  xy: 1430, 216
+  size: 124, 38
+  orig: 124, 38
+  offset: 0, 0
+  index: -1
+eye_2
+  rotate: false
+  xy: 170, 85
+  size: 92, 16
+  orig: 92, 16
+  offset: 0, 0
+  index: -1
+eye_3
+  rotate: true
+  xy: 1264, 126
+  size: 77, 38
+  orig: 77, 38
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 2, 84
+  size: 166, 170
+  orig: 166, 170
+  offset: 0, 0
+  index: -1
+hair-B
+  rotate: true
+  xy: 170, 103
+  size: 151, 185
+  orig: 151, 185
+  offset: 0, 0
+  index: -1
+hair-B2
+  rotate: false
+  xy: 1173, 205
+  size: 138, 49
+  orig: 138, 49
+  offset: 0, 0
+  index: -1
+hair-L
+  rotate: true
+  xy: 507, 116
+  size: 43, 126
+  orig: 43, 126
+  offset: 0, 0
+  index: -1
+hair-L2
+  rotate: false
+  xy: 357, 113
+  size: 148, 141
+  orig: 148, 141
+  offset: 0, 0
+  index: -1
+hair-L3
+  rotate: true
+  xy: 1670, 206
+  size: 48, 110
+  orig: 48, 110
+  offset: 0, 0
+  index: -1
+hair-R
+  rotate: true
+  xy: 902, 177
+  size: 77, 138
+  orig: 77, 138
+  offset: 0, 0
+  index: -1
+hair-R2
+  rotate: true
+  xy: 1556, 213
+  size: 41, 112
+  orig: 41, 112
+  offset: 0, 0
+  index: -1
+hand-L
+  rotate: true
+  xy: 1668, 168
+  size: 36, 45
+  orig: 36, 45
+  offset: 0, 0
+  index: -1
+hand-R
+  rotate: true
+  xy: 1304, 114
+  size: 29, 42
+  orig: 29, 42
+  offset: 0, 0
+  index: -1
+hand-R2
+  rotate: true
+  xy: 1348, 115
+  size: 28, 38
+  orig: 28, 38
+  offset: 0, 0
+  index: -1
+hand_L2
+  rotate: false
+  xy: 231, 41
+  size: 30, 42
+  orig: 30, 42
+  offset: 0, 0
+  index: -1
+leg_L
+  rotate: true
+  xy: 1554, 144
+  size: 33, 60
+  orig: 33, 60
+  offset: 0, 0
+  index: -1
+leg_L2
+  rotate: false
+  xy: 173, 37
+  size: 27, 46
+  orig: 27, 46
+  offset: 0, 0
+  index: -1
+leg_R
+  rotate: true
+  xy: 1554, 179
+  size: 32, 62
+  orig: 32, 62
+  offset: 0, 0
+  index: -1
+leg_R2
+  rotate: false
+  xy: 202, 37
+  size: 27, 46
+  orig: 27, 46
+  offset: 0, 0
+  index: -1
+meimao_1
+  rotate: false
+  xy: 1782, 183
+  size: 94, 71
+  orig: 94, 71
+  offset: 0, 0
+  index: -1
+meimao_3
+  rotate: true
+  xy: 88, 2
+  size: 80, 60
+  orig: 80, 60
+  offset: 0, 0
+  index: -1
+peijian1
+  rotate: false
+  xy: 1388, 138
+  size: 48, 62
+  orig: 48, 62
+  offset: 0, 0
+  index: -1
+peijian2
+  rotate: true
+  xy: 1618, 165
+  size: 46, 48
+  orig: 46, 48
+  offset: 0, 0
+  index: -1
+peijian3
+  rotate: false
+  xy: 1491, 152
+  size: 34, 62
+  orig: 34, 62
+  offset: 0, 0
+  index: -1
+peijian4
+  rotate: true
+  xy: 1715, 181
+  size: 23, 58
+  orig: 23, 58
+  offset: 0, 0
+  index: -1
+qiang1
+  rotate: false
+  xy: 770, 168
+  size: 130, 86
+  orig: 130, 86
+  offset: 0, 0
+  index: -1
+qiang2
+  rotate: false
+  xy: 507, 161
+  size: 130, 93
+  orig: 130, 93
+  offset: 0, 0
+  index: -1
+shen1
+  rotate: true
+  xy: 1304, 145
+  size: 55, 82
+  orig: 55, 82
+  offset: 0, 0
+  index: -1
+shen2
+  rotate: true
+  xy: 357, 2
+  size: 109, 78
+  orig: 109, 78
+  offset: 0, 0
+  index: -1
+shen3
+  rotate: true
+  xy: 437, 9
+  size: 102, 66
+  orig: 102, 66
+  offset: 0, 0
+  index: -1
+shen4
+  rotate: false
+  xy: 1878, 192
+  size: 91, 62
+  orig: 91, 62
+  offset: 0, 0
+  index: -1
+shen5
+  rotate: false
+  xy: 639, 162
+  size: 129, 92
+  orig: 129, 92
+  offset: 0, 0
+  index: -1
+shen6
+  rotate: false
+  xy: 1313, 202
+  size: 115, 52
+  orig: 115, 52
+  offset: 0, 0
+  index: -1
+tou1
+  rotate: true
+  xy: 1042, 181
+  size: 73, 129
+  orig: 73, 129
+  offset: 0, 0
+  index: -1
+tou2
+  rotate: true
+  xy: 2, 2
+  size: 80, 84
+  orig: 80, 84
+  offset: 0, 0
+  index: -1
+toushi1
+  rotate: true
+  xy: 1173, 139
+  size: 64, 89
+  orig: 64, 89
+  offset: 0, 0
+  index: -1
+toushi2
+  rotate: false
+  xy: 1438, 144
+  size: 51, 70
+  orig: 51, 70
+  offset: 0, 0
+  index: -1
+yuqi1
+  rotate: true
+  xy: 150, 29
+  size: 53, 21
+  orig: 53, 21
+  offset: 0, 0
+  index: -1
+yuqi2
+  rotate: true
+  xy: 1527, 155
+  size: 59, 25
+  orig: 59, 25
+  offset: 0, 0
+  index: -1

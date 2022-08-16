@@ -1,0 +1,34 @@
+
+daofengB.png
+size: 4096,4096
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bu_texiao1
+  rotate: false
+  xy: 2409, 2546
+  size: 525, 1526
+  orig: 525, 1526
+  offset: 0, 0
+  index: -1
+bu_texiao2
+  rotate: false
+  xy: 2, 2
+  size: 1074, 2166
+  orig: 1074, 2166
+  offset: 0, 0
+  index: -1
+bu_texiao3
+  rotate: false
+  xy: 1078, 1830
+  size: 637, 338
+  orig: 637, 338
+  offset: 0, 0
+  index: -1
+texiao4
+  rotate: false
+  xy: 2, 2170
+  size: 2405, 1902
+  orig: 2405, 1902
+  offset: 0, 0
+  index: -1

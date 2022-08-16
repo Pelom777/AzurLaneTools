@@ -1,0 +1,293 @@
+
+akasita.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: true
+  xy: 727, 83
+  size: 63, 78
+  orig: 63, 78
+  offset: 0, 0
+  index: -1
+bodyW
+  rotate: true
+  xy: 288, 45
+  size: 45, 48
+  orig: 45, 48
+  offset: 0, 0
+  index: -1
+daimao
+  rotate: true
+  xy: 293, 92
+  size: 35, 55
+  orig: 35, 55
+  offset: 0, 0
+  index: -1
+ear
+  rotate: false
+  xy: 510, 89
+  size: 26, 30
+  orig: 26, 30
+  offset: 0, 0
+  index: -1
+eye_2_1
+  rotate: true
+  xy: 387, 53
+  size: 37, 17
+  orig: 37, 17
+  offset: 0, 0
+  index: -1
+eye_2_2
+  rotate: true
+  xy: 538, 93
+  size: 26, 17
+  orig: 26, 17
+  offset: 0, 0
+  index: -1
+eye_3_1
+  rotate: false
+  xy: 406, 89
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_3_2
+  rotate: true
+  xy: 434, 93
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_4_1
+  rotate: false
+  xy: 593, 90
+  size: 29, 22
+  orig: 29, 22
+  offset: 0, 0
+  index: -1
+eye_4_2
+  rotate: false
+  xy: 338, 31
+  size: 23, 22
+  orig: 23, 22
+  offset: 0, 0
+  index: -1
+eye_5_1
+  rotate: false
+  xy: 896, 74
+  size: 26, 25
+  orig: 26, 25
+  offset: 0, 0
+  index: -1
+eye_5_2
+  rotate: false
+  xy: 872, 84
+  size: 22, 25
+  orig: 22, 25
+  offset: 0, 0
+  index: -1
+eye_L
+  rotate: false
+  xy: 898, 101
+  size: 42, 32
+  orig: 42, 32
+  offset: 0, 0
+  index: -1
+eye_R
+  rotate: true
+  xy: 474, 88
+  size: 31, 34
+  orig: 31, 34
+  offset: 0, 0
+  index: -1
+face
+  rotate: true
+  xy: 153, 118
+  size: 136, 138
+  orig: 136, 138
+  offset: 0, 0
+  index: -1
+hair_B
+  rotate: false
+  xy: 2, 123
+  size: 149, 131
+  orig: 149, 131
+  offset: 0, 0
+  index: -1
+hair_B2
+  rotate: false
+  xy: 293, 129
+  size: 142, 125
+  orig: 142, 125
+  offset: 0, 0
+  index: -1
+hair_F
+  rotate: false
+  xy: 2, 17
+  size: 146, 104
+  orig: 146, 104
+  offset: 0, 0
+  index: -1
+hair_L
+  rotate: true
+  xy: 886, 193
+  size: 61, 122
+  orig: 61, 122
+  offset: 0, 0
+  index: -1
+hair_R
+  rotate: true
+  xy: 437, 121
+  size: 33, 118
+  orig: 33, 118
+  offset: 0, 0
+  index: -1
+hand_L
+  rotate: true
+  xy: 942, 154
+  size: 37, 58
+  orig: 37, 58
+  offset: 0, 0
+  index: -1
+hand_R
+  rotate: true
+  xy: 350, 92
+  size: 35, 54
+  orig: 35, 54
+  offset: 0, 0
+  index: -1
+hudiejie
+  rotate: true
+  xy: 734, 148
+  size: 33, 84
+  orig: 33, 84
+  offset: 0, 0
+  index: -1
+jianzhuang_B
+  rotate: false
+  xy: 820, 111
+  size: 76, 70
+  orig: 76, 70
+  offset: 0, 0
+  index: -1
+leg_L
+  rotate: false
+  xy: 260, 54
+  size: 26, 62
+  orig: 26, 62
+  offset: 0, 0
+  index: -1
+leg_L2
+  rotate: true
+  xy: 942, 126
+  size: 26, 62
+  orig: 26, 62
+  offset: 0, 0
+  index: -1
+leg_R
+  rotate: true
+  xy: 807, 83
+  size: 26, 63
+  orig: 26, 63
+  offset: 0, 0
+  index: -1
+leg_R2
+  rotate: true
+  xy: 942, 98
+  size: 26, 63
+  orig: 26, 63
+  offset: 0, 0
+  index: -1
+lingjie
+  rotate: false
+  xy: 363, 32
+  size: 22, 21
+  orig: 22, 21
+  offset: 0, 0
+  index: -1
+manjuuuu
+  rotate: false
+  xy: 593, 156
+  size: 139, 98
+  orig: 139, 98
+  offset: 0, 0
+  index: -1
+maozi
+  rotate: false
+  xy: 734, 183
+  size: 150, 71
+  orig: 150, 71
+  offset: 0, 0
+  index: -1
+meimao
+  rotate: false
+  xy: 150, 54
+  size: 108, 62
+  orig: 108, 62
+  offset: 0, 0
+  index: -1
+meimao_3
+  rotate: false
+  xy: 645, 94
+  size: 80, 60
+  orig: 80, 60
+  offset: 0, 0
+  index: -1
+sleep6
+  rotate: false
+  xy: 557, 114
+  size: 86, 40
+  orig: 86, 40
+  offset: 0, 0
+  index: -1
+sleep7
+  rotate: false
+  xy: 437, 156
+  size: 154, 98
+  orig: 154, 98
+  offset: 0, 0
+  index: -1
+waitao
+  rotate: false
+  xy: 205, 4
+  size: 64, 48
+  orig: 64, 48
+  offset: 0, 0
+  index: -1
+weapon_L
+  rotate: true
+  xy: 338, 55
+  size: 35, 47
+  orig: 35, 47
+  offset: 0, 0
+  index: -1
+yiling_L
+  rotate: true
+  xy: 406, 53
+  size: 34, 21
+  orig: 34, 21
+  offset: 0, 0
+  index: -1
+yiling_R
+  rotate: false
+  xy: 557, 91
+  size: 34, 21
+  orig: 34, 21
+  offset: 0, 0
+  index: -1
+yulei_L
+  rotate: false
+  xy: 898, 135
+  size: 42, 56
+  orig: 42, 56
+  offset: 0, 0
+  index: -1
+yulei_R
+  rotate: false
+  xy: 150, 2
+  size: 53, 50
+  orig: 53, 50
+  offset: 0, 0
+  index: -1

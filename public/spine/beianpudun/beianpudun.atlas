@@ -1,0 +1,279 @@
+
+beianpudun.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 386, 347
+  size: 58, 75
+  orig: 58, 75
+  offset: 0, 0
+  index: -1
+bodyB
+  rotate: false
+  xy: 272, 248
+  size: 45, 48
+  orig: 45, 48
+  offset: 0, 0
+  index: -1
+cebian
+  rotate: true
+  xy: 111, 3
+  size: 18, 27
+  orig: 18, 27
+  offset: 0, 0
+  index: -1
+ear
+  rotate: false
+  xy: 224, 115
+  size: 26, 30
+  orig: 26, 30
+  offset: 0, 0
+  index: -1
+eye_1_1
+  rotate: false
+  xy: 272, 212
+  size: 50, 34
+  orig: 50, 34
+  offset: 0, 0
+  index: -1
+eye_1_2
+  rotate: false
+  xy: 272, 176
+  size: 34, 34
+  orig: 34, 34
+  offset: 0, 0
+  index: -1
+eye_2_1
+  rotate: false
+  xy: 43, 4
+  size: 36, 17
+  orig: 36, 17
+  offset: 0, 0
+  index: -1
+eye_2_2
+  rotate: false
+  xy: 140, 3
+  size: 27, 17
+  orig: 27, 17
+  offset: 0, 0
+  index: -1
+eye_3_1
+  rotate: true
+  xy: 232, 210
+  size: 27, 38
+  orig: 27, 38
+  offset: 0, 0
+  index: -1
+eye_3_2
+  rotate: false
+  xy: 308, 172
+  size: 27, 38
+  orig: 27, 38
+  offset: 0, 0
+  index: -1
+eye_4_1
+  rotate: true
+  xy: 252, 115
+  size: 30, 24
+  orig: 30, 24
+  offset: 0, 0
+  index: -1
+eye_4_2
+  rotate: true
+  xy: 262, 147
+  size: 26, 24
+  orig: 26, 24
+  offset: 0, 0
+  index: -1
+eye_6_1
+  rotate: true
+  xy: 204, 2
+  size: 48, 27
+  orig: 48, 27
+  offset: 0, 0
+  index: -1
+eye_6_2
+  rotate: false
+  xy: 228, 147
+  size: 32, 26
+  orig: 32, 26
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 2, 198
+  size: 136, 138
+  orig: 136, 138
+  offset: 0, 0
+  index: -1
+fadai
+  rotate: true
+  xy: 265, 348
+  size: 74, 119
+  orig: 74, 119
+  offset: 0, 0
+  index: -1
+hair_B
+  rotate: false
+  xy: 2, 71
+  size: 136, 125
+  orig: 136, 125
+  offset: 0, 0
+  index: -1
+hair_B2
+  rotate: false
+  xy: 2, 338
+  size: 157, 172
+  orig: 157, 172
+  offset: 0, 0
+  index: -1
+hair_F
+  rotate: false
+  xy: 161, 348
+  size: 102, 162
+  orig: 102, 162
+  offset: 0, 0
+  index: -1
+hair_L
+  rotate: true
+  xy: 2, 23
+  size: 46, 139
+  orig: 46, 139
+  offset: 0, 0
+  index: -1
+hair_L2
+  rotate: true
+  xy: 2, 3
+  size: 18, 39
+  orig: 18, 39
+  offset: 0, 0
+  index: -1
+hand_L
+  rotate: true
+  xy: 384, 311
+  size: 34, 58
+  orig: 34, 58
+  offset: 0, 0
+  index: -1
+hand_R
+  rotate: false
+  xy: 232, 239
+  size: 38, 57
+  orig: 38, 57
+  offset: 0, 0
+  index: -1
+jianzhuang_L
+  rotate: false
+  xy: 140, 232
+  size: 90, 104
+  orig: 90, 104
+  offset: 0, 0
+  index: -1
+jianzhuang_R
+  rotate: false
+  xy: 437, 426
+  size: 66, 84
+  orig: 66, 84
+  offset: 0, 0
+  index: -1
+kuguan
+  rotate: false
+  xy: 81, 4
+  size: 28, 17
+  orig: 28, 17
+  offset: 0, 0
+  index: -1
+leg_L
+  rotate: true
+  xy: 143, 22
+  size: 28, 59
+  orig: 28, 59
+  offset: 0, 0
+  index: -1
+leg_L2
+  rotate: true
+  xy: 444, 309
+  size: 28, 59
+  orig: 28, 59
+  offset: 0, 0
+  index: -1
+leg_R
+  rotate: true
+  xy: 384, 283
+  size: 26, 58
+  orig: 26, 58
+  offset: 0, 0
+  index: -1
+leg_R2
+  rotate: true
+  xy: 444, 281
+  size: 26, 58
+  orig: 26, 58
+  offset: 0, 0
+  index: -1
+meimao_1
+  rotate: true
+  xy: 446, 339
+  size: 85, 64
+  orig: 85, 64
+  offset: 0, 0
+  index: -1
+meimao_3
+  rotate: false
+  xy: 140, 104
+  size: 82, 62
+  orig: 82, 62
+  offset: 0, 0
+  index: -1
+meimao_4
+  rotate: false
+  xy: 140, 168
+  size: 86, 62
+  orig: 86, 62
+  offset: 0, 0
+  index: -1
+paopao1
+  rotate: false
+  xy: 265, 424
+  size: 170, 86
+  orig: 170, 86
+  offset: 0, 0
+  index: -1
+sleep5
+  rotate: false
+  xy: 232, 298
+  size: 86, 48
+  orig: 86, 48
+  offset: 0, 0
+  index: -1
+weapon_L
+  rotate: false
+  xy: 228, 175
+  size: 42, 33
+  orig: 42, 33
+  offset: 0, 0
+  index: -1
+weapon_L2
+  rotate: false
+  xy: 140, 77
+  size: 72, 25
+  orig: 72, 25
+  offset: 0, 0
+  index: -1
+weapon_L3
+  rotate: true
+  xy: 320, 301
+  size: 45, 62
+  orig: 45, 62
+  offset: 0, 0
+  index: -1
+weapon_R
+  rotate: false
+  xy: 143, 52
+  size: 67, 23
+  orig: 67, 23
+  offset: 0, 0
+  index: -1

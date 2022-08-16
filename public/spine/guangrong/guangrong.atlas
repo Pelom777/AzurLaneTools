@@ -1,0 +1,237 @@
+
+guangrong.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 153, 72
+  size: 59, 87
+  orig: 59, 87
+  offset: 0, 0
+  index: -1
+bodyW
+  rotate: false
+  xy: 153, 161
+  size: 45, 48
+  orig: 45, 48
+  offset: 0, 0
+  index: -1
+ear_L
+  rotate: false
+  xy: 2, 67
+  size: 65, 134
+  orig: 65, 134
+  offset: 0, 0
+  index: -1
+ear_R
+  rotate: true
+  xy: 281, 446
+  size: 64, 133
+  orig: 64, 133
+  offset: 0, 0
+  index: -1
+eye_1 _1
+  rotate: false
+  xy: 144, 36
+  size: 42, 34
+  orig: 42, 34
+  offset: 0, 0
+  index: -1
+eye_1_2
+  rotate: false
+  xy: 213, 36
+  size: 34, 33
+  orig: 34, 33
+  offset: 0, 0
+  index: -1
+eye_2_1
+  rotate: false
+  xy: 433, 391
+  size: 37, 17
+  orig: 37, 17
+  offset: 0, 0
+  index: -1
+eye_2_2
+  rotate: false
+  xy: 405, 383
+  size: 26, 17
+  orig: 26, 17
+  offset: 0, 0
+  index: -1
+eye_3_1
+  rotate: false
+  xy: 433, 410
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_3_2
+  rotate: false
+  xy: 461, 410
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_4_1
+  rotate: true
+  xy: 262, 68
+  size: 29, 22
+  orig: 29, 22
+  offset: 0, 0
+  index: -1
+eye_4_2
+  rotate: false
+  xy: 253, 16
+  size: 23, 22
+  orig: 23, 22
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 2, 203
+  size: 141, 139
+  orig: 141, 139
+  offset: 0, 0
+  index: -1
+hair_B
+  rotate: false
+  xy: 2, 344
+  size: 152, 166
+  orig: 152, 166
+  offset: 0, 0
+  index: -1
+hair_F
+  rotate: false
+  xy: 156, 388
+  size: 123, 122
+  orig: 123, 122
+  offset: 0, 0
+  index: -1
+hair_L
+  rotate: true
+  xy: 281, 392
+  size: 52, 122
+  orig: 52, 122
+  offset: 0, 0
+  index: -1
+hair_L2
+  rotate: false
+  xy: 200, 181
+  size: 36, 150
+  orig: 36, 150
+  offset: 0, 0
+  index: -1
+hair_R
+  rotate: false
+  xy: 145, 211
+  size: 53, 120
+  orig: 53, 120
+  offset: 0, 0
+  index: -1
+hair_R2
+  rotate: false
+  xy: 238, 181
+  size: 36, 150
+  orig: 36, 150
+  offset: 0, 0
+  index: -1
+hand_L
+  rotate: false
+  xy: 144, 2
+  size: 26, 32
+  orig: 26, 32
+  offset: 0, 0
+  index: -1
+hand_L2
+  rotate: true
+  xy: 172, 5
+  size: 29, 40
+  orig: 29, 40
+  offset: 0, 0
+  index: -1
+hand_R
+  rotate: true
+  xy: 249, 40
+  size: 26, 34
+  orig: 26, 34
+  offset: 0, 0
+  index: -1
+hand_R2
+  rotate: true
+  xy: 214, 5
+  size: 29, 37
+  orig: 29, 37
+  offset: 0, 0
+  index: -1
+jianzhuang1
+  rotate: false
+  xy: 214, 99
+  size: 69, 80
+  orig: 69, 80
+  offset: 0, 0
+  index: -1
+leg_L1
+  rotate: true
+  xy: 214, 71
+  size: 26, 46
+  orig: 26, 46
+  offset: 0, 0
+  index: -1
+leg_L2
+  rotate: false
+  xy: 188, 36
+  size: 23, 34
+  orig: 23, 34
+  offset: 0, 0
+  index: -1
+leg_R1
+  rotate: false
+  xy: 405, 402
+  size: 26, 42
+  orig: 26, 42
+  offset: 0, 0
+  index: -1
+leg_R2
+  rotate: false
+  xy: 489, 420
+  size: 21, 28
+  orig: 21, 28
+  offset: 0, 0
+  index: -1
+maojin
+  rotate: false
+  xy: 156, 333
+  size: 121, 53
+  orig: 121, 53
+  offset: 0, 0
+  index: -1
+meimao_1
+  rotate: true
+  xy: 84, 5
+  size: 90, 58
+  orig: 90, 58
+  offset: 0, 0
+  index: -1
+meimao_2
+  rotate: false
+  xy: 416, 450
+  size: 90, 60
+  orig: 90, 60
+  offset: 0, 0
+  index: -1
+meimao_3
+  rotate: false
+  xy: 2, 5
+  size: 80, 60
+  orig: 80, 60
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: true
+  xy: 69, 97
+  size: 104, 82
+  orig: 104, 82
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,286 @@
+
+ekelahema.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: true
+  xy: 520, 118
+  size: 65, 68
+  orig: 65, 68
+  offset: 0, 0
+  index: -1
+bodyW
+  rotate: true
+  xy: 670, 138
+  size: 45, 48
+  orig: 45, 48
+  offset: 0, 0
+  index: -1
+daimao
+  rotate: false
+  xy: 670, 85
+  size: 50, 51
+  orig: 50, 51
+  offset: 0, 0
+  index: -1
+ear_L
+  rotate: false
+  xy: 848, 133
+  size: 26, 30
+  orig: 26, 30
+  offset: 0, 0
+  index: -1
+eye_1_1
+  rotate: true
+  xy: 786, 104
+  size: 44, 34
+  orig: 44, 34
+  offset: 0, 0
+  index: -1
+eye_1_2
+  rotate: true
+  xy: 806, 150
+  size: 28, 34
+  orig: 28, 34
+  offset: 0, 0
+  index: -1
+eye_2_1
+  rotate: false
+  xy: 786, 85
+  size: 37, 17
+  orig: 37, 17
+  offset: 0, 0
+  index: -1
+eye_2_2
+  rotate: false
+  xy: 850, 90
+  size: 26, 17
+  orig: 26, 17
+  offset: 0, 0
+  index: -1
+eye_3_1
+  rotate: false
+  xy: 162, 19
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_3_2
+  rotate: true
+  xy: 885, 163
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_4_1
+  rotate: true
+  xy: 409, 99
+  size: 30, 22
+  orig: 30, 22
+  offset: 0, 0
+  index: -1
+eye_4_2
+  rotate: false
+  xy: 825, 82
+  size: 23, 22
+  orig: 23, 22
+  offset: 0, 0
+  index: -1
+face
+  rotate: true
+  xy: 190, 118
+  size: 136, 138
+  orig: 136, 138
+  offset: 0, 0
+  index: -1
+hair_B
+  rotate: false
+  xy: 2, 126
+  size: 186, 128
+  orig: 186, 128
+  offset: 0, 0
+  index: -1
+hair_B2
+  rotate: false
+  xy: 436, 185
+  size: 146, 69
+  orig: 146, 69
+  offset: 0, 0
+  index: -1
+hair_F
+  rotate: true
+  xy: 720, 180
+  size: 74, 106
+  orig: 74, 106
+  offset: 0, 0
+  index: -1
+hair_L
+  rotate: false
+  xy: 330, 131
+  size: 104, 123
+  orig: 104, 123
+  offset: 0, 0
+  index: -1
+hair_R
+  rotate: false
+  xy: 2, 2
+  size: 76, 122
+  orig: 76, 122
+  offset: 0, 0
+  index: -1
+hair_R2
+  rotate: true
+  xy: 590, 136
+  size: 47, 78
+  orig: 47, 78
+  offset: 0, 0
+  index: -1
+hand_L
+  rotate: false
+  xy: 722, 88
+  size: 30, 60
+  orig: 30, 60
+  offset: 0, 0
+  index: -1
+hand_R
+  rotate: false
+  xy: 754, 91
+  size: 30, 57
+  orig: 30, 57
+  offset: 0, 0
+  index: -1
+jianzhuang_B
+  rotate: false
+  xy: 584, 185
+  size: 134, 69
+  orig: 134, 69
+  offset: 0, 0
+  index: -1
+jianzhuang_L
+  rotate: false
+  xy: 190, 2
+  size: 78, 59
+  orig: 78, 59
+  offset: 0, 0
+  index: -1
+jianzhuang_R
+  rotate: true
+  xy: 848, 109
+  size: 22, 28
+  orig: 22, 28
+  offset: 0, 0
+  index: -1
+jianzhuang_R2
+  rotate: false
+  xy: 80, 5
+  size: 80, 52
+  orig: 80, 52
+  offset: 0, 0
+  index: -1
+leg_L
+  rotate: false
+  xy: 822, 106
+  size: 24, 42
+  orig: 24, 42
+  offset: 0, 0
+  index: -1
+leg_L2
+  rotate: true
+  xy: 433, 93
+  size: 26, 35
+  orig: 26, 35
+  offset: 0, 0
+  index: -1
+leg_R
+  rotate: true
+  xy: 842, 165
+  size: 24, 41
+  orig: 24, 41
+  offset: 0, 0
+  index: -1
+leg_R2
+  rotate: true
+  xy: 470, 97
+  size: 22, 35
+  orig: 22, 35
+  offset: 0, 0
+  index: -1
+maojin
+  rotate: false
+  xy: 190, 63
+  size: 121, 53
+  orig: 121, 53
+  offset: 0, 0
+  index: -1
+meimao_1
+  rotate: false
+  xy: 80, 59
+  size: 108, 65
+  orig: 108, 65
+  offset: 0, 0
+  index: -1
+meimao_3
+  rotate: false
+  xy: 436, 121
+  size: 82, 62
+  orig: 82, 62
+  offset: 0, 0
+  index: -1
+meimao_4
+  rotate: false
+  xy: 828, 191
+  size: 106, 63
+  orig: 106, 63
+  offset: 0, 0
+  index: -1
+sleep5
+  rotate: false
+  xy: 936, 206
+  size: 86, 48
+  orig: 86, 48
+  offset: 0, 0
+  index: -1
+toushi
+  rotate: false
+  xy: 270, 3
+  size: 54, 58
+  orig: 54, 58
+  offset: 0, 0
+  index: -1
+weapon_L
+  rotate: false
+  xy: 720, 150
+  size: 84, 28
+  orig: 84, 28
+  offset: 0, 0
+  index: -1
+weapon_L2
+  rotate: false
+  xy: 936, 174
+  size: 82, 30
+  orig: 82, 30
+  offset: 0, 0
+  index: -1
+weapon_R
+  rotate: false
+  xy: 590, 107
+  size: 78, 27
+  orig: 78, 27
+  offset: 0, 0
+  index: -1
+weapon_R2
+  rotate: false
+  xy: 330, 101
+  size: 77, 28
+  orig: 77, 28
+  offset: 0, 0
+  index: -1
+yiling_L
+  rotate: true
+  xy: 313, 63
+  size: 17, 18
+  orig: 17, 18
+  offset: 0, 0
+  index: -1
