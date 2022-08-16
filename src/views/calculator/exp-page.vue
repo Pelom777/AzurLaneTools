@@ -7,9 +7,9 @@ import { load } from '@/axios/data'
 const { user } = useStore()
 const option = ref({}), ship = ref({}), exp = ref([])
 ;(async () => {
-  option.value = await load('ui', 'option')
-  ship.value = await load('ui', 'ship')
-  exp.value = await load('/', 'exp')
+  option.value = await load('option')
+  ship.value = await load('ship')
+  exp.value = await load('exp')
 })()
 const showDrawer = ref(false)
 const showDialog = ref(true)

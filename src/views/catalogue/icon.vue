@@ -5,14 +5,14 @@ const props = defineProps<{
   skin: [string, number][]
 }>()
 const [name_cn, type, rarity, nationality] = props.ship
-const cdn = 'https://ui.al.pelom.cn'
+const cdn = 'https://cdn.al.pelom.cn'
 const index = ref(0)
 </script>
 
 <template>
   <el-card
-    :style="{ backgroundImage: `url(${cdn}/assets/iconbackground/${nationality == 97 ? '1' : ''}${!!skin[index][0].match(/_g$/) ? rarity + 1 : rarity}.png)` }">
-    <el-image :src="`${cdn}/assets/shipicon/${skin[index][0]}.png`" fit="contain" loading="lazy" @click="$router.push({
+    :style="{ backgroundImage: `url(${cdn}/iconbackground/${nationality == 97 ? '1' : ''}${!!skin[index][0].match(/_g$/) ? rarity + 1 : rarity}.png)` }">
+    <el-image :src="`${cdn}/shipicon/${skin[index][0]}.png`" fit="contain" loading="lazy" @click="$router.push({
       name: 'profile',
       params: { name }
     })" />
@@ -20,7 +20,7 @@ const index = ref(0)
       {{ skin[index][1] }}
     </span>
     <el-image
-      :src="`${cdn}/assets/iconframe/${nationality == 97 ? '1' : ''}${!!skin[index][0].match(/_g$/) ? rarity + 1 : rarity}.png`"
+      :src="`${cdn}/iconframe/${nationality == 97 ? '1' : ''}${!!skin[index][0].match(/_g$/) ? rarity + 1 : rarity}.png`"
       fit="contain" :style="{ scale: (nationality == 97 && rarity == 5 ? 1.166 : null) }" />
   </el-card>
 </template>

@@ -62,8 +62,8 @@ onMounted(() => {
   const myChart = echarts.init(document.getElementById('echarts')!)
 
   ;(async () => {
-    const ship = await load('ui', 'ship')
-    const vote = await load('vote', `${year}-${region}`)
+    const ship = await load('ship')
+    const vote = await load(`${year}-${region}`)
 
     Object.keys(vote).forEach((k, i) => {
       setTimeout(() => {

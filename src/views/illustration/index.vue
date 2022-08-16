@@ -3,7 +3,7 @@ import { load } from '@/axios/data'
 
 const cg = ref()
 ;(async () => {
-  cg.value = await load('ui', 'cg')
+  cg.value = await load('cg')
 })()
 const page = ref(1)
 const list = ref([])

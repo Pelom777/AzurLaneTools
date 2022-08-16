@@ -1,14 +1,8 @@
 import request from './request'
 
-export const load = (src: string, file: string) => {
-  if (src == '/')
-    return request({
-      url: `data/${file}.json`,
-      method: 'GET'
-    })
-
+export const load = (file: string) => {
   return request({
-    url: `https://${src}.al.pelom.cn/assets/${file}.json`,
+    url: `https://cdn.al.pelom.cn/data/${file}.json`,
     method: 'GET'
   })
 }

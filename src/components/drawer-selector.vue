@@ -84,7 +84,7 @@ watchEffect(() => {
             v-show="list.includes(name)"
           >
             <el-image
-              :src="`https://ui.al.pelom.cn/assets/squareicon/${name}.png`"
+              :src="`https://cdn.al.pelom.cn/squareicon/${name}.png`"
               loading="lazy"
               @click="$emit('check', name)"
             />

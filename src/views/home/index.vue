@@ -3,7 +3,7 @@ import { load } from '@/axios/data'
 
 const cg = ref()
 ;(async () => {
-  cg.value = (await load('ui', 'cg') as any).slice(0, 5)
+  cg.value = (await load('cg') as any).slice(0, 5)
 })()
 </script>
 

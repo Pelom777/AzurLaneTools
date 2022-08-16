@@ -4,9 +4,9 @@ import { load } from '@/axios/data'
 
 const option = ref({}), ship = ref({}), skin = ref({})
 ;(async () => {
-  option.value = await load('ui', 'option')
-  ship.value = await load('ui', 'ship')
-  skin.value = await load('ui', 'skin')
+  option.value = await load('option')
+  ship.value = await load('ship')
+  skin.value = await load('skin')
 
   watchEffect(() => {
     list.value = []

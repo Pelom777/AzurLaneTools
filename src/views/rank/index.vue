@@ -4,7 +4,7 @@ import { load } from '@/axios/data'
 
 const server = ref()
 ;(async () => {
-  server.value = await load('/', 'server')
+  server.value = await load('server')
 })()
 
 const serverId = ref(0), rankType = ref(0)

@@ -3,7 +3,7 @@ import { load } from '@/axios/data'
 
 const vote = ref({})
 ;(async () => {
-  vote.value = await load('vote', 'vote')
+  vote.value = await load('vote')
 })()
 const name = {'cn': '国服', 'jp': '日服', 'en': '国际服'}
 </script>
@@ -30,7 +30,7 @@ const name = {'cn': '国服', 'jp': '日服', 'en': '国际服'}
               v-for="(winner, region) in value"
             >
               <el-card
-                :style="{ backgroundImage: `url(https://ui.al.pelom.cn/assets/voteicon/${winner}.png)` }"
+                :style="{ backgroundImage: `url(https://cdn.al.pelom.cn/voteicon/${winner}.png)` }"
                 @click="$router.push({
                   name: 'vote',
                   params: { year, region }

@@ -27,7 +27,7 @@ const time = computed(() => {
 <template>
   <el-card>
     <h1>
-      <el-avatar size="large" :src="`https://ui.al.pelom.cn/assets/squareicon/${name}.png`" />
+      <el-avatar size="large" :src="`https://cdn.al.pelom.cn/squareicon/${name}.png`" />
       <el-divider direction="vertical" />
       <span>{{ ship[0] }}</span>
       <el-button circle type="danger" size="small" @click="$emit('remove', index)">

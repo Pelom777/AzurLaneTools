@@ -4,7 +4,7 @@ import { load } from '@/axios/data'
 
 const bgm = ref([])
 ;(async () => {
-  bgm.value = await load('ui', 'bgm')
+  bgm.value = await load('bgm')
 
   watchEffect(() => {
     list.value = bgm.value.filter((item: [number, string]) => {

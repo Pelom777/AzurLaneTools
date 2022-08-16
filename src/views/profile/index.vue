@@ -16,12 +16,12 @@ const spine = new Container()
 let container: HTMLElement, back: Sprite, base: Sprite, char: Spine
 
 ;(async () => {
-  ship.value = await load('ui', 'ship')
-  skin.value = await load('ui', 'skin')
+  ship.value = await load('ship')
+  skin.value = await load('skin')
   const [, , rarity,] = ship.value[name]
   app.loader
-    .add('back', `https://ui.al.pelom.cn/assets/shipbackground/${rarity}.png`)
-    .add('base', `https://ui.al.pelom.cn/assets/spinebase/${rarity > 6 ? rarity - 2 : rarity}.png`)
+    .add('back', `https://cdn.al.pelom.cn/shipbackground/${rarity}.png`)
+    .add('base', `https://cdn.al.pelom.cn/spinebase/${rarity > 6 ? rarity - 2 : rarity}.png`)
     .load((loader, resources) => {
       back = new Sprite(resources.back.texture)
       back.anchor.set(0.5)
@@ -46,7 +46,7 @@ const handleSwitch = (name: string) => {
   loading.value = true
   app.loader
     .reset()
-    .add('char', `https://sd.al.pelom.cn/assets/spine/${name}/${name}.skel`)
+    .add('char', `https://cdn.al.pelom.cn/spine/${name}/${name}.skel`)
     .load((loader, resources) => {
       char?.destroy()
       char = new Spine(resources.char.spineData)
