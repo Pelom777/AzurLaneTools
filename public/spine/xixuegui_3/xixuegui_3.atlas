@@ -1,0 +1,328 @@
+
+xixuegui_3.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: true
+  xy: 253, 17
+  size: 60, 70
+  orig: 60, 70
+  offset: 0, 0
+  index: -1
+body_w
+  rotate: false
+  xy: 679, 128
+  size: 45, 48
+  orig: 45, 48
+  offset: 0, 0
+  index: -1
+chain
+  rotate: true
+  xy: 944, 168
+  size: 14, 51
+  orig: 14, 51
+  offset: 0, 0
+  index: -1
+eye_1_1
+  rotate: false
+  xy: 944, 136
+  size: 36, 30
+  orig: 36, 30
+  offset: 0, 0
+  index: -1
+eye_1_2
+  rotate: true
+  xy: 790, 122
+  size: 26, 31
+  orig: 26, 31
+  offset: 0, 0
+  index: -1
+eye_2_1
+  rotate: false
+  xy: 823, 120
+  size: 37, 17
+  orig: 37, 17
+  offset: 0, 0
+  index: -1
+eye_2_2
+  rotate: true
+  xy: 121, 88
+  size: 26, 17
+  orig: 26, 17
+  offset: 0, 0
+  index: -1
+eye_3_1
+  rotate: true
+  xy: 825, 139
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_3_2
+  rotate: true
+  xy: 865, 139
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_4_1
+  rotate: false
+  xy: 930, 112
+  size: 29, 22
+  orig: 29, 22
+  offset: 0, 0
+  index: -1
+eye_4_2
+  rotate: true
+  xy: 462, 2
+  size: 23, 22
+  orig: 23, 22
+  offset: 0, 0
+  index: -1
+eye_5_1
+  rotate: true
+  xy: 997, 156
+  size: 26, 25
+  orig: 26, 25
+  offset: 0, 0
+  index: -1
+eye_5_2
+  rotate: false
+  xy: 961, 109
+  size: 22, 25
+  orig: 22, 25
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 2, 116
+  size: 136, 138
+  orig: 136, 138
+  offset: 0, 0
+  index: -1
+hair_F
+  rotate: true
+  xy: 325, 39
+  size: 57, 99
+  orig: 57, 99
+  offset: 0, 0
+  index: -1
+hair_FL
+  rotate: true
+  xy: 676, 178
+  size: 76, 147
+  orig: 76, 147
+  offset: 0, 0
+  index: -1
+hair_FR
+  rotate: true
+  xy: 825, 167
+  size: 87, 117
+  orig: 87, 117
+  offset: 0, 0
+  index: -1
+hair_R2
+  rotate: true
+  xy: 140, 84
+  size: 79, 111
+  orig: 79, 111
+  offset: 0, 0
+  index: -1
+hair_R3
+  rotate: true
+  xy: 320, 172
+  size: 82, 182
+  orig: 82, 182
+  offset: 0, 0
+  index: -1
+hair_mawei_L
+  rotate: true
+  xy: 140, 165
+  size: 89, 178
+  orig: 89, 178
+  offset: 0, 0
+  index: -1
+hand_L
+  rotate: true
+  xy: 790, 150
+  size: 26, 33
+  orig: 26, 33
+  offset: 0, 0
+  index: -1
+hand_L2
+  rotate: true
+  xy: 905, 138
+  size: 27, 37
+  orig: 27, 37
+  offset: 0, 0
+  index: -1
+hand_R
+  rotate: true
+  xy: 620, 2
+  size: 25, 34
+  orig: 25, 34
+  offset: 0, 0
+  index: -1
+hand_R2
+  rotate: true
+  xy: 862, 108
+  size: 29, 34
+  orig: 29, 34
+  offset: 0, 0
+  index: -1
+hand_R2_2
+  rotate: false
+  xy: 726, 129
+  size: 34, 47
+  orig: 34, 47
+  offset: 0, 0
+  index: -1
+hat
+  rotate: false
+  xy: 504, 112
+  size: 109, 54
+  orig: 109, 54
+  offset: 0, 0
+  index: -1
+hongyun
+  rotate: false
+  xy: 325, 13
+  size: 79, 24
+  orig: 79, 24
+  offset: 0, 0
+  index: -1
+leg_L1
+  rotate: true
+  xy: 574, 2
+  size: 25, 44
+  orig: 25, 44
+  offset: 0, 0
+  index: -1
+leg_L2
+  rotate: true
+  xy: 898, 113
+  size: 23, 30
+  orig: 23, 30
+  offset: 0, 0
+  index: -1
+leg_R1
+  rotate: false
+  xy: 762, 130
+  size: 26, 46
+  orig: 26, 46
+  offset: 0, 0
+  index: -1
+leg_R2
+  rotate: false
+  xy: 656, 12
+  size: 22, 30
+  orig: 22, 30
+  offset: 0, 0
+  index: -1
+light_heart
+  rotate: false
+  xy: 2, 8
+  size: 117, 106
+  orig: 117, 106
+  offset: 0, 0
+  index: -1
+light_star
+  rotate: false
+  xy: 628, 44
+  size: 53, 66
+  orig: 53, 66
+  offset: 0, 0
+  index: -1
+meimao_1
+  rotate: true
+  xy: 426, 27
+  size: 84, 58
+  orig: 84, 58
+  offset: 0, 0
+  index: -1
+meimao_2
+  rotate: false
+  xy: 417, 113
+  size: 85, 57
+  orig: 85, 57
+  offset: 0, 0
+  index: -1
+meimao_3
+  rotate: true
+  xy: 121, 2
+  size: 80, 60
+  orig: 80, 60
+  offset: 0, 0
+  index: -1
+meimao_6
+  rotate: true
+  xy: 253, 79
+  size: 84, 66
+  orig: 84, 66
+  offset: 0, 0
+  index: -1
+paopao1
+  rotate: false
+  xy: 504, 168
+  size: 170, 86
+  orig: 170, 86
+  offset: 0, 0
+  index: -1
+sleep3
+  rotate: true
+  xy: 574, 29
+  size: 81, 52
+  orig: 81, 52
+  offset: 0, 0
+  index: -1
+stinger
+  rotate: false
+  xy: 406, 2
+  size: 54, 23
+  orig: 54, 23
+  offset: 0, 0
+  index: -1
+toushi_L
+  rotate: false
+  xy: 183, 13
+  size: 68, 69
+  orig: 68, 69
+  offset: 0, 0
+  index: -1
+toushi_R
+  rotate: true
+  xy: 615, 112
+  size: 54, 62
+  orig: 54, 62
+  offset: 0, 0
+  index: -1
+weapon_yuleiL
+  rotate: true
+  xy: 486, 62
+  size: 48, 86
+  orig: 48, 86
+  offset: 0, 0
+  index: -1
+weapon_yuleiR
+  rotate: true
+  xy: 486, 12
+  size: 48, 86
+  orig: 48, 86
+  offset: 0, 0
+  index: -1
+wing_L
+  rotate: false
+  xy: 321, 98
+  size: 94, 72
+  orig: 94, 72
+  offset: 0, 0
+  index: -1
+wing_R
+  rotate: false
+  xy: 944, 184
+  size: 78, 70
+  orig: 78, 70
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,223 @@
+
+tangsi_g.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 409, 309
+  size: 60, 70
+  orig: 60, 70
+  offset: 0, 0
+  index: -1
+bodyW
+  rotate: false
+  xy: 141, 89
+  size: 45, 48
+  orig: 45, 48
+  offset: 0, 0
+  index: -1
+daimao
+  rotate: true
+  xy: 229, 207
+  size: 54, 35
+  orig: 54, 35
+  offset: 0, 0
+  index: -1
+eye_1_1
+  rotate: true
+  xy: 471, 300
+  size: 46, 37
+  orig: 46, 37
+  offset: 0, 0
+  index: -1
+eye_1_2
+  rotate: false
+  xy: 471, 348
+  size: 39, 31
+  orig: 39, 31
+  offset: 0, 0
+  index: -1
+eye_2_1
+  rotate: false
+  xy: 325, 276
+  size: 37, 17
+  orig: 37, 17
+  offset: 0, 0
+  index: -1
+eye_2_2
+  rotate: true
+  xy: 409, 384
+  size: 26, 17
+  orig: 26, 17
+  offset: 0, 0
+  index: -1
+eye_3_1
+  rotate: false
+  xy: 261, 332
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_3_2
+  rotate: false
+  xy: 261, 292
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 2, 207
+  size: 142, 143
+  orig: 142, 143
+  offset: 0, 0
+  index: -1
+hair_B
+  rotate: false
+  xy: 149, 372
+  size: 138, 138
+  orig: 138, 138
+  offset: 0, 0
+  index: -1
+hair_B2
+  rotate: false
+  xy: 289, 295
+  size: 118, 115
+  orig: 118, 115
+  offset: 0, 0
+  index: -1
+hair_L
+  rotate: false
+  xy: 2, 352
+  size: 145, 158
+  orig: 145, 158
+  offset: 0, 0
+  index: -1
+hair_R
+  rotate: false
+  xy: 2, 67
+  size: 107, 138
+  orig: 107, 138
+  offset: 0, 0
+  index: -1
+hand_L1
+  rotate: true
+  xy: 229, 175
+  size: 30, 38
+  orig: 30, 38
+  offset: 0, 0
+  index: -1
+hand_L2
+  rotate: false
+  xy: 199, 172
+  size: 28, 35
+  orig: 28, 35
+  offset: 0, 0
+  index: -1
+hand_R1
+  rotate: false
+  xy: 199, 130
+  size: 30, 40
+  orig: 30, 40
+  offset: 0, 0
+  index: -1
+hand_R2
+  rotate: false
+  xy: 294, 264
+  size: 29, 29
+  orig: 29, 29
+  offset: 0, 0
+  index: -1
+leg_L1
+  rotate: true
+  xy: 409, 277
+  size: 30, 49
+  orig: 30, 49
+  offset: 0, 0
+  index: -1
+leg_L2
+  rotate: false
+  xy: 231, 140
+  size: 30, 33
+  orig: 30, 33
+  offset: 0, 0
+  index: -1
+leg_R1
+  rotate: false
+  xy: 98, 16
+  size: 29, 49
+  orig: 29, 49
+  offset: 0, 0
+  index: -1
+leg_R2
+  rotate: true
+  xy: 261, 264
+  size: 26, 31
+  orig: 26, 31
+  offset: 0, 0
+  index: -1
+manjuuuu
+  rotate: false
+  xy: 289, 412
+  size: 139, 98
+  orig: 139, 98
+  offset: 0, 0
+  index: -1
+masaikeyanjing
+  rotate: true
+  xy: 111, 87
+  size: 118, 28
+  orig: 118, 28
+  offset: 0, 0
+  index: -1
+mawei
+  rotate: false
+  xy: 149, 263
+  size: 110, 107
+  orig: 110, 107
+  offset: 0, 0
+  index: -1
+meimao_1
+  rotate: false
+  xy: 2, 6
+  size: 94, 59
+  orig: 94, 59
+  offset: 0, 0
+  index: -1
+meimao_3
+  rotate: false
+  xy: 430, 450
+  size: 80, 60
+  orig: 80, 60
+  offset: 0, 0
+  index: -1
+sleep3
+  rotate: false
+  xy: 146, 209
+  size: 81, 52
+  orig: 81, 52
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: false
+  xy: 266, 240
+  size: 30, 22
+  orig: 30, 22
+  offset: 0, 0
+  index: -1
+yulei
+  rotate: false
+  xy: 430, 381
+  size: 74, 67
+  orig: 74, 67
+  offset: 0, 0
+  index: -1
+yulei2
+  rotate: true
+  xy: 141, 139
+  size: 66, 56
+  orig: 66, 56
+  offset: 0, 0
+  index: -1

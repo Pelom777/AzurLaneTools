@@ -1,0 +1,314 @@
+
+xixuegui.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 180, 374
+  size: 87, 67
+  orig: 87, 67
+  offset: 0, 0
+  index: -1
+body_w
+  rotate: false
+  xy: 151, 79
+  size: 45, 48
+  orig: 45, 48
+  offset: 0, 0
+  index: -1
+chibang_L
+  rotate: true
+  xy: 278, 300
+  size: 73, 59
+  orig: 73, 59
+  offset: 0, 0
+  index: -1
+chibang_R
+  rotate: true
+  xy: 123, 196
+  size: 58, 55
+  orig: 58, 55
+  offset: 0, 0
+  index: -1
+ear
+  rotate: true
+  xy: 484, 232
+  size: 24, 26
+  orig: 24, 26
+  offset: 0, 0
+  index: -1
+eye_1_1
+  rotate: false
+  xy: 457, 317
+  size: 37, 31
+  orig: 37, 31
+  offset: 0, 0
+  index: -1
+eye_1_2
+  rotate: false
+  xy: 133, 44
+  size: 26, 32
+  orig: 26, 32
+  offset: 0, 0
+  index: -1
+eye_2_1
+  rotate: false
+  xy: 457, 298
+  size: 37, 17
+  orig: 37, 17
+  offset: 0, 0
+  index: -1
+eye_2_2
+  rotate: true
+  xy: 161, 288
+  size: 26, 17
+  orig: 26, 17
+  offset: 0, 0
+  index: -1
+eye_3_1
+  rotate: false
+  xy: 484, 258
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_3_2
+  rotate: false
+  xy: 128, 4
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_4_1
+  rotate: false
+  xy: 453, 235
+  size: 29, 22
+  orig: 29, 22
+  offset: 0, 0
+  index: -1
+eye_4_2
+  rotate: false
+  xy: 161, 256
+  size: 23, 22
+  orig: 23, 22
+  offset: 0, 0
+  index: -1
+eye_6_2
+  rotate: true
+  xy: 180, 287
+  size: 25, 33
+  orig: 25, 33
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 2, 308
+  size: 132, 114
+  orig: 132, 114
+  offset: 0, 0
+  index: -1
+fadai_L
+  rotate: true
+  xy: 348, 374
+  size: 72, 80
+  orig: 72, 80
+  offset: 0, 0
+  index: -1
+fadai_R
+  rotate: true
+  xy: 269, 375
+  size: 66, 77
+  orig: 66, 77
+  offset: 0, 0
+  index: -1
+hair_B
+  rotate: false
+  xy: 2, 196
+  size: 119, 110
+  orig: 119, 110
+  offset: 0, 0
+  index: -1
+hair_F
+  rotate: true
+  xy: 180, 314
+  size: 58, 96
+  orig: 58, 96
+  offset: 0, 0
+  index: -1
+hair_L
+  rotate: false
+  xy: 2, 45
+  size: 78, 149
+  orig: 78, 149
+  offset: 0, 0
+  index: -1
+hair_L2
+  rotate: true
+  xy: 174, 443
+  size: 67, 165
+  orig: 67, 165
+  offset: 0, 0
+  index: -1
+hair_R
+  rotate: false
+  xy: 82, 78
+  size: 67, 116
+  orig: 67, 116
+  offset: 0, 0
+  index: -1
+hair_R2
+  rotate: false
+  xy: 136, 316
+  size: 42, 106
+  orig: 42, 106
+  offset: 0, 0
+  index: -1
+hair_R3
+  rotate: true
+  xy: 341, 448
+  size: 62, 165
+  orig: 62, 165
+  offset: 0, 0
+  index: -1
+hand_L
+  rotate: false
+  xy: 453, 259
+  size: 29, 37
+  orig: 29, 37
+  offset: 0, 0
+  index: -1
+hand_L2
+  rotate: true
+  xy: 161, 50
+  size: 27, 36
+  orig: 27, 36
+  offset: 0, 0
+  index: -1
+hand_R
+  rotate: false
+  xy: 426, 302
+  size: 29, 46
+  orig: 29, 46
+  offset: 0, 0
+  index: -1
+hand_R2
+  rotate: false
+  xy: 250, 284
+  size: 25, 28
+  orig: 25, 28
+  offset: 0, 0
+  index: -1
+leg_L
+  rotate: false
+  xy: 426, 256
+  size: 25, 44
+  orig: 25, 44
+  offset: 0, 0
+  index: -1
+leg_L2
+  rotate: true
+  xy: 215, 290
+  size: 22, 33
+  orig: 22, 33
+  offset: 0, 0
+  index: -1
+leg_R
+  rotate: false
+  xy: 156, 4
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+leg_R2
+  rotate: false
+  xy: 184, 14
+  size: 22, 34
+  orig: 22, 34
+  offset: 0, 0
+  index: -1
+meimao_1
+  rotate: false
+  xy: 339, 315
+  size: 85, 57
+  orig: 85, 57
+  offset: 0, 0
+  index: -1
+meimao_2
+  rotate: false
+  xy: 339, 256
+  size: 85, 57
+  orig: 85, 57
+  offset: 0, 0
+  index: -1
+meimao_3
+  rotate: false
+  xy: 430, 386
+  size: 80, 60
+  orig: 80, 60
+  offset: 0, 0
+  index: -1
+paopao1
+  rotate: false
+  xy: 2, 424
+  size: 170, 86
+  orig: 170, 86
+  offset: 0, 0
+  index: -1
+sleep6
+  rotate: false
+  xy: 2, 3
+  size: 86, 40
+  orig: 86, 40
+  offset: 0, 0
+  index: -1
+weapon_L1
+  rotate: true
+  xy: 430, 350
+  size: 34, 64
+  orig: 34, 64
+  offset: 0, 0
+  index: -1
+weapon_L2
+  rotate: false
+  xy: 277, 280
+  size: 28, 18
+  orig: 28, 18
+  offset: 0, 0
+  index: -1
+weapon_R1
+  rotate: false
+  xy: 151, 129
+  size: 39, 65
+  orig: 39, 65
+  offset: 0, 0
+  index: -1
+weapon_R2
+  rotate: false
+  xy: 307, 280
+  size: 28, 18
+  orig: 28, 18
+  offset: 0, 0
+  index: -1
+xiongkou
+  rotate: false
+  xy: 82, 47
+  size: 49, 29
+  orig: 49, 29
+  offset: 0, 0
+  index: -1
+yulei_L2
+  rotate: true
+  xy: 123, 256
+  size: 42, 36
+  orig: 42, 36
+  offset: 0, 0
+  index: -1
+yulei_R
+  rotate: true
+  xy: 90, 3
+  size: 42, 36
+  orig: 42, 36
+  offset: 0, 0
+  index: -1

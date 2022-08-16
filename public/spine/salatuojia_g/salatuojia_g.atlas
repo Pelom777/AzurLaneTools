@@ -1,0 +1,279 @@
+
+salatuojia_g.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 728, 81
+  size: 78, 74
+  orig: 78, 74
+  offset: 0, 0
+  index: -1
+body_w
+  rotate: false
+  xy: 564, 52
+  size: 45, 48
+  orig: 45, 48
+  offset: 0, 0
+  index: -1
+daimao
+  rotate: false
+  xy: 488, 39
+  size: 74, 46
+  orig: 74, 46
+  offset: 0, 0
+  index: -1
+eye1_1
+  rotate: false
+  xy: 384, 10
+  size: 38, 36
+  orig: 38, 36
+  offset: 0, 0
+  index: -1
+eye1_2
+  rotate: false
+  xy: 468, 2
+  size: 32, 35
+  orig: 32, 35
+  offset: 0, 0
+  index: -1
+eye_2_1
+  rotate: true
+  xy: 857, 86
+  size: 37, 17
+  orig: 37, 17
+  offset: 0, 0
+  index: -1
+eye_2_2
+  rotate: true
+  xy: 706, 58
+  size: 26, 17
+  orig: 26, 17
+  offset: 0, 0
+  index: -1
+eye_3_1
+  rotate: true
+  xy: 666, 58
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_3_2
+  rotate: true
+  xy: 530, 11
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_4_1
+  rotate: false
+  xy: 949, 96
+  size: 29, 22
+  orig: 29, 22
+  offset: 0, 0
+  index: -1
+eye_4_2
+  rotate: false
+  xy: 725, 57
+  size: 23, 22
+  orig: 23, 22
+  offset: 0, 0
+  index: -1
+face
+  rotate: true
+  xy: 882, 120
+  size: 134, 137
+  orig: 134, 137
+  offset: 0, 0
+  index: -1
+hair_F
+  rotate: false
+  xy: 741, 157
+  size: 139, 97
+  orig: 139, 97
+  offset: 0, 0
+  index: -1
+hair_L
+  rotate: true
+  xy: 389, 186
+  size: 68, 178
+  orig: 68, 178
+  offset: 0, 0
+  index: -1
+hair_L2
+  rotate: true
+  xy: 2, 14
+  size: 61, 126
+  orig: 61, 126
+  offset: 0, 0
+  index: -1
+hair_R
+  rotate: false
+  xy: 808, 61
+  size: 47, 94
+  orig: 47, 94
+  offset: 0, 0
+  index: -1
+hair_R2
+  rotate: true
+  xy: 146, 114
+  size: 77, 182
+  orig: 77, 182
+  offset: 0, 0
+  index: -1
+hand_L1
+  rotate: true
+  xy: 916, 93
+  size: 25, 31
+  orig: 25, 31
+  offset: 0, 0
+  index: -1
+hand_L2
+  rotate: true
+  xy: 876, 92
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+hand_R1
+  rotate: false
+  xy: 639, 63
+  size: 25, 37
+  orig: 25, 37
+  offset: 0, 0
+  index: -1
+hand_R2
+  rotate: false
+  xy: 502, 2
+  size: 26, 35
+  orig: 26, 35
+  offset: 0, 0
+  index: -1
+hat
+  rotate: false
+  xy: 384, 48
+  size: 102, 64
+  orig: 102, 64
+  offset: 0, 0
+  index: -1
+leg_L1
+  rotate: false
+  xy: 611, 54
+  size: 26, 46
+  orig: 26, 46
+  offset: 0, 0
+  index: -1
+leg_L2
+  rotate: false
+  xy: 857, 125
+  size: 23, 30
+  orig: 23, 30
+  offset: 0, 0
+  index: -1
+leg_R1
+  rotate: true
+  xy: 424, 20
+  size: 26, 42
+  orig: 26, 42
+  offset: 0, 0
+  index: -1
+leg_R2
+  rotate: true
+  xy: 980, 96
+  size: 22, 29
+  orig: 22, 29
+  offset: 0, 0
+  index: -1
+lingzi1
+  rotate: true
+  xy: 130, 64
+  size: 11, 14
+  orig: 11, 14
+  offset: 0, 0
+  index: -1
+meimao_1
+  rotate: false
+  xy: 562, 102
+  size: 102, 64
+  orig: 102, 64
+  offset: 0, 0
+  index: -1
+meimao_3
+  rotate: true
+  xy: 666, 86
+  size: 80, 60
+  orig: 80, 60
+  offset: 0, 0
+  index: -1
+meimao_4
+  rotate: true
+  xy: 316, 3
+  size: 100, 66
+  orig: 100, 66
+  offset: 0, 0
+  index: -1
+paopao1
+  rotate: false
+  xy: 569, 168
+  size: 170, 86
+  orig: 170, 86
+  offset: 0, 0
+  index: -1
+pifeng
+  rotate: true
+  xy: 494, 87
+  size: 97, 66
+  orig: 97, 66
+  offset: 0, 0
+  index: -1
+quanzhang
+  rotate: false
+  xy: 2, 77
+  size: 142, 177
+  orig: 142, 177
+  offset: 0, 0
+  index: -1
+sleep5
+  rotate: true
+  xy: 330, 105
+  size: 86, 48
+  orig: 86, 48
+  offset: 0, 0
+  index: -1
+star
+  rotate: false
+  xy: 750, 60
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1
+weapon1
+  rotate: false
+  xy: 146, 193
+  size: 241, 61
+  orig: 241, 61
+  offset: 0, 0
+  index: -1
+weapon2
+  rotate: false
+  xy: 146, 15
+  size: 113, 97
+  orig: 113, 97
+  offset: 0, 0
+  index: -1
+yifu_L
+  rotate: true
+  xy: 380, 114
+  size: 70, 112
+  orig: 70, 112
+  offset: 0, 0
+  index: -1
+yifu_R
+  rotate: false
+  xy: 261, 2
+  size: 53, 110
+  orig: 53, 110
+  offset: 0, 0
+  index: -1
