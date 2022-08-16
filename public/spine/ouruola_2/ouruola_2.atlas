@@ -1,0 +1,279 @@
+
+ouruola_2.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: true
+  xy: 151, 280
+  size: 52, 102
+  orig: 52, 102
+  offset: 0, 0
+  index: -1
+body1
+  rotate: true
+  xy: 149, 129
+  size: 45, 53
+  orig: 45, 53
+  offset: 0, 0
+  index: -1
+body2
+  rotate: false
+  xy: 363, 374
+  size: 15, 50
+  orig: 15, 50
+  offset: 0, 0
+  index: -1
+body3
+  rotate: false
+  xy: 149, 176
+  size: 54, 58
+  orig: 54, 58
+  offset: 0, 0
+  index: -1
+body_w
+  rotate: false
+  xy: 236, 186
+  size: 45, 48
+  orig: 45, 48
+  offset: 0, 0
+  index: -1
+eye_1_1
+  rotate: false
+  xy: 227, 236
+  size: 47, 42
+  orig: 47, 42
+  offset: 0, 0
+  index: -1
+eye_1_2
+  rotate: false
+  xy: 255, 285
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+eye_2_1
+  rotate: true
+  xy: 255, 357
+  size: 37, 17
+  orig: 37, 17
+  offset: 0, 0
+  index: -1
+eye_2_2
+  rotate: false
+  xy: 146, 110
+  size: 26, 17
+  orig: 26, 17
+  offset: 0, 0
+  index: -1
+eye_3_1
+  rotate: true
+  xy: 126, 2
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_3_2
+  rotate: true
+  xy: 424, 379
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_4_1
+  rotate: false
+  xy: 477, 405
+  size: 29, 22
+  orig: 29, 22
+  offset: 0, 0
+  index: -1
+eye_4_2
+  rotate: false
+  xy: 174, 105
+  size: 23, 22
+  orig: 23, 22
+  offset: 0, 0
+  index: -1
+eye_5_1
+  rotate: true
+  xy: 310, 303
+  size: 26, 25
+  orig: 26, 25
+  offset: 0, 0
+  index: -1
+eye_5_2
+  rotate: false
+  xy: 337, 305
+  size: 22, 25
+  orig: 22, 25
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 2, 373
+  size: 134, 137
+  orig: 134, 137
+  offset: 0, 0
+  index: -1
+hair_B
+  rotate: false
+  xy: 138, 396
+  size: 141, 114
+  orig: 141, 114
+  offset: 0, 0
+  index: -1
+hair_B1
+  rotate: false
+  xy: 2, 207
+  size: 102, 164
+  orig: 102, 164
+  offset: 0, 0
+  index: -1
+hair_F
+  rotate: false
+  xy: 281, 426
+  size: 106, 84
+  orig: 106, 84
+  offset: 0, 0
+  index: -1
+hair_L
+  rotate: false
+  xy: 2, 111
+  size: 102, 94
+  orig: 102, 94
+  offset: 0, 0
+  index: -1
+hair_L1
+  rotate: false
+  xy: 106, 257
+  size: 43, 114
+  orig: 43, 114
+  offset: 0, 0
+  index: -1
+hair_R
+  rotate: false
+  xy: 2, 17
+  size: 74, 92
+  orig: 74, 92
+  offset: 0, 0
+  index: -1
+hair_R1
+  rotate: false
+  xy: 106, 145
+  size: 41, 110
+  orig: 41, 110
+  offset: 0, 0
+  index: -1
+hand_L1
+  rotate: false
+  xy: 310, 331
+  size: 25, 31
+  orig: 25, 31
+  offset: 0, 0
+  index: -1
+hand_L2
+  rotate: false
+  xy: 255, 317
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+hand_R1
+  rotate: false
+  xy: 283, 324
+  size: 25, 38
+  orig: 25, 38
+  offset: 0, 0
+  index: -1
+hand_R2
+  rotate: true
+  xy: 477, 429
+  size: 26, 33
+  orig: 26, 33
+  offset: 0, 0
+  index: -1
+leg_L
+  rotate: true
+  xy: 78, 2
+  size: 26, 46
+  orig: 26, 46
+  offset: 0, 0
+  index: -1
+leg_L2
+  rotate: false
+  xy: 337, 332
+  size: 22, 30
+  orig: 22, 30
+  offset: 0, 0
+  index: -1
+leg_R
+  rotate: true
+  xy: 380, 380
+  size: 25, 42
+  orig: 25, 42
+  offset: 0, 0
+  index: -1
+leg_R2
+  rotate: false
+  xy: 287, 294
+  size: 21, 28
+  orig: 21, 28
+  offset: 0, 0
+  index: -1
+maojin
+  rotate: false
+  xy: 389, 457
+  size: 120, 53
+  orig: 120, 53
+  offset: 0, 0
+  index: -1
+meimao_1
+  rotate: false
+  xy: 151, 334
+  size: 102, 60
+  orig: 102, 60
+  offset: 0, 0
+  index: -1
+meimao_3
+  rotate: false
+  xy: 281, 364
+  size: 80, 60
+  orig: 80, 60
+  offset: 0, 0
+  index: -1
+shanzi
+  rotate: true
+  xy: 205, 184
+  size: 50, 29
+  orig: 50, 29
+  offset: 0, 0
+  index: -1
+shanzi2
+  rotate: false
+  xy: 78, 30
+  size: 52, 79
+  orig: 52, 79
+  offset: 0, 0
+  index: -1
+sleep5
+  rotate: false
+  xy: 389, 407
+  size: 86, 48
+  orig: 86, 48
+  offset: 0, 0
+  index: -1
+weapon_L
+  rotate: false
+  xy: 151, 236
+  size: 74, 42
+  orig: 74, 42
+  offset: 0, 0
+  index: -1
+yulei_R
+  rotate: false
+  xy: 106, 111
+  size: 38, 32
+  orig: 38, 32
+  offset: 0, 0
+  index: -1

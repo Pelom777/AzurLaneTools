@@ -1,0 +1,265 @@
+
+maikaoer.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bag
+  rotate: false
+  xy: 464, 452
+  size: 35, 58
+  orig: 35, 58
+  offset: 0, 0
+  index: -1
+bangbing
+  rotate: true
+  xy: 358, 333
+  size: 45, 19
+  orig: 45, 19
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 265, 312
+  size: 57, 66
+  orig: 57, 66
+  offset: 0, 0
+  index: -1
+bodyW
+  rotate: false
+  xy: 111, 147
+  size: 45, 48
+  orig: 45, 48
+  offset: 0, 0
+  index: -1
+daimao
+  rotate: false
+  xy: 312, 407
+  size: 65, 27
+  orig: 65, 27
+  offset: 0, 0
+  index: -1
+ear
+  rotate: true
+  xy: 480, 424
+  size: 26, 30
+  orig: 26, 30
+  offset: 0, 0
+  index: -1
+eye_1_1
+  rotate: false
+  xy: 438, 400
+  size: 40, 34
+  orig: 40, 34
+  offset: 0, 0
+  index: -1
+eye_1_2
+  rotate: true
+  xy: 424, 343
+  size: 27, 34
+  orig: 27, 34
+  offset: 0, 0
+  index: -1
+eye_2_1
+  rotate: true
+  xy: 461, 361
+  size: 37, 17
+  orig: 37, 17
+  offset: 0, 0
+  index: -1
+eye_2_2
+  rotate: true
+  xy: 460, 333
+  size: 26, 17
+  orig: 26, 17
+  offset: 0, 0
+  index: -1
+eye_3_1
+  rotate: true
+  xy: 421, 372
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_3_2
+  rotate: false
+  xy: 480, 351
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_6_1
+  rotate: false
+  xy: 379, 370
+  size: 40, 31
+  orig: 40, 31
+  offset: 0, 0
+  index: -1
+eye_6_2
+  rotate: false
+  xy: 480, 391
+  size: 29, 31
+  orig: 29, 31
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 2, 372
+  size: 136, 138
+  orig: 136, 138
+  offset: 0, 0
+  index: -1
+hair_B
+  rotate: true
+  xy: 2, 224
+  size: 146, 114
+  orig: 146, 114
+  offset: 0, 0
+  index: -1
+hair_F
+  rotate: true
+  xy: 2, 81
+  size: 141, 107
+  orig: 141, 107
+  offset: 0, 0
+  index: -1
+hair_L
+  rotate: true
+  xy: 140, 380
+  size: 42, 164
+  orig: 42, 164
+  offset: 0, 0
+  index: -1
+hair_R
+  rotate: false
+  xy: 118, 239
+  size: 41, 131
+  orig: 41, 131
+  offset: 0, 0
+  index: -1
+hand_L
+  rotate: false
+  xy: 111, 85
+  size: 31, 60
+  orig: 31, 60
+  offset: 0, 0
+  index: -1
+hand_R
+  rotate: true
+  xy: 379, 403
+  size: 31, 57
+  orig: 31, 57
+  offset: 0, 0
+  index: -1
+jianzhuang_1
+  rotate: false
+  xy: 244, 201
+  size: 44, 47
+  orig: 44, 47
+  offset: 0, 0
+  index: -1
+leg_L
+  rotate: true
+  xy: 306, 380
+  size: 25, 58
+  orig: 25, 58
+  offset: 0, 0
+  index: -1
+leg_L2
+  rotate: true
+  xy: 290, 223
+  size: 25, 58
+  orig: 25, 58
+  offset: 0, 0
+  index: -1
+leg_R
+  rotate: true
+  xy: 290, 197
+  size: 24, 56
+  orig: 24, 56
+  offset: 0, 0
+  index: -1
+leg_R2
+  rotate: false
+  xy: 144, 89
+  size: 24, 56
+  orig: 24, 56
+  offset: 0, 0
+  index: -1
+mawei_L
+  rotate: true
+  xy: 312, 436
+  size: 74, 150
+  orig: 74, 150
+  offset: 0, 0
+  index: -1
+mawei_R
+  rotate: true
+  xy: 2, 4
+  size: 75, 138
+  orig: 75, 138
+  offset: 0, 0
+  index: -1
+meimao_1
+  rotate: false
+  xy: 161, 317
+  size: 102, 61
+  orig: 102, 61
+  offset: 0, 0
+  index: -1
+meimao_3
+  rotate: false
+  xy: 264, 250
+  size: 80, 60
+  orig: 80, 60
+  offset: 0, 0
+  index: -1
+meimao_4
+  rotate: false
+  xy: 161, 254
+  size: 101, 61
+  orig: 101, 61
+  offset: 0, 0
+  index: -1
+paopao1
+  rotate: false
+  xy: 140, 424
+  size: 170, 86
+  orig: 170, 86
+  offset: 0, 0
+  index: -1
+sleep3
+  rotate: false
+  xy: 161, 200
+  size: 81, 52
+  orig: 81, 52
+  offset: 0, 0
+  index: -1
+tie
+  rotate: true
+  xy: 379, 314
+  size: 25, 36
+  orig: 25, 36
+  offset: 0, 0
+  index: -1
+weapon_L
+  rotate: false
+  xy: 379, 341
+  size: 43, 27
+  orig: 43, 27
+  offset: 0, 0
+  index: -1
+yulei_1
+  rotate: true
+  xy: 118, 197
+  size: 40, 41
+  orig: 40, 41
+  offset: 0, 0
+  index: -1
+yulei_2
+  rotate: true
+  xy: 324, 321
+  size: 57, 32
+  orig: 57, 32
+  offset: 0, 0
+  index: -1

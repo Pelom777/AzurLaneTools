@@ -1,0 +1,27 @@
+
+sairen10_danchuan.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+tishen_body
+  rotate: true
+  xy: 2, 2
+  size: 169, 457
+  orig: 169, 457
+  offset: 0, 0
+  index: -1
+tishen_hand_L
+  rotate: false
+  xy: 461, 21
+  size: 148, 150
+  orig: 148, 150
+  offset: 0, 0
+  index: -1
+tishen_hand_R
+  rotate: false
+  xy: 611, 32
+  size: 146, 139
+  orig: 146, 139
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,286 @@
+
+safuke.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 94, 2
+  size: 75, 78
+  orig: 75, 78
+  offset: 0, 0
+  index: -1
+body_w
+  rotate: true
+  xy: 270, 337
+  size: 45, 48
+  orig: 45, 48
+  offset: 0, 0
+  index: -1
+ear
+  rotate: false
+  xy: 216, 203
+  size: 26, 29
+  orig: 26, 29
+  offset: 0, 0
+  index: -1
+ear_L
+  rotate: true
+  xy: 140, 213
+  size: 58, 74
+  orig: 58, 74
+  offset: 0, 0
+  index: -1
+ear_R
+  rotate: false
+  xy: 444, 436
+  size: 57, 74
+  orig: 57, 74
+  offset: 0, 0
+  index: -1
+eye_2_1
+  rotate: true
+  xy: 216, 234
+  size: 37, 17
+  orig: 37, 17
+  offset: 0, 0
+  index: -1
+eye_2_2
+  rotate: false
+  xy: 210, 184
+  size: 26, 17
+  orig: 26, 17
+  offset: 0, 0
+  index: -1
+eye_3_1
+  rotate: false
+  xy: 408, 342
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_3_2
+  rotate: true
+  xy: 436, 353
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_L
+  rotate: false
+  xy: 211, 2
+  size: 37, 31
+  orig: 37, 31
+  offset: 0, 0
+  index: -1
+eye_R
+  rotate: false
+  xy: 235, 238
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 2, 212
+  size: 136, 138
+  orig: 136, 138
+  offset: 0, 0
+  index: -1
+hair_B
+  rotate: false
+  xy: 148, 391
+  size: 130, 119
+  orig: 130, 119
+  offset: 0, 0
+  index: -1
+hair_B2
+  rotate: false
+  xy: 2, 352
+  size: 144, 158
+  orig: 144, 158
+  offset: 0, 0
+  index: -1
+hair_F
+  rotate: true
+  xy: 2, 68
+  size: 142, 90
+  orig: 142, 90
+  offset: 0, 0
+  index: -1
+hair_L
+  rotate: true
+  xy: 280, 463
+  size: 47, 162
+  orig: 47, 162
+  offset: 0, 0
+  index: -1
+hair_R
+  rotate: true
+  xy: 280, 413
+  size: 48, 157
+  orig: 48, 157
+  offset: 0, 0
+  index: -1
+hand_L1
+  rotate: false
+  xy: 210, 139
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+hand_L2
+  rotate: true
+  xy: 171, 2
+  size: 31, 38
+  orig: 31, 38
+  offset: 0, 0
+  index: -1
+hand_L3
+  rotate: false
+  xy: 412, 382
+  size: 25, 29
+  orig: 25, 29
+  offset: 0, 0
+  index: -1
+hand_R1
+  rotate: false
+  xy: 210, 159
+  size: 18, 23
+  orig: 18, 23
+  offset: 0, 0
+  index: -1
+hand_R2
+  rotate: false
+  xy: 376, 342
+  size: 30, 40
+  orig: 30, 40
+  offset: 0, 0
+  index: -1
+hand_R3
+  rotate: false
+  xy: 244, 214
+  size: 22, 22
+  orig: 22, 22
+  offset: 0, 0
+  index: -1
+hudiejie_L
+  rotate: false
+  xy: 436, 327
+  size: 39, 24
+  orig: 39, 24
+  offset: 0, 0
+  index: -1
+hudiejie_R
+  rotate: false
+  xy: 439, 381
+  size: 40, 24
+  orig: 40, 24
+  offset: 0, 0
+  index: -1
+jianzhuang_L
+  rotate: true
+  xy: 94, 82
+  size: 128, 72
+  orig: 128, 72
+  offset: 0, 0
+  index: -1
+leg_L
+  rotate: false
+  xy: 240, 272
+  size: 27, 62
+  orig: 27, 62
+  offset: 0, 0
+  index: -1
+leg_L2
+  rotate: true
+  xy: 439, 407
+  size: 27, 62
+  orig: 27, 62
+  offset: 0, 0
+  index: -1
+leg_R
+  rotate: true
+  xy: 280, 384
+  size: 27, 64
+  orig: 27, 64
+  offset: 0, 0
+  index: -1
+leg_R2
+  rotate: true
+  xy: 346, 384
+  size: 27, 64
+  orig: 27, 64
+  offset: 0, 0
+  index: -1
+lingdang
+  rotate: true
+  xy: 244, 195
+  size: 17, 18
+  orig: 17, 18
+  offset: 0, 0
+  index: -1
+lingjie
+  rotate: true
+  xy: 481, 371
+  size: 34, 29
+  orig: 34, 29
+  offset: 0, 0
+  index: -1
+maojin
+  rotate: false
+  xy: 148, 336
+  size: 120, 53
+  orig: 120, 53
+  offset: 0, 0
+  index: -1
+meimao_1
+  rotate: false
+  xy: 140, 273
+  size: 98, 61
+  orig: 98, 61
+  offset: 0, 0
+  index: -1
+meimao_3
+  rotate: false
+  xy: 2, 6
+  size: 80, 60
+  orig: 80, 60
+  offset: 0, 0
+  index: -1
+piaodai_L
+  rotate: false
+  xy: 171, 35
+  size: 26, 52
+  orig: 26, 52
+  offset: 0, 0
+  index: -1
+piaodai_R
+  rotate: false
+  xy: 199, 35
+  size: 26, 52
+  orig: 26, 52
+  offset: 0, 0
+  index: -1
+sleep6
+  rotate: true
+  xy: 168, 125
+  size: 86, 40
+  orig: 86, 40
+  offset: 0, 0
+  index: -1
+weapon_1
+  rotate: false
+  xy: 320, 345
+  size: 54, 37
+  orig: 54, 37
+  offset: 0, 0
+  index: -1
+weapon_2
+  rotate: false
+  xy: 168, 89
+  size: 50, 34
+  orig: 50, 34
+  offset: 0, 0
+  index: -1

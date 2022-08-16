@@ -1,0 +1,286 @@
+
+kenisibao.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 350, 302
+  size: 57, 69
+  orig: 57, 69
+  offset: 0, 0
+  index: -1
+bodyW
+  rotate: true
+  xy: 259, 238
+  size: 45, 48
+  orig: 45, 48
+  offset: 0, 0
+  index: -1
+eye_1_1
+  rotate: true
+  xy: 309, 236
+  size: 46, 32
+  orig: 46, 32
+  offset: 0, 0
+  index: -1
+eye_1_2
+  rotate: false
+  xy: 388, 237
+  size: 32, 31
+  orig: 32, 31
+  offset: 0, 0
+  index: -1
+eye_2_1
+  rotate: true
+  xy: 485, 324
+  size: 37, 17
+  orig: 37, 17
+  offset: 0, 0
+  index: -1
+eye_2_2
+  rotate: true
+  xy: 220, 111
+  size: 26, 17
+  orig: 26, 17
+  offset: 0, 0
+  index: -1
+eye_3_1
+  rotate: false
+  xy: 192, 13
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_3_2
+  rotate: false
+  xy: 220, 196
+  size: 26, 38
+  orig: 26, 38
+  offset: 0, 0
+  index: -1
+eye_4_1
+  rotate: true
+  xy: 486, 363
+  size: 29, 22
+  orig: 29, 22
+  offset: 0, 0
+  index: -1
+eye_4_2
+  rotate: false
+  xy: 220, 139
+  size: 23, 22
+  orig: 23, 22
+  offset: 0, 0
+  index: -1
+eye_6_1
+  rotate: false
+  xy: 343, 238
+  size: 43, 30
+  orig: 43, 30
+  offset: 0, 0
+  index: -1
+eye_6_2
+  rotate: true
+  xy: 220, 163
+  size: 31, 30
+  orig: 31, 30
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 2, 233
+  size: 134, 137
+  orig: 134, 137
+  offset: 0, 0
+  index: -1
+gangjia_L
+  rotate: false
+  xy: 279, 373
+  size: 63, 53
+  orig: 63, 53
+  offset: 0, 0
+  index: -1
+gangjia_R
+  rotate: false
+  xy: 156, 182
+  size: 62, 52
+  orig: 62, 52
+  offset: 0, 0
+  index: -1
+hair_B
+  rotate: false
+  xy: 2, 372
+  size: 152, 138
+  orig: 152, 138
+  offset: 0, 0
+  index: -1
+hair_F
+  rotate: true
+  xy: 2, 14
+  size: 104, 87
+  orig: 104, 87
+  offset: 0, 0
+  index: -1
+hair_L
+  rotate: false
+  xy: 2, 120
+  size: 103, 111
+  orig: 103, 111
+  offset: 0, 0
+  index: -1
+hair_L2
+  rotate: false
+  xy: 107, 108
+  size: 47, 123
+  orig: 47, 123
+  offset: 0, 0
+  index: -1
+hair_R
+  rotate: true
+  xy: 304, 430
+  size: 80, 103
+  orig: 80, 103
+  offset: 0, 0
+  index: -1
+hair_R2
+  rotate: false
+  xy: 91, 2
+  size: 39, 104
+  orig: 39, 104
+  offset: 0, 0
+  index: -1
+hand_L
+  rotate: false
+  xy: 409, 306
+  size: 36, 58
+  orig: 36, 58
+  offset: 0, 0
+  index: -1
+hand_R
+  rotate: false
+  xy: 447, 308
+  size: 36, 56
+  orig: 36, 56
+  offset: 0, 0
+  index: -1
+hat
+  rotate: false
+  xy: 409, 432
+  size: 95, 78
+  orig: 95, 78
+  offset: 0, 0
+  index: -1
+jianzhuang_L
+  rotate: true
+  xy: 156, 428
+  size: 82, 146
+  orig: 82, 146
+  offset: 0, 0
+  index: -1
+jianzhuang_L2
+  rotate: false
+  xy: 227, 237
+  size: 30, 52
+  orig: 30, 52
+  offset: 0, 0
+  index: -1
+jianzhuang_R
+  rotate: true
+  xy: 344, 373
+  size: 55, 78
+  orig: 55, 78
+  offset: 0, 0
+  index: -1
+jianzhuang_R2
+  rotate: true
+  xy: 350, 270
+  size: 30, 56
+  orig: 30, 56
+  offset: 0, 0
+  index: -1
+leg_L
+  rotate: false
+  xy: 156, 115
+  size: 30, 65
+  orig: 30, 65
+  offset: 0, 0
+  index: -1
+leg_L2
+  rotate: false
+  xy: 188, 115
+  size: 30, 65
+  orig: 30, 65
+  offset: 0, 0
+  index: -1
+leg_R
+  rotate: true
+  xy: 424, 366
+  size: 26, 60
+  orig: 26, 60
+  offset: 0, 0
+  index: -1
+leg_R2
+  rotate: false
+  xy: 192, 53
+  size: 26, 60
+  orig: 26, 60
+  offset: 0, 0
+  index: -1
+maojin
+  rotate: false
+  xy: 156, 373
+  size: 121, 53
+  orig: 121, 53
+  offset: 0, 0
+  index: -1
+meimao_1
+  rotate: true
+  xy: 132, 12
+  size: 94, 58
+  orig: 94, 58
+  offset: 0, 0
+  index: -1
+meimao_2
+  rotate: true
+  xy: 138, 276
+  size: 94, 58
+  orig: 94, 58
+  offset: 0, 0
+  index: -1
+meimao_3
+  rotate: true
+  xy: 198, 291
+  size: 80, 60
+  orig: 80, 60
+  offset: 0, 0
+  index: -1
+sleep5
+  rotate: true
+  xy: 260, 285
+  size: 86, 48
+  orig: 86, 48
+  offset: 0, 0
+  index: -1
+weapon_L1
+  rotate: true
+  xy: 310, 284
+  size: 87, 38
+  orig: 87, 38
+  offset: 0, 0
+  index: -1
+weapon_L2
+  rotate: false
+  xy: 138, 236
+  size: 87, 38
+  orig: 87, 38
+  offset: 0, 0
+  index: -1
+weapon_R
+  rotate: false
+  xy: 424, 394
+  size: 80, 36
+  orig: 80, 36
+  offset: 0, 0
+  index: -1
