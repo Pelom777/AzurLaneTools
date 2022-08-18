@@ -38,6 +38,10 @@ const emits = defineEmits(['update:hide'])
       <el-icon><i-ep-List /></el-icon>
       <span>记录</span>
     </el-menu-item>
+    <el-menu-item index="/game">
+      <el-icon><i-ep-SwitchFilled /></el-icon>
+      <span>小游戏</span>
+    </el-menu-item>
     <el-menu-item index="/about">
       <el-icon><i-ep-InfoFilled /></el-icon>
       <span>关于</span>

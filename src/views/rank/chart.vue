@@ -10,6 +10,7 @@ const props = defineProps<{
   serverId: number,
   rankType: number
 }>()
+const container = ref<HTMLDivElement>()
 
 echarts.use([DatasetComponent, TooltipComponent, GridComponent, BarChart, CanvasRenderer])
 
@@ -48,7 +49,7 @@ const option: EChartsOption = {
 }
 
 onMounted(() => {
-  const myChart = echarts.init(document.getElementById('echarts')!)
+  const myChart = echarts.init(container.value)
   
   watchEffect(async () => {
     ;(async () => {
@@ -60,7 +61,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div id="echarts"></div>
+  <div id="echarts" ref="container"></div>
 </template>
 
 <style lang="scss" scoped>

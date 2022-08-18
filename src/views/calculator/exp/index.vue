@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import drawerSelector from '@/components/drawer-selector.vue'
-import expCard from './exp-card.vue'
+import card from './card.vue'
 import { useStore } from '@/store'
 import { load } from '@/axios/data'
 
@@ -40,7 +40,7 @@ const handleCheck = (name: string) =>{
       v-for="(name, key) in list"
       :key="key"
     >
-      <exp-card
+      <card
         :name="name"
         :index="key"
         :ship="ship[name]"

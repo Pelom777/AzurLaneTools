@@ -1,16 +1,33 @@
 <script lang="ts" setup>
-import cdPage from './cd-page.vue'
-import expPage from './exp-page.vue'
+const route = useRoute()
+const router = useRouter()
+
+const name = computed({
+  get: () => route.path.split('/')[2],
+  set: (value) => router.push({ name: value })
+})
 </script>
 
 <template>
-  <el-tabs type="border-card">
-    <el-tab-pane label="EXP">
-      <exp-page />
+  <el-tabs type="border-card" v-model="name">
+    <el-tab-pane name="exp">
+      <template #label>
+        <el-icon><i-ep-Plus /></el-icon>
+        舰船经验
+      </template>
     </el-tab-pane>
-    <el-tab-pane label="CD">
-      <cd-page />
+    <el-tab-pane name="cd">
+      <template #label>
+        <el-icon><i-ep-Timer /></el-icon>
+        CD
+      </template>
     </el-tab-pane>
+    <router-view v-slot="{ Component }">
+      <keep-alive>
+        <component :is="Component" :key="$route.name" v-if="$route.meta.keepAlive" />
+      </keep-alive>
+      <component :is="Component" v-if="!$route.meta.keepAlive" />
+    </router-view>
   </el-tabs>
 </template>
 
@@ -27,5 +44,9 @@ import expPage from './exp-page.vue'
       margin-left: 40px;
     }
   }
+}
+
+.el-icon {
+  vertical-align: middle;
 }
 </style>

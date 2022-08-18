@@ -13,7 +13,8 @@ let currentName: string
 const option = ref([])
 const app = new Application({ resolution: 2 })
 const spine = new Container()
-let container: HTMLElement, back: Sprite, base: Sprite, char: Spine
+const container = ref<HTMLDivElement>()
+let back: Sprite, base: Sprite, char: Spine
 
 ;(async () => {
   ship.value = await load('ship')
@@ -81,9 +82,8 @@ const handleAction = (opt: string) => {
 }
 
 onMounted(() => {
-  container = document.getElementById('pixi')
-  container.appendChild(app.view)
-  app.renderer.resize(container.offsetWidth, container.offsetHeight)
+  container.value.appendChild(app.view)
+  app.renderer.resize(container.value.offsetWidth, container.value.offsetHeight)
 })
 
 onUnmounted(() => {
@@ -92,8 +92,8 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div id="pixi"></div>
-  <div id="ui" v-loading="loading">
+  <div id="pixi" ref="container" v-loading="loading"></div>
+  <div id="ui">
     <selector
       v-show="option.length == 0"
       :name="name"
