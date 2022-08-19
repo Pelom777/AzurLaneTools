@@ -7,6 +7,7 @@ import { CanvasRenderer } from 'echarts/renderers'
 
 const route = useRoute()
 const { year, region } = route.params
+const container = ref<HTMLDivElement>()
 
 echarts.use([DatasetComponent, GraphicComponent, GridComponent, BarChart, CanvasRenderer])
 
@@ -59,7 +60,7 @@ const option: EChartsOption = {
 }
 
 onMounted(() => {
-  const myChart = echarts.init(document.getElementById('echarts')!)
+  const myChart = echarts.init(container.value)
 
   ;(async () => {
     const ship = await load('ship')
@@ -79,7 +80,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div id="echarts"></div>
+  <div id="echarts" ref="container"></div>
 </template>
 
 <style lang="scss" scoped>

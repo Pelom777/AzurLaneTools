@@ -41,9 +41,9 @@ const handleCheck = (name: string) =>{
       :key="key"
     >
       <card
-        :name="name"
+        :ship="name"
         :index="key"
-        :ship="ship[name]"
+        :attr="ship[name]"
         :exp="exp"
         @remove="handleRemove"
       />
@@ -51,9 +51,7 @@ const handleCheck = (name: string) =>{
     <el-col :sm="12" :lg="8" :xl="6">
       <el-card>
         <el-avatar size="large" @click="showDrawer=true">
-          <template #default>
-            <i-ep-Plus/>
-          </template>
+          <i-ep-Plus/>
         </el-avatar>
       </el-card>
     </el-col>
@@ -80,6 +78,7 @@ const handleCheck = (name: string) =>{
     v-model:show="showDrawer"
     :option="option"
     :list="ship"
+    dir="squareicon"
     @check="handleCheck"
   />
 </template>

@@ -60,6 +60,9 @@ const routes: Array<RouteRecordRaw> = [
           {
             path: 'cd',
             name: 'cd',
+            meta: {
+              keepAlive: true,
+            },
             component: () => import('@/views/calculator/cd/index.vue'),
           },
         ],

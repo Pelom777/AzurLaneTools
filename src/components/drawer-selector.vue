@@ -2,7 +2,8 @@
 const props = defineProps<{
   show: boolean,
   option: {},
-  list: {}
+  list: {},
+  dir: string
 }>()
 const emits = defineEmits(['update:show', 'check'])
 const show = computed({
@@ -84,7 +85,7 @@ watchEffect(() => {
             v-show="list.includes(name)"
           >
             <el-image
-              :src="`https://cdn.al.pelom.cn/squareicon/${name}.png`"
+              :src="`https://cdn.al.pelom.cn/${dir}/${name}.png`"
               loading="lazy"
               @click="$emit('check', name)"
             />

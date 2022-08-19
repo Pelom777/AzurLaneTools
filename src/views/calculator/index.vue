@@ -19,7 +19,7 @@ const name = computed({
     <el-tab-pane name="cd">
       <template #label>
         <el-icon><i-ep-Timer /></el-icon>
-        CD
+        舰船射速
       </template>
     </el-tab-pane>
     <router-view v-slot="{ Component }">

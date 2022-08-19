@@ -2,13 +2,13 @@
 import { useStore } from '@/store'
 
 const props = defineProps<{
-  name: string,
+  ship: string,
   index: string,
-  ship: [string, number, number, number],
+  attr: [string, number, number, number],
   exp: [][]
 }>()
 const { user } = useStore()
-const type = props.ship[2] > 6 ? 1 : 0
+const type = props.attr[2] > 6 ? 1 : 0
 const from = ref(1), to = ref(1), base = ref(0)
 const range = computed(() => {
   return props.exp[type][from.value + 1] - props.exp[type][from.value] - 1 || 3000000
@@ -27,9 +27,9 @@ const time = computed(() => {
 <template>
   <el-card>
     <h1>
-      <el-avatar size="large" :src="`https://cdn.al.pelom.cn/squareicon/${name}.png`" />
+      <el-avatar size="large" :src="`https://cdn.al.pelom.cn/squareicon/${ship}.png`" />
       <el-divider direction="vertical" />
-      <span>{{ ship[0] }}</span>
+      <span>{{ attr[0] }}</span>
       <el-button circle type="danger" size="small" @click="$emit('remove', index)">
         <el-icon>
           <i-ep-Close />
