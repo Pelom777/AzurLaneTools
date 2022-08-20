@@ -4,7 +4,7 @@ const props = defineProps<{
   ship: {},
   skin: {}
 }>()
-const cdn = ''
+const cdn = 'https://cdn.al.pelom.cn'
 const index = ref(0)
 const count = Object.keys(props.skin).length
 const icon = computed(() => {

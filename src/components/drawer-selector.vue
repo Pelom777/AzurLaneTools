@@ -78,7 +78,7 @@ watchEffect(() => {
           >
             <el-image
               :src="`https://cdn.al.pelom.cn/${dir}/${item[name]['painting']}.png`"
-              :style="{ backgroundImage: `url(/squareback/${[2, 2, 3, 4, 5, 6, 5, 6][item[name]['rarity'] - 1]}.png)` }"
+              :style="{ backgroundImage: `url(https://cdn.al.pelom.cn/squareback/${[2, 2, 3, 4, 5, 6, 5, 6][item[name]['rarity'] - 1]}.png)` }"
               loading="lazy"
               @click="$emit('check', name)"
             />

@@ -13,7 +13,7 @@ const vote = ref({})
       <el-row :gutter="40">
         <el-col :xs="24" :sm="12" :md="8" :lg="6" :xl="3" v-for="(winner, region) in value">
           <el-card
-            :style="{ backgroundImage: `url(/voteicon/${winner}.png)` }"
+            :style="{ backgroundImage: `url(https://cdn.al.pelom.cn/voteicon/${winner}.png)` }"
             @click="$router.push({
               name: 'vote-chart',
               params: { year, region }
