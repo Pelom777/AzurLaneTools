@@ -51,7 +51,7 @@ const option: EChartsOption = {
 onMounted(() => {
   const myChart = echarts.init(container.value)
   
-  watchEffect(async () => {
+  watchEffect(() => {
     ;(async () => {
       option.dataset[0].source = await rank({ rankType: props.rankType, serverId: props.serverId })
       option && myChart.setOption(option)
