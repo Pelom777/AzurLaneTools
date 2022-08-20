@@ -2,8 +2,8 @@
 const props = defineProps<{
   show: boolean,
   option: {},
-  list: {},
-  dir: string
+  item: {},
+  dir: string,
 }>()
 const emits = defineEmits(['update:show', 'check'])
 const show = computed({
@@ -12,20 +12,20 @@ const show = computed({
 })
 const showOption = ref(false)
 const input = ref('')
-const filter = ref([[], [], []])
+const filter = ref({})
 const list = ref([])
 
 watchEffect(() => {
   list.value = []
-  for (let name in props.list) {
+  Object.keys(props.item).forEach((name) => {
     if (
-      filter.value.every((filter: number[], index) => {
-        return filter.length == 0
-          || filter.includes(props.list[name][index + 1] as number)
+      Object.keys(filter.value).every((key) => {
+        return filter.value[key].length == 0
+          || filter.value[key].includes(props.item[name][key])
       })
-      && props.list[name][0].includes(input.value)
+      && props.item[name]['name'].includes(input.value)
     ) list.value.push(name)
-  }
+  })
 })
 </script>
 
@@ -58,21 +58,12 @@ watchEffect(() => {
         </el-row>
         <el-row
           v-show="showOption"
-          v-for="(opt, key, index) in option as {}"
+          v-for="(opt, key) in option"
         >
-          <el-col :xs="0" :lg="2">
-            <el-button
-              type="primary"
-              :disabled="filter[index].length==0"
-              @click="filter[index]=[]"
-            >
-              {{ key }}
-            </el-button>
-          </el-col>
-          <el-col :xs="24" :lg="22">
-            <el-checkbox-group v-model="filter[index]">
-              <el-checkbox-button v-for="name in opt" :label="name[0]">
-                {{ name[1] }}
+          <el-col>
+            <el-checkbox-group v-model="filter[key]">
+              <el-checkbox-button v-for="item in opt" :label="item[0]">
+                {{ item[1] }}
               </el-checkbox-button>
             </el-checkbox-group>
           </el-col>
@@ -81,11 +72,13 @@ watchEffect(() => {
       <el-main>
         <el-row>
           <el-col :xs="6" :sm="4" :md="3" :lg="2" :xl="1"
-            v-for="(value, name) in props.list"
-            v-show="list.includes(name)"
+            v-for="name in list"
+            :key="name"
+            :title="item[name]['name']"
           >
             <el-image
-              :src="`https://cdn.al.pelom.cn/${dir}/${name}.png`"
+              :src="`https://cdn.al.pelom.cn/${dir}/${item[name]['painting']}.png`"
+              :style="{ backgroundImage: `url(/squareback/${[2, 2, 3, 4, 5, 6, 5, 6][item[name]['rarity'] - 1]}.png)` }"
               loading="lazy"
               @click="$emit('check', name)"
             />
@@ -114,6 +107,11 @@ watchEffect(() => {
 :deep(.el-main) {
   & .el-col {
     padding: 2px;
+    display: flex;
+  }
+
+  & img {
+    object-fit: contain;
   }
 }
 </style>

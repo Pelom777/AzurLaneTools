@@ -9,7 +9,7 @@ const emits = defineEmits(['update:hide'])
   <el-menu
     active-text-color="#f78989"
     background-color="#4d5f75"
-    :default-active="`/${$route.path.split('/')[1]}`"
+    :default-active="`https://cdn.al.pelom.cn/${$route.path.split('/')[1]}`"
     text-color="#bfcbd9"
     :collapse="hide"
     router

@@ -10,21 +10,21 @@ const option = ref({}), ship = ref({}), skin = ref({})
 
   watchEffect(() => {
     list.value = []
-    for (let name in ship.value) {
+    Object.keys(ship.value).forEach((name) => {
       if (
-        filter.value.every((filter: number[], index) => {
-          return filter.length == 0
-            || filter.includes(ship.value[name][index + 1] as number)
+        Object.keys(filter.value).every((key) => {
+          return filter.value[key].length == 0
+            || filter.value[key].includes(ship.value[name][key])
         })
-        && ship.value[name][0].includes(input.value)
+        && ship.value[name]['name'].includes(input.value)
       ) list.value.push(name)
-    }
+    })
     count.value = list.value.length
   })
 })()
 
 const showOption = ref(false)
-const input = ref(''), filter = ref([[], [], []]), list = ref([]), count = ref(0)
+const input = ref(''), filter = ref({ 'type': [], 'rarity': [], 'nationality': [] }), list = ref([]), count = ref(0)
 const showSkin = ref(false), showBack = ref(false), showFrame = ref(false)
 </script>
 
@@ -44,11 +44,7 @@ const showSkin = ref(false), showBack = ref(false), showFrame = ref(false)
             v-model.lazy="input"
           >
             <template #prepend>
-              <el-badge is-dot :hidden="
-                filter[0].length == 0
-                && filter[1].length == 0
-                && filter[2].length == 0
-              ">
+              <el-badge is-dot :hidden="Object.keys(filter).every(key => filter[key].length == 0)">
                 <el-button size="large" @click="showOption=!showOption">
                   <el-icon>
                     <i-ep-ArrowUpBold v-show="showOption" />
@@ -87,20 +83,20 @@ const showSkin = ref(false), showBack = ref(false), showFrame = ref(false)
       </el-row>
       <el-row
         v-show="showOption"
-        v-for="(opt, key, index) in option as {}"
+        v-for="(opt, key) in option"
       >
         <el-col :lg="2">
           <el-button
             size="large"
             type="primary"
-            :disabled="filter[index].length==0"
-            @click="filter[index]=[]"
+            :disabled="(filter[key] as []).length == 0"
+            @click="(filter[key] as [])=[]"
           >
-            {{ key }}
+            {{ {'type':'类型', 'rarity': '稀有度', 'nationality': '阵营'}[key] }}
           </el-button>
         </el-col>
         <el-col :lg="22">
-          <el-checkbox-group size="large" v-model="filter[index]">
+          <el-checkbox-group size="large" v-model="filter[key]">
             <el-checkbox-button v-for="item in opt" :label="item[0]">
               {{ item[1] }}
             </el-checkbox-button>
@@ -116,8 +112,8 @@ const showSkin = ref(false), showBack = ref(false), showFrame = ref(false)
       }">
         <el-col
           :xs="8" :sm="6" :md="4" :lg="3" :xl="2"
-          v-show="list.includes(name)"
           v-for="name in list"
+          :key="name"
         >
           <icon
             :name="name"

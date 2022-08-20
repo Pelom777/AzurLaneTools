@@ -17,9 +17,9 @@ const container = ref<HTMLDivElement>()
 let back: Sprite, base: Sprite, char: Spine
 
 ;(async () => {
-  ship.value = await load('ship')
-  skin.value = await load('skin')
-  const [, , rarity,] = ship.value[name]
+  ship.value = (await load('ship'))[name]
+  skin.value = (await load('skin'))[name]
+  const rarity = ship.value['rarity']
   app.loader
     .add('back', `https://cdn.al.pelom.cn/shipbackground/${rarity}.png`)
     .add('base', `https://cdn.al.pelom.cn/spinebase/${rarity > 6 ? rarity - 2 : rarity}.png`)
@@ -97,8 +97,8 @@ onUnmounted(() => {
     <selector
       v-show="option.length == 0"
       :name="name"
-      :name_cn="ship[name]?.[0] ?? ''"
-      :skin="skin[name] ?? []"
+      :ship="ship"
+      :skin="skin"
       @switch="handleSwitch"
     />
     <controller

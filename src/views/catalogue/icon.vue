@@ -1,27 +1,40 @@
 <script lang="ts" setup>
 const props = defineProps<{
   name: string,
-  ship: [string, number, number, number],
-  skin: [string, number][]
+  ship: {},
+  skin: {}
 }>()
-const [name_cn, type, rarity, nationality] = props.ship
-const cdn = 'https://cdn.al.pelom.cn'
+const cdn = ''
 const index = ref(0)
+const count = Object.keys(props.skin).length
+const icon = computed(() => {
+  return Object.values(props.skin)[index.value]
+})
 </script>
 
 <template>
   <el-card
-    :style="{ backgroundImage: `url(${cdn}/iconbackground/${nationality == 97 ? '1' : ''}${!!skin[index][0].match(/_g$/) ? rarity + 1 : rarity}.png)` }">
-    <el-image :src="`${cdn}/shipicon/${skin[index][0]}.png`" fit="contain" loading="lazy" @click="$router.push({
-      name: 'profile',
-      params: { name }
-    })" />
-    <span :style="{ '--count': skin.length, '--index': index }" @click="index = (index + 1) % skin.length">
-      {{ skin[index][1] }}
+    :style="{ backgroundImage: `url(${cdn}/iconbackground/${ship['nationality'] == 97 ? '1' : ''}${!!icon['painting'].match(/_g$/) ? ship['rarity'] + 1 : ship['rarity']}.png)` }">
+    <el-image
+      :src="`${cdn}/shipicon/${icon['painting']}.png`"
+      fit="contain"
+      loading="lazy"
+      @click="$router.push({
+        name: 'profile',
+        params: { name }
+      })"
+    />
+    <span
+      :style="{ '--count': count, '--index': index }"
+      @click="index = (index + 1) % count"
+    >
+      {{ icon['name'] }}
     </span>
     <el-image
-      :src="`${cdn}/iconframe/${nationality == 97 ? '1' : ''}${!!skin[index][0].match(/_g$/) ? rarity + 1 : rarity}.png`"
-      fit="contain" :style="{ scale: (nationality == 97 && rarity == 5 ? 1.166 : null) }" />
+      :src="`${cdn}/iconframe/${ship['nationality'] == 97 ? '1' : ''}${!!icon['painting'].match(/_g$/) ? ship['rarity'] + 1 : ship['rarity']}.png`"
+      fit="contain"
+      :style="{ scale: (ship['nationality'] == 97 && ship['rarity'] == 5 ? 1.166 : null) }"
+    />
   </el-card>
 </template>
 

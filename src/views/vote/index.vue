@@ -69,7 +69,7 @@ onMounted(() => {
     Object.keys(vote).forEach((k, i) => {
       setTimeout(() => {
         option.dataset[0].source = vote[k].map((d: [string, number]) => {
-          return [ship[d[0]][0], d[1]]
+          return [ship[d[0]]['name'], d[1]]
         });
         (option as any).graphic.elements[0].style.text = k.replace(' ', '\n')
         myChart.setOption(option)

@@ -5,7 +5,6 @@ const vote = ref({})
 ;(async () => {
   vote.value = await load('vote')
 })()
-const name = {'cn': '国服', 'jp': '日服', 'en': '国际服'}
 </script>
 
 <template>
@@ -14,13 +13,13 @@ const name = {'cn': '国服', 'jp': '日服', 'en': '国际服'}
       <el-row :gutter="40">
         <el-col :xs="24" :sm="12" :md="8" :lg="6" :xl="3" v-for="(winner, region) in value">
           <el-card
-            :style="{ backgroundImage: `url(https://cdn.al.pelom.cn/voteicon/${winner}.png)` }"
+            :style="{ backgroundImage: `url(/voteicon/${winner}.png)` }"
             @click="$router.push({
               name: 'vote-chart',
               params: { year, region }
             })"
           >
-            <h1>{{ name[region] }}</h1>
+            <h1>{{ {'cn': '国服', 'jp': '日服', 'en': '国际服'}[region] }}</h1>
           </el-card>
         </el-col>
       </el-row>

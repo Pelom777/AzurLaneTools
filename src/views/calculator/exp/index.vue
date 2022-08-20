@@ -37,13 +37,12 @@ const handleCheck = (name: string) =>{
   </el-button>
   <el-row>
     <el-col :sm="12" :lg="8" :xl="6"
-      v-for="(name, key) in list"
-      :key="key"
+      v-for="(name, index) in list"
+      :key="index"
     >
       <card
-        :ship="name"
-        :index="key"
-        :attr="ship[name]"
+        :index="index"
+        :ship="ship[name]"
         :exp="exp"
         @remove="handleRemove"
       />
@@ -59,25 +58,25 @@ const handleCheck = (name: string) =>{
   <el-dialog v-model="showDialog" title="全局设置" width="fit-content">
     <h3>
       <span>指挥官等级</span>
-      <el-input-number v-model="user.expSetting.level" :min="1" :max="200" />
+      <el-input-number v-model="user.level" :min="1" :max="200" />
     </h3>
     <h3>
       <span>后宅舒适度</span>
-      <el-input-number v-model="user.expSetting.comfort" :min="0" :max="600" />
+      <el-input-number v-model="user.backyard.comfort" :min="0" :max="600" />
     </h3>
     <h3>
       <span>加成百分比</span>
-      <el-input-number v-model="user.expSetting.buff" :min="0" :max="100" />
+      <el-input-number v-model="user.backyard.buff" :min="0" :max="100" />
     </h3>
     <h3>
       <span>后宅舰船数</span>
-      <el-input-number v-model="user.expSetting.count" :min="1" :max="6" />
+      <el-input-number v-model="user.backyard.count" :min="1" :max="6" />
     </h3>
   </el-dialog>
   <drawer-selector
     v-model:show="showDrawer"
     :option="option"
-    :list="ship"
+    :item="ship"
     dir="squareicon"
     @check="handleCheck"
   />
@@ -101,5 +100,10 @@ const handleCheck = (name: string) =>{
 
 .el-avatar {
   cursor: pointer;
+}
+
+h3 {
+  display: flex;
+  justify-content: space-between;
 }
 </style>

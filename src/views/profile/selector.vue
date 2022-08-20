@@ -1,23 +1,23 @@
 <script lang="ts" setup>
 const props = defineProps<{
   name: string,
-  name_cn: string,
-  skin: []
+  ship: {},
+  skin: {}
 }>()
 </script>
 
 <template>
 <el-card>
   <template #header>
-    {{ name_cn }}
+    {{ ship['name'] }}
   </template>
-  <el-row v-for="item in skin">
+  <el-row v-for="(item, name) in skin">
     <el-col :span="24">
       <el-button
         size="large"
-        @click="$emit('switch', item[0])"
+        @click="$emit('switch', name)"
       >
-        {{ item[1] }}
+        {{ item['name'] }}
       </el-button>
     </el-col>
   </el-row>
