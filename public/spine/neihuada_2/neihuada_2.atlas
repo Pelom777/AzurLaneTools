@@ -1,0 +1,293 @@
+
+neihuada_2.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bodyA
+  rotate: true
+  xy: 572, 136
+  size: 58, 110
+  orig: 58, 110
+  offset: 0, 0
+  index: -1
+bodyB
+  rotate: false
+  xy: 684, 149
+  size: 41, 45
+  orig: 41, 45
+  offset: 0, 0
+  index: -1
+body_w
+  rotate: false
+  xy: 320, 2
+  size: 45, 48
+  orig: 45, 48
+  offset: 0, 0
+  index: -1
+eye1
+  rotate: false
+  xy: 2, 11
+  size: 106, 29
+  orig: 106, 29
+  offset: 0, 0
+  index: -1
+eye_b
+  rotate: false
+  xy: 827, 138
+  size: 75, 24
+  orig: 75, 24
+  offset: 0, 0
+  index: -1
+eye_k
+  rotate: false
+  xy: 747, 75
+  size: 74, 26
+  orig: 74, 26
+  offset: 0, 0
+  index: -1
+eye_m
+  rotate: false
+  xy: 827, 121
+  size: 84, 15
+  orig: 84, 15
+  offset: 0, 0
+  index: -1
+eye_q
+  rotate: false
+  xy: 827, 164
+  size: 74, 27
+  orig: 74, 27
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 232, 52
+  size: 166, 202
+  orig: 166, 202
+  offset: 0, 0
+  index: -1
+hairB
+  rotate: false
+  xy: 2, 42
+  size: 228, 212
+  orig: 228, 212
+  offset: 0, 0
+  index: -1
+hairF
+  rotate: true
+  xy: 532, 36
+  size: 98, 107
+  orig: 98, 107
+  offset: 0, 0
+  index: -1
+hairL
+  rotate: true
+  xy: 756, 193
+  size: 61, 177
+  orig: 61, 177
+  offset: 0, 0
+  index: -1
+hairR
+  rotate: true
+  xy: 572, 196
+  size: 58, 182
+  orig: 58, 182
+  offset: 0, 0
+  index: -1
+hand_L1
+  rotate: true
+  xy: 196, 13
+  size: 27, 34
+  orig: 27, 34
+  offset: 0, 0
+  index: -1
+hand_L2a
+  rotate: true
+  xy: 875, 91
+  size: 28, 38
+  orig: 28, 38
+  offset: 0, 0
+  index: -1
+hand_L2b
+  rotate: true
+  xy: 532, 136
+  size: 30, 35
+  orig: 30, 35
+  offset: 0, 0
+  index: -1
+hand_R1
+  rotate: false
+  xy: 900, 55
+  size: 27, 34
+  orig: 27, 34
+  offset: 0, 0
+  index: -1
+hand_R2a
+  rotate: true
+  xy: 823, 63
+  size: 28, 38
+  orig: 28, 38
+  offset: 0, 0
+  index: -1
+hand_R2b
+  rotate: true
+  xy: 863, 59
+  size: 30, 35
+  orig: 30, 35
+  offset: 0, 0
+  index: -1
+itemA1
+  rotate: false
+  xy: 400, 84
+  size: 130, 82
+  orig: 130, 82
+  offset: 0, 0
+  index: -1
+itemA2
+  rotate: true
+  xy: 367, 20
+  size: 30, 31
+  orig: 30, 31
+  offset: 0, 0
+  index: -1
+itemB1
+  rotate: true
+  xy: 935, 189
+  size: 65, 82
+  orig: 65, 82
+  offset: 0, 0
+  index: -1
+itemC1
+  rotate: true
+  xy: 367, 4
+  size: 14, 26
+  orig: 14, 26
+  offset: 0, 0
+  index: -1
+itemC2
+  rotate: true
+  xy: 519, 69
+  size: 13, 10
+  orig: 13, 10
+  offset: 0, 0
+  index: -1
+item_B2
+  rotate: true
+  xy: 727, 169
+  size: 25, 17
+  orig: 25, 17
+  offset: 0, 0
+  index: -1
+item_B3
+  rotate: true
+  xy: 682, 3
+  size: 31, 25
+  orig: 31, 25
+  offset: 0, 0
+  index: -1
+jzL1
+  rotate: false
+  xy: 747, 132
+  size: 78, 59
+  orig: 78, 59
+  offset: 0, 0
+  index: -1
+jzL2
+  rotate: false
+  xy: 519, 4
+  size: 82, 30
+  orig: 82, 30
+  offset: 0, 0
+  index: -1
+jzL3
+  rotate: false
+  xy: 110, 12
+  size: 84, 28
+  orig: 84, 28
+  offset: 0, 0
+  index: -1
+jzR1
+  rotate: true
+  xy: 465, 2
+  size: 80, 52
+  orig: 80, 52
+  offset: 0, 0
+  index: -1
+jzR2
+  rotate: false
+  xy: 603, 6
+  size: 77, 28
+  orig: 77, 28
+  offset: 0, 0
+  index: -1
+jzR3
+  rotate: false
+  xy: 747, 103
+  size: 78, 27
+  orig: 78, 27
+  offset: 0, 0
+  index: -1
+leg_L1
+  rotate: true
+  xy: 827, 93
+  size: 26, 46
+  orig: 26, 46
+  offset: 0, 0
+  index: -1
+leg_L2
+  rotate: true
+  xy: 747, 50
+  size: 23, 31
+  orig: 23, 31
+  offset: 0, 0
+  index: -1
+leg_R1
+  rotate: true
+  xy: 695, 37
+  size: 26, 49
+  orig: 26, 49
+  offset: 0, 0
+  index: -1
+leg_R2
+  rotate: false
+  xy: 709, 4
+  size: 25, 31
+  orig: 25, 31
+  offset: 0, 0
+  index: -1
+mm1
+  rotate: true
+  xy: 641, 36
+  size: 98, 52
+  orig: 98, 52
+  offset: 0, 0
+  index: -1
+mm2
+  rotate: true
+  xy: 695, 65
+  size: 82, 50
+  orig: 82, 50
+  offset: 0, 0
+  index: -1
+paopao1
+  rotate: false
+  xy: 400, 168
+  size: 170, 86
+  orig: 170, 86
+  offset: 0, 0
+  index: -1
+sleep5
+  rotate: false
+  xy: 232, 2
+  size: 86, 48
+  orig: 86, 48
+  offset: 0, 0
+  index: -1
+toushi
+  rotate: true
+  xy: 400, 2
+  size: 80, 63
+  orig: 80, 63
+  offset: 0, 0
+  index: -1
