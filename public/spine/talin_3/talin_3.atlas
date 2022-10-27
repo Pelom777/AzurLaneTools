@@ -1,26 +1,26 @@
 
 talin_3.png
-size: 1024,256
+size: 2048,256
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 body
   rotate: true
-  xy: 544, 11
+  xy: 1058, 111
   size: 55, 70
   orig: 55, 70
   offset: 0, 0
   index: -1
 body_w
   rotate: false
-  xy: 961, 206
+  xy: 280, 22
   size: 45, 48
   orig: 45, 48
   offset: 0, 0
   index: -1
 ear
-  rotate: false
-  xy: 672, 28
+  rotate: true
+  xy: 525, 42
   size: 24, 30
   orig: 24, 30
   offset: 0, 0
@@ -48,14 +48,14 @@ eye_3
   index: -1
 eye_4
   rotate: false
-  xy: 843, 114
+  xy: 1241, 206
   size: 100, 48
   orig: 100, 48
   offset: 0, 0
   index: -1
 eye_5
   rotate: false
-  xy: 671, 85
+  xy: 1123, 169
   size: 93, 32
   orig: 93, 32
   offset: 0, 0
@@ -69,28 +69,28 @@ face
   index: -1
 hair_L
   rotate: true
-  xy: 843, 62
+  xy: 1343, 204
   size: 50, 97
   orig: 50, 97
   offset: 0, 0
   index: -1
 hair_L1
   rotate: true
-  xy: 843, 164
+  xy: 1634, 217
   size: 37, 101
   orig: 37, 101
   offset: 0, 0
   index: -1
 hair_L2
   rotate: true
-  xy: 843, 203
+  xy: 1123, 203
   size: 51, 116
   orig: 51, 116
   offset: 0, 0
   index: -1
 hair_L3
   rotate: true
-  xy: 671, 119
+  xy: 951, 119
   size: 47, 105
   orig: 47, 105
   offset: 0, 0
@@ -117,29 +117,29 @@ hair_m
   offset: 0, 0
   index: -1
 hand_L1
-  rotate: true
-  xy: 626, 60
+  rotate: false
+  xy: 361, 34
   size: 26, 36
   orig: 26, 36
   offset: 0, 0
   index: -1
 hand_L2
-  rotate: false
-  xy: 644, 26
+  rotate: true
+  xy: 457, 40
   size: 26, 32
   orig: 26, 32
   offset: 0, 0
   index: -1
 hand_R1
   rotate: true
-  xy: 664, 60
+  xy: 491, 43
   size: 23, 32
   orig: 23, 32
   offset: 0, 0
   index: -1
 hand_R2
-  rotate: false
-  xy: 616, 25
+  rotate: true
+  xy: 422, 40
   size: 26, 33
   orig: 26, 33
   offset: 0, 0
@@ -152,10 +152,24 @@ hari_b
   offset: 0, 0
   index: -1
 jita
-  rotate: true
-  xy: 946, 155
+  rotate: false
+  xy: 2000, 178
   size: 46, 76
   orig: 46, 76
+  offset: 0, 0
+  index: -1
+jz_L
+  rotate: false
+  xy: 811, 119
+  size: 138, 135
+  orig: 138, 135
+  offset: 0, 0
+  index: -1
+jz_R
+  rotate: false
+  xy: 671, 117
+  size: 138, 137
+  orig: 138, 137
   offset: 0, 0
   index: -1
 leg_L1
@@ -166,92 +180,106 @@ leg_L1
   offset: 0, 0
   index: -1
 leg_L2
-  rotate: false
-  xy: 698, 53
+  rotate: true
+  xy: 590, 44
   size: 22, 30
   orig: 22, 30
   offset: 0, 0
   index: -1
 leg_R1
-  rotate: true
-  xy: 626, 88
+  rotate: false
+  xy: 626, 71
   size: 26, 43
   orig: 26, 43
   offset: 0, 0
   index: -1
 leg_R2
   rotate: true
-  xy: 644, 2
+  xy: 557, 44
   size: 22, 31
   orig: 22, 31
   offset: 0, 0
   index: -1
 meimao1
   rotate: false
-  xy: 287, 5
+  xy: 196, 5
   size: 82, 65
   orig: 82, 65
   offset: 0, 0
   index: -1
 meimao2
   rotate: false
-  xy: 371, 4
+  xy: 1828, 192
   size: 85, 62
   orig: 85, 62
   offset: 0, 0
   index: -1
 meimao3
   rotate: false
-  xy: 196, 2
+  xy: 1737, 196
   size: 89, 58
   orig: 89, 58
   offset: 0, 0
   index: -1
 meimao4
-  rotate: true
-  xy: 778, 83
+  rotate: false
+  xy: 1915, 191
   size: 83, 63
   orig: 83, 63
   offset: 0, 0
   index: -1
 meimao_5
   rotate: false
-  xy: 458, 9
+  xy: 1130, 110
   size: 84, 57
   orig: 84, 57
   offset: 0, 0
   index: -1
+pao
+  rotate: false
+  xy: 1442, 208
+  size: 94, 46
+  orig: 94, 46
+  offset: 0, 0
+  index: -1
 paopao1
   rotate: false
-  xy: 671, 168
+  xy: 951, 168
   size: 170, 86
   orig: 170, 86
   offset: 0, 0
   index: -1
 texiao1
   rotate: false
-  xy: 945, 121
+  xy: 327, 38
   size: 32, 32
   orig: 32, 32
   offset: 0, 0
   index: -1
 texiao2
   rotate: false
-  xy: 979, 121
+  xy: 389, 34
   size: 31, 32
   orig: 31, 32
   offset: 0, 0
   index: -1
-yinfu1
+weapon_R
   rotate: false
-  xy: 698, 34
+  xy: 1538, 208
+  size: 94, 46
+  orig: 94, 46
+  offset: 0, 0
+  index: -1
+yinfu1
+  rotate: true
+  xy: 1218, 179
   size: 22, 17
   orig: 22, 17
   offset: 0, 0
   index: -1
 yinfu2
   rotate: false
-  xy: 196, 64
+  xy: 280, 2
   size: 27, 18
   orig: 27, 18
   offset: 0, 0

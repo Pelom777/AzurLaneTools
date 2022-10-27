@@ -13,7 +13,7 @@ TX_1
   index: -1
 bianfu_1
   rotate: false
-  xy: 1646, 177
+  xy: 1734, 177
   size: 38, 18
   orig: 38, 18
   offset: 0, 0
@@ -55,7 +55,7 @@ body_tr
   index: -1
 body_w
   rotate: true
-  xy: 1520, 156
+  xy: 1608, 156
   size: 39, 41
   orig: 39, 41
   offset: 0, 0
@@ -223,21 +223,21 @@ hair_R3
   index: -1
 hand_L1
   rotate: false
-  xy: 1563, 161
+  xy: 1651, 161
   size: 26, 34
   orig: 26, 34
   offset: 0, 0
   index: -1
 hand_L2
   rotate: false
-  xy: 1591, 161
+  xy: 1679, 161
   size: 26, 34
   orig: 26, 34
   offset: 0, 0
   index: -1
 hand_Ls
   rotate: false
-  xy: 1722, 177
+  xy: 1734, 157
   size: 33, 18
   orig: 33, 18
   offset: 0, 0
@@ -251,7 +251,7 @@ hand_Lx
   index: -1
 hand_R1
   rotate: false
-  xy: 1619, 161
+  xy: 1707, 161
   size: 25, 34
   orig: 25, 34
   offset: 0, 0
@@ -265,7 +265,7 @@ hand_R2
   index: -1
 hand_Rs
   rotate: false
-  xy: 1686, 177
+  xy: 1774, 177
   size: 34, 18
   orig: 34, 18
   offset: 0, 0
@@ -396,6 +396,20 @@ wangguang
   orig: 51, 50
   offset: 0, 0
   index: -1
+weapon_L2
+  rotate: false
+  xy: 897, 137
+  size: 28, 18
+  orig: 28, 18
+  offset: 0, 0
+  index: -1
+weapon_R2
+  rotate: false
+  xy: 1769, 157
+  size: 28, 18
+  orig: 28, 18
+  offset: 0, 0
+  index: -1
 yinfu1
   rotate: false
   xy: 424, 85
@@ -405,7 +419,7 @@ yinfu1
   index: -1
 yinfu2
   rotate: false
-  xy: 897, 137
+  xy: 1035, 119
   size: 27, 18
   orig: 27, 18
   offset: 0, 0
@@ -415,6 +429,20 @@ yingying
   xy: 166, 2
   size: 102, 74
   orig: 102, 74
+  offset: 0, 0
+  index: -1
+yulei_L2
+  rotate: false
+  xy: 1564, 159
+  size: 42, 36
+  orig: 42, 36
+  offset: 0, 0
+  index: -1
+yulei_R
+  rotate: false
+  xy: 1520, 159
+  size: 42, 36
+  orig: 42, 36
   offset: 0, 0
   index: -1
 zui_1

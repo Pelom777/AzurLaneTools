@@ -5,8 +5,8 @@ format: RGBA8888
 filter: Linear,Linear
 repeat: none
 bag
-  rotate: true
-  xy: 477, 36
+  rotate: false
+  xy: 532, 49
   size: 62, 58
   orig: 62, 58
   offset: 0, 0
@@ -20,7 +20,7 @@ body
   index: -1
 body_1
   rotate: true
-  xy: 697, 106
+  xy: 581, 11
   size: 36, 21
   orig: 36, 21
   offset: 0, 0
@@ -41,7 +41,7 @@ body_tr
   index: -1
 body_w
   rotate: true
-  xy: 932, 147
+  xy: 531, 2
   size: 45, 48
   orig: 45, 48
   offset: 0, 0
@@ -75,8 +75,8 @@ eye_3
   offset: 0, 0
   index: -1
 eye_33
-  rotate: false
-  xy: 537, 15
+  rotate: true
+  xy: 984, 61
   size: 77, 38
   orig: 77, 38
   offset: 0, 0
@@ -125,30 +125,37 @@ hair_bf
   index: -1
 hand_L1
   rotate: false
-  xy: 620, 62
+  xy: 664, 77
   size: 30, 37
   orig: 30, 37
   offset: 0, 0
   index: -1
 hand_L2
-  rotate: true
-  xy: 720, 107
+  rotate: false
+  xy: 636, 25
   size: 29, 34
   orig: 29, 34
   offset: 0, 0
   index: -1
 hand_R1
-  rotate: true
-  xy: 756, 109
+  rotate: false
+  xy: 667, 41
   size: 27, 34
   orig: 27, 34
   offset: 0, 0
   index: -1
 hand_R2
   rotate: false
-  xy: 652, 80
+  xy: 604, 21
   size: 30, 34
   orig: 30, 34
+  offset: 0, 0
+  index: -1
+jianzhuang_R
+  rotate: true
+  xy: 477, 24
+  size: 74, 52
+  orig: 74, 52
   offset: 0, 0
   index: -1
 jiao
@@ -160,42 +167,42 @@ jiao
   index: -1
 leg_L1
   rotate: false
-  xy: 904, 155
+  xy: 636, 61
   size: 26, 46
   orig: 26, 46
   offset: 0, 0
   index: -1
 leg_L2
   rotate: true
-  xy: 652, 52
+  xy: 667, 13
   size: 26, 31
   orig: 26, 31
   offset: 0, 0
   index: -1
 leg_R1
   rotate: true
-  xy: 652, 116
+  xy: 659, 116
   size: 26, 43
   orig: 26, 43
   offset: 0, 0
   index: -1
 leg_R2
-  rotate: false
-  xy: 625, 101
+  rotate: true
+  xy: 625, 109
   size: 24, 32
   orig: 24, 32
   offset: 0, 0
   index: -1
 lihe_1
   rotate: false
-  xy: 495, 2
+  xy: 696, 82
   size: 29, 32
   orig: 29, 32
   offset: 0, 0
   index: -1
 lihe_2
-  rotate: false
-  xy: 982, 157
+  rotate: true
+  xy: 987, 154
   size: 38, 35
   orig: 38, 35
   offset: 0, 0
@@ -244,9 +251,23 @@ sheng
   index: -1
 sleep3
   rotate: false
-  xy: 537, 55
+  xy: 904, 140
   size: 81, 52
   orig: 81, 52
+  offset: 0, 0
+  index: -1
+weapon_L
+  rotate: false
+  xy: 596, 57
+  size: 38, 50
+  orig: 38, 50
+  offset: 0, 0
+  index: -1
+weapon_R
+  rotate: false
+  xy: 902, 96
+  size: 80, 42
+  orig: 80, 42
   offset: 0, 0
   index: -1
 yanzhao

@@ -13,7 +13,7 @@ body
   index: -1
 body_w
   rotate: false
-  xy: 346, 47
+  xy: 346, 2
   size: 45, 48
   orig: 45, 48
   offset: 0, 0
@@ -48,7 +48,7 @@ eye_1 _1
   index: -1
 eye_1_2
   rotate: false
-  xy: 451, 66
+  xy: 863, 137
   size: 31, 29
   orig: 31, 29
   offset: 0, 0
@@ -62,49 +62,49 @@ eye_2_1
   index: -1
 eye_2_2
   rotate: false
-  xy: 828, 149
+  xy: 1755, 170
   size: 26, 17
   orig: 26, 17
   offset: 0, 0
   index: -1
 eye_3_1
-  rotate: false
-  xy: 393, 57
+  rotate: true
+  xy: 1429, 143
   size: 26, 38
   orig: 26, 38
   offset: 0, 0
   index: -1
 eye_3_2
   rotate: true
-  xy: 1386, 143
+  xy: 751, 140
   size: 26, 38
   orig: 26, 38
   offset: 0, 0
   index: -1
 eye_4_1
-  rotate: true
-  xy: 484, 66
+  rotate: false
+  xy: 1669, 173
   size: 29, 22
   orig: 29, 22
   offset: 0, 0
   index: -1
 eye_4_2
   rotate: false
-  xy: 803, 144
+  xy: 1783, 165
   size: 23, 22
   orig: 23, 22
   offset: 0, 0
   index: -1
 eye_5_1
-  rotate: false
-  xy: 751, 141
+  rotate: true
+  xy: 319, 13
   size: 26, 25
   orig: 26, 25
   offset: 0, 0
   index: -1
 eye_5_2
-  rotate: false
-  xy: 779, 141
+  rotate: true
+  xy: 1728, 173
   size: 22, 25
   orig: 22, 25
   offset: 0, 0
@@ -159,15 +159,15 @@ hand_L2
   offset: 0, 0
   index: -1
 hand_R1
-  rotate: false
-  xy: 319, 5
+  rotate: true
+  xy: 791, 140
   size: 26, 34
   orig: 26, 34
   offset: 0, 0
   index: -1
 hand_R2
-  rotate: false
-  xy: 421, 61
+  rotate: true
+  xy: 827, 138
   size: 28, 34
   orig: 28, 34
   offset: 0, 0
@@ -202,14 +202,14 @@ leg_L1
   index: -1
 leg_L2
   rotate: true
-  xy: 1939, 190
+  xy: 896, 144
   size: 22, 30
   orig: 22, 30
   offset: 0, 0
   index: -1
 leg_R1
   rotate: true
-  xy: 1983, 228
+  xy: 454, 69
   size: 26, 46
   orig: 26, 46
   offset: 0, 0
@@ -219,6 +219,13 @@ leg_R2
   xy: 1300, 117
   size: 22, 30
   orig: 22, 30
+  offset: 0, 0
+  index: -1
+lianjie
+  rotate: true
+  xy: 1386, 139
+  size: 30, 41
+  orig: 30, 41
   offset: 0, 0
   index: -1
 maan
@@ -272,7 +279,7 @@ paopao1
   index: -1
 qiu
   rotate: false
-  xy: 347, 19
+  xy: 1700, 169
   size: 26, 26
   orig: 26, 26
   offset: 0, 0
@@ -291,9 +298,30 @@ sleep6
   orig: 86, 40
   offset: 0, 0
   index: -1
+weapon_R
+  rotate: false
+  xy: 346, 52
+  size: 53, 43
+  orig: 53, 43
+  offset: 0, 0
+  index: -1
+weapon_R2
+  rotate: false
+  xy: 401, 54
+  size: 51, 41
+  orig: 51, 41
+  offset: 0, 0
+  index: -1
+yulei_L
+  rotate: false
+  xy: 1983, 188
+  size: 56, 66
+  orig: 56, 66
+  offset: 0, 0
+  index: -1
 yunqiu
   rotate: false
-  xy: 1426, 146
+  xy: 1939, 189
   size: 39, 23
   orig: 39, 23
   offset: 0, 0

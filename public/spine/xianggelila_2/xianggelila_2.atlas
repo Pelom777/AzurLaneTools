@@ -5,8 +5,8 @@ format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Q1
-  rotate: true
-  xy: 969, 123
+  rotate: false
+  xy: 991, 63
   size: 30, 21
   orig: 30, 21
   offset: 0, 0
@@ -19,8 +19,8 @@ Q2
   offset: 0, 0
   index: -1
 Q3
-  rotate: false
-  xy: 723, 31
+  rotate: true
+  xy: 860, 46
   size: 37, 65
   orig: 37, 65
   offset: 0, 0
@@ -34,7 +34,7 @@ body
   index: -1
 body_w
   rotate: false
-  xy: 762, 48
+  xy: 932, 10
   size: 45, 48
   orig: 45, 48
   offset: 0, 0
@@ -132,7 +132,7 @@ hand_L1
   index: -1
 hand_L2
   rotate: false
-  xy: 904, 113
+  xy: 991, 113
   size: 31, 40
   orig: 31, 40
   offset: 0, 0
@@ -153,7 +153,7 @@ hand_R1
   index: -1
 hand_R2
   rotate: false
-  xy: 937, 115
+  xy: 900, 6
   size: 30, 38
   orig: 30, 38
   offset: 0, 0
@@ -170,6 +170,48 @@ hat2
   xy: 137, 152
   size: 162, 102
   orig: 162, 102
+  offset: 0, 0
+  index: -1
+jianzhuang_L1
+  rotate: false
+  xy: 669, 28
+  size: 75, 74
+  orig: 75, 74
+  offset: 0, 0
+  index: -1
+jianzhuang_L2
+  rotate: true
+  xy: 612, 73
+  size: 51, 55
+  orig: 51, 55
+  offset: 0, 0
+  index: -1
+jianzhuang_L3
+  rotate: false
+  xy: 860, 2
+  size: 38, 42
+  orig: 38, 42
+  offset: 0, 0
+  index: -1
+jianzhuang_R1
+  rotate: false
+  xy: 865, 85
+  size: 72, 68
+  orig: 72, 68
+  offset: 0, 0
+  index: -1
+jianzhuang_R2
+  rotate: false
+  xy: 939, 99
+  size: 50, 54
+  orig: 50, 54
+  offset: 0, 0
+  index: -1
+jianzhuang_R3
+  rotate: true
+  xy: 991, 86
+  size: 25, 31
+  orig: 25, 31
   offset: 0, 0
   index: -1
 lamp
@@ -209,7 +251,7 @@ leg_R2
   index: -1
 light
   rotate: false
-  xy: 609, 28
+  xy: 746, 22
   size: 74, 74
   orig: 74, 74
   offset: 0, 0
@@ -271,22 +313,22 @@ xiangji
   offset: 0, 0
   index: -1
 xiuzi_L1
-  rotate: false
-  xy: 809, 47
+  rotate: true
+  xy: 609, 33
   size: 38, 49
   orig: 38, 49
   offset: 0, 0
   index: -1
 xiuzi_L2
   rotate: false
-  xy: 685, 27
+  xy: 822, 21
   size: 36, 75
   orig: 36, 75
   offset: 0, 0
   index: -1
 xiuzi_R1
-  rotate: false
-  xy: 865, 103
+  rotate: true
+  xy: 939, 60
   size: 37, 50
   orig: 37, 50
   offset: 0, 0

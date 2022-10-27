@@ -111,7 +111,7 @@ chazi
   index: -1
 chuangketie
   rotate: false
-  xy: 340, 5
+  xy: 1683, 363
   size: 15, 17
   orig: 15, 17
   offset: 0, 0
@@ -275,6 +275,13 @@ lianhong
   xy: 1571, 382
   size: 128, 133
   orig: 128, 133
+  offset: 0, 0
+  index: -1
+pao
+  rotate: false
+  xy: 340, 4
+  size: 48, 18
+  orig: 48, 18
   offset: 0, 0
   index: -1
 paopao1

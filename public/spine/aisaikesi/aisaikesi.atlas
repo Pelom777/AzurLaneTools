@@ -4,6 +4,13 @@ size: 2048,256
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
+apple
+  rotate: false
+  xy: 1322, 156
+  size: 28, 30
+  orig: 28, 30
+  offset: 0, 0
+  index: -1
 body
   rotate: true
   xy: 558, 133
@@ -132,7 +139,7 @@ eye_8_1
   index: -1
 eye_8_2
   rotate: false
-  xy: 1322, 130
+  xy: 1483, 159
   size: 23, 22
   orig: 23, 22
   offset: 0, 0
@@ -187,8 +194,8 @@ hair_R2
   offset: 0, 0
   index: -1
 hand_L1
-  rotate: false
-  xy: 1322, 154
+  rotate: true
+  xy: 1352, 162
   size: 24, 32
   orig: 24, 32
   offset: 0, 0
@@ -201,8 +208,8 @@ hand_L2
   offset: 0, 0
   index: -1
 hand_R1
-  rotate: false
-  xy: 1348, 154
+  rotate: true
+  xy: 1386, 164
   size: 22, 32
   orig: 22, 32
   offset: 0, 0
@@ -250,8 +257,8 @@ leg_L1
   offset: 0, 0
   index: -1
 leg_L2
-  rotate: false
-  xy: 1372, 156
+  rotate: true
+  xy: 1420, 157
   size: 24, 30
   orig: 24, 30
   offset: 0, 0
@@ -264,8 +271,8 @@ leg_R1
   offset: 0, 0
   index: -1
 leg_R2
-  rotate: false
-  xy: 1297, 118
+  rotate: true
+  xy: 1452, 158
   size: 23, 29
   orig: 23, 29
   offset: 0, 0

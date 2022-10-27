@@ -5,50 +5,57 @@ format: RGBA8888
 filter: Linear,Linear
 repeat: none
 body
-  rotate: false
-  xy: 965, 182
+  rotate: true
+  xy: 568, 112
   size: 54, 72
   orig: 54, 72
   offset: 0, 0
   index: -1
 body_w
   rotate: false
-  xy: 514, 70
+  xy: 811, 111
   size: 45, 48
   orig: 45, 48
   offset: 0, 0
   index: -1
+diqiuyi
+  rotate: true
+  xy: 979, 177
+  size: 77, 43
+  orig: 77, 43
+  offset: 0, 0
+  index: -1
 doupeng_L
-  rotate: false
-  xy: 837, 160
+  rotate: true
+  xy: 534, 10
   size: 24, 31
   orig: 24, 31
   offset: 0, 0
   index: -1
 doupeng_R
-  rotate: false
-  xy: 402, 16
+  rotate: true
+  xy: 613, 38
   size: 28, 30
   orig: 28, 30
   offset: 0, 0
   index: -1
 doupenghou
   rotate: false
-  xy: 947, 131
+  xy: 460, 9
   size: 72, 49
   orig: 72, 49
   offset: 0, 0
   index: -1
 erduo_L
-  rotate: false
-  xy: 458, 69
+  rotate: true
+  xy: 280, 5
   size: 54, 49
   orig: 54, 49
   offset: 0, 0
   index: -1
 erduo_R
   rotate: false
-  xy: 280, 13
+  xy: 523, 72
   size: 43, 46
   orig: 43, 46
   offset: 0, 0
@@ -62,28 +69,28 @@ eye_1
   index: -1
 eye_2
   rotate: false
-  xy: 327, 80
+  xy: 863, 162
   size: 92, 44
   orig: 92, 44
   offset: 0, 0
   index: -1
 eye_3
   rotate: false
-  xy: 326, 48
+  xy: 751, 161
   size: 92, 30
   orig: 92, 30
   offset: 0, 0
   index: -1
 eye_b
   rotate: false
-  xy: 325, 22
+  xy: 568, 68
   size: 75, 24
   orig: 75, 24
   offset: 0, 0
   index: -1
 eye_m
   rotate: false
-  xy: 751, 175
+  xy: 568, 94
   size: 84, 16
   orig: 84, 16
   offset: 0, 0
@@ -145,29 +152,29 @@ hair_R3
   offset: 0, 0
   index: -1
 hand_L1
-  rotate: true
-  xy: 903, 105
+  rotate: false
+  xy: 605, 2
   size: 27, 34
   orig: 27, 34
   offset: 0, 0
   index: -1
 hand_L2
   rotate: false
-  xy: 606, 75
+  xy: 568, 2
   size: 35, 37
   orig: 35, 37
   offset: 0, 0
   index: -1
 hand_R1
-  rotate: true
-  xy: 939, 104
+  rotate: false
+  xy: 634, 2
   size: 25, 34
   orig: 25, 34
   offset: 0, 0
   index: -1
 hand_R2
-  rotate: false
-  xy: 975, 97
+  rotate: true
+  xy: 534, 36
   size: 34, 32
   orig: 34, 32
   offset: 0, 0
@@ -181,28 +188,28 @@ hat
   index: -1
 leg_L1
   rotate: true
-  xy: 858, 107
+  xy: 568, 41
   size: 25, 43
   orig: 25, 43
   offset: 0, 0
   index: -1
 leg_L2
-  rotate: false
-  xy: 420, 48
+  rotate: true
+  xy: 727, 73
   size: 22, 30
   orig: 22, 30
   offset: 0, 0
   index: -1
 leg_R1
-  rotate: false
-  xy: 830, 112
+  rotate: true
+  xy: 654, 84
   size: 26, 46
   orig: 26, 46
   offset: 0, 0
   index: -1
 leg_R2
   rotate: false
-  xy: 432, 17
+  xy: 702, 81
   size: 23, 29
   orig: 23, 29
   offset: 0, 0
@@ -216,28 +223,28 @@ meimao_1
   index: -1
 meimao_2
   rotate: false
-  xy: 863, 198
+  xy: 327, 68
   size: 100, 56
   orig: 100, 56
   offset: 0, 0
   index: -1
 meimao_3
   rotate: false
-  xy: 863, 134
+  xy: 727, 97
   size: 82, 62
   orig: 82, 62
   offset: 0, 0
   index: -1
 meimao_4
   rotate: false
-  xy: 745, 108
+  xy: 642, 112
   size: 83, 65
   orig: 83, 65
   offset: 0, 0
   index: -1
 meimao_5
   rotate: false
-  xy: 651, 119
+  xy: 429, 60
   size: 92, 58
   orig: 92, 58
   offset: 0, 0
@@ -249,6 +256,20 @@ paopao1
   orig: 170, 86
   offset: 0, 0
   index: -1
+piaodai_EL
+  rotate: true
+  xy: 863, 208
+  size: 46, 114
+  orig: 46, 114
+  offset: 0, 0
+  index: -1
+piaodai_ER
+  rotate: false
+  xy: 414, 2
+  size: 44, 56
+  orig: 44, 56
+  offset: 0, 0
+  index: -1
 saihong
   rotate: false
   xy: 96, 2
@@ -258,49 +279,49 @@ saihong
   index: -1
 sleep3
   rotate: false
-  xy: 568, 114
+  xy: 331, 14
   size: 81, 52
   orig: 81, 52
   offset: 0, 0
   index: -1
 tong1
   rotate: true
-  xy: 421, 82
+  xy: 903, 100
   size: 42, 35
   orig: 42, 35
   offset: 0, 0
   index: -1
 tong2
   rotate: false
-  xy: 561, 73
+  xy: 858, 103
   size: 43, 39
   orig: 43, 39
   offset: 0, 0
   index: -1
 yanjing
   rotate: false
-  xy: 325, 4
+  xy: 858, 144
   size: 72, 16
   orig: 72, 16
   offset: 0, 0
   index: -1
 zhituan1
   rotate: false
-  xy: 448, 2
+  xy: 845, 178
   size: 13, 13
   orig: 13, 13
   offset: 0, 0
   index: -1
 zhituan2
-  rotate: true
-  xy: 432, 2
+  rotate: false
+  xy: 727, 163
   size: 13, 14
   orig: 13, 14
   offset: 0, 0
   index: -1
 zhituan3
   rotate: false
-  xy: 947, 182
+  xy: 957, 192
   size: 14, 14
   orig: 14, 14
   offset: 0, 0

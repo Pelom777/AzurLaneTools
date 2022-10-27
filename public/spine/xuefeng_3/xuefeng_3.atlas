@@ -54,8 +54,8 @@ ear_L
   offset: 0, 0
   index: -1
 ear_R
-  rotate: false
-  xy: 392, 9
+  rotate: true
+  xy: 755, 39
   size: 58, 54
   orig: 58, 54
   offset: 0, 0
@@ -111,7 +111,7 @@ fashi
   index: -1
 gold
   rotate: false
-  xy: 575, 100
+  xy: 84, 3
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
@@ -152,43 +152,50 @@ hair_bf
   offset: 0, 0
   index: -1
 hand_L
-  rotate: true
-  xy: 452, 13
+  rotate: false
+  xy: 843, 75
   size: 26, 32
   orig: 26, 32
   offset: 0, 0
   index: -1
 hand_L2
-  rotate: false
-  xy: 731, 49
+  rotate: true
+  xy: 810, 109
   size: 34, 48
   orig: 34, 48
   offset: 0, 0
   index: -1
 hand_R
-  rotate: true
-  xy: 731, 25
+  rotate: false
+  xy: 860, 111
   size: 22, 32
   orig: 22, 32
   offset: 0, 0
   index: -1
 hand_R2
   rotate: false
-  xy: 767, 55
+  xy: 811, 65
   size: 30, 42
   orig: 30, 42
   offset: 0, 0
   index: -1
+jianzhuang_R
+  rotate: false
+  xy: 755, 7
+  size: 54, 30
+  orig: 54, 30
+  offset: 0, 0
+  index: -1
 leg_L1
-  rotate: true
-  xy: 810, 118
+  rotate: false
+  xy: 811, 17
   size: 25, 46
   orig: 25, 46
   offset: 0, 0
   index: -1
 leg_L2
   rotate: true
-  xy: 452, 41
+  xy: 247, 89
   size: 22, 33
   orig: 22, 33
   offset: 0, 0
@@ -201,8 +208,8 @@ leg_R1
   offset: 0, 0
   index: -1
 leg_R2
-  rotate: true
-  xy: 720, 2
+  rotate: false
+  xy: 884, 114
   size: 21, 32
   orig: 21, 32
   offset: 0, 0
@@ -237,7 +244,7 @@ meimao_3 (2)
   index: -1
 oil
   rotate: false
-  xy: 84, 3
+  xy: 575, 100
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
@@ -250,8 +257,8 @@ paopao1
   offset: 0, 0
   index: -1
 saihong
-  rotate: true
-  xy: 720, 27
+  rotate: false
+  xy: 392, 10
   size: 65, 9
   orig: 65, 9
   offset: 0, 0
@@ -270,6 +277,13 @@ sleep4
   orig: 84, 50
   offset: 0, 0
   index: -1
+weapon_R
+  rotate: true
+  xy: 720, 10
+  size: 82, 33
+  orig: 82, 33
+  offset: 0, 0
+  index: -1
 xiuzi_R
   rotate: false
   xy: 538, 2
@@ -282,5 +296,12 @@ xuzi_L
   xy: 487, 2
   size: 49, 82
   orig: 49, 82
+  offset: 0, 0
+  index: -1
+yulei_L
+  rotate: true
+  xy: 392, 21
+  size: 42, 77
+  orig: 42, 77
   offset: 0, 0
   index: -1
