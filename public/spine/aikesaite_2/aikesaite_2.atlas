@@ -33,29 +33,29 @@ body_w
   offset: 0, 0
   index: -1
 ear
-  rotate: false
-  xy: 280, 54
+  rotate: true
+  xy: 881, 154
   size: 24, 30
   orig: 24, 30
   offset: 0, 0
   index: -1
 eye_
   rotate: false
-  xy: 470, 132
+  xy: 470, 92
   size: 74, 22
   orig: 74, 22
   offset: 0, 0
   index: -1
 eye_22
   rotate: false
-  xy: 836, 184
+  xy: 633, 174
   size: 92, 16
   orig: 92, 16
   offset: 0, 0
   index: -1
 eye_33
   rotate: false
-  xy: 728, 152
+  xy: 470, 116
   size: 77, 38
   orig: 77, 38
   offset: 0, 0
@@ -69,7 +69,7 @@ face
   index: -1
 hair-L1
   rotate: true
-  xy: 633, 146
+  xy: 347, 92
   size: 44, 93
   orig: 44, 93
   offset: 0, 0
@@ -104,7 +104,7 @@ hair-L5
   index: -1
 hair-R1
   rotate: false
-  xy: 252, 54
+  xy: 442, 82
   size: 26, 54
   orig: 26, 54
   offset: 0, 0
@@ -118,70 +118,70 @@ hair-R2
   index: -1
 hand_L
   rotate: true
-  xy: 930, 154
+  xy: 919, 174
   size: 26, 34
   orig: 26, 34
   offset: 0, 0
   index: -1
 hand_L2
   rotate: false
-  xy: 807, 153
+  xy: 289, 20
   size: 27, 37
   orig: 27, 37
   offset: 0, 0
   index: -1
 hand_R
-  rotate: false
-  xy: 310, 85
+  rotate: true
+  xy: 955, 175
   size: 25, 34
   orig: 25, 34
   offset: 0, 0
   index: -1
 hand_R2
   rotate: false
-  xy: 280, 86
+  xy: 827, 147
   size: 28, 33
   orig: 28, 33
   offset: 0, 0
   index: -1
 hongjiu
   rotate: true
-  xy: 976, 180
+  xy: 882, 180
   size: 20, 35
   orig: 20, 35
   offset: 0, 0
   index: -1
 jing
   rotate: true
-  xy: 279, 121
+  xy: 727, 145
   size: 45, 61
   orig: 45, 61
   offset: 0, 0
   index: -1
 leg_L1
   rotate: true
-  xy: 884, 157
+  xy: 280, 59
   size: 25, 44
   orig: 25, 44
   offset: 0, 0
   index: -1
 leg_L2
   rotate: false
-  xy: 306, 53
+  xy: 857, 150
   size: 22, 30
   orig: 22, 30
   offset: 0, 0
   index: -1
 leg_R1
-  rotate: true
-  xy: 836, 156
+  rotate: false
+  xy: 252, 62
   size: 26, 46
   orig: 26, 46
   offset: 0, 0
   index: -1
 leg_R2
-  rotate: true
-  xy: 550, 147
+  rotate: false
+  xy: 991, 171
   size: 22, 29
   orig: 22, 29
   offset: 0, 0
@@ -214,9 +214,58 @@ sleep5
   orig: 86, 48
   offset: 0, 0
   index: -1
+wep_anchor_L
+  rotate: false
+  xy: 612, 142
+  size: 18, 27
+  orig: 18, 27
+  offset: 0, 0
+  index: -1
+wep_anchor_R
+  rotate: false
+  xy: 154, 110
+  size: 17, 26
+  orig: 17, 26
+  offset: 0, 0
+  index: -1
+wep_canon_L
+  rotate: false
+  xy: 550, 146
+  size: 60, 23
+  orig: 60, 23
+  offset: 0, 0
+  index: -1
+wep_canon_L2
+  rotate: false
+  xy: 280, 86
+  size: 60, 24
+  orig: 60, 24
+  offset: 0, 0
+  index: -1
+wep_canon_R
+  rotate: false
+  xy: 549, 118
+  size: 60, 26
+  orig: 60, 26
+  offset: 0, 0
+  index: -1
+wep_pipe
+  rotate: false
+  xy: 790, 140
+  size: 35, 50
+  orig: 35, 50
+  offset: 0, 0
+  index: -1
+wep_shield
+  rotate: true
+  xy: 279, 112
+  size: 54, 66
+  orig: 54, 66
+  offset: 0, 0
+  index: -1
 wuzi
   rotate: false
-  xy: 930, 182
+  xy: 836, 182
   size: 44, 18
   orig: 44, 18
   offset: 0, 0

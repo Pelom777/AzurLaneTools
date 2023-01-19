@@ -20,7 +20,7 @@ V2
   index: -1
 bag
   rotate: true
-  xy: 623, 11
+  xy: 837, 38
   size: 47, 43
   orig: 47, 43
   offset: 0, 0
@@ -33,15 +33,15 @@ body
   offset: 0, 0
   index: -1
 body_b
-  rotate: false
-  xy: 576, 10
+  rotate: true
+  xy: 882, 67
   size: 45, 48
   orig: 45, 48
   offset: 0, 0
   index: -1
 botelan
   rotate: false
-  xy: 467, 2
+  xy: 837, 87
   size: 43, 57
   orig: 43, 57
   offset: 0, 0
@@ -54,15 +54,15 @@ daimao
   offset: 0, 0
   index: -1
 eye_1_1
-  rotate: false
-  xy: 875, 112
+  rotate: true
+  xy: 932, 67
   size: 45, 32
   orig: 45, 32
   offset: 0, 0
   index: -1
 eye_1_2
-  rotate: false
-  xy: 553, 61
+  rotate: true
+  xy: 753, 2
   size: 34, 31
   orig: 34, 31
   offset: 0, 0
@@ -83,28 +83,28 @@ eye_2_2
   index: -1
 eye_3_1
   rotate: true
-  xy: 973, 140
+  xy: 931, 39
   size: 26, 38
   orig: 26, 38
   offset: 0, 0
   index: -1
 eye_3_2
   rotate: true
-  xy: 968, 112
+  xy: 780, 54
   size: 26, 38
   orig: 26, 38
   offset: 0, 0
   index: -1
 eye_4_1
   rotate: false
-  xy: 668, 2
+  xy: 749, 58
   size: 29, 22
   orig: 29, 22
   offset: 0, 0
   index: -1
 eye_4_2
-  rotate: false
-  xy: 695, 62
+  rotate: true
+  xy: 458, 111
   size: 23, 22
   orig: 23, 22
   offset: 0, 0
@@ -153,42 +153,42 @@ hair_R2
   index: -1
 hand_L1
   rotate: false
-  xy: 668, 26
+  xy: 816, 2
   size: 26, 34
   orig: 26, 34
   offset: 0, 0
   index: -1
 hand_L2
   rotate: true
-  xy: 553, 94
+  xy: 978, 99
   size: 27, 37
   orig: 27, 37
   offset: 0, 0
   index: -1
 hand_R1
   rotate: false
-  xy: 696, 26
+  xy: 844, 2
   size: 25, 34
   orig: 25, 34
   offset: 0, 0
   index: -1
 hand_R2
   rotate: false
-  xy: 735, 82
+  xy: 786, 2
   size: 28, 34
   orig: 28, 34
   offset: 0, 0
   index: -1
 jianzhuang1
   rotate: false
-  xy: 592, 60
+  xy: 591, 60
   size: 69, 38
   orig: 69, 38
   offset: 0, 0
   index: -1
 jianzhuang2
   rotate: false
-  xy: 663, 86
+  xy: 882, 114
   size: 70, 30
   orig: 70, 30
   offset: 0, 0
@@ -202,49 +202,56 @@ jiao_L
   index: -1
 jiao_R
   rotate: false
-  xy: 512, 5
+  xy: 599, 4
   size: 62, 54
   orig: 62, 54
   offset: 0, 0
   index: -1
 leg_L1
   rotate: true
-  xy: 922, 119
+  xy: 978, 128
   size: 25, 44
   orig: 25, 44
   offset: 0, 0
   index: -1
 leg_L2
   rotate: false
-  xy: 458, 136
+  xy: 954, 114
   size: 22, 30
   orig: 22, 30
   offset: 0, 0
   index: -1
 leg_R1
   rotate: true
-  xy: 826, 118
+  xy: 882, 39
   size: 26, 47
   orig: 26, 47
   offset: 0, 0
   index: -1
 leg_R2
-  rotate: true
-  xy: 663, 62
+  rotate: false
+  xy: 458, 136
   size: 22, 30
   orig: 22, 30
   offset: 0, 0
   index: -1
-meimao_1
+lianjie_L
   rotate: true
-  xy: 403, 15
+  xy: 663, 7
+  size: 47, 88
+  orig: 47, 88
+  offset: 0, 0
+  index: -1
+meimao_1
+  rotate: false
+  xy: 499, 59
   size: 90, 62
   orig: 90, 62
   offset: 0, 0
   index: -1
 meimao_3
   rotate: false
-  xy: 467, 61
+  xy: 663, 56
   size: 84, 60
   orig: 84, 60
   offset: 0, 0
@@ -257,8 +264,8 @@ paopao1
   offset: 0, 0
   index: -1
 sleep6
-  rotate: true
-  xy: 973, 168
+  rotate: false
+  xy: 749, 82
   size: 86, 40
   orig: 86, 40
   offset: 0, 0
@@ -275,5 +282,26 @@ weapon2
   xy: 277, 3
   size: 102, 124
   orig: 102, 124
+  offset: 0, 0
+  index: -1
+weapon_L
+  rotate: true
+  xy: 403, 3
+  size: 102, 94
+  orig: 102, 94
+  offset: 0, 0
+  index: -1
+weapon_R
+  rotate: true
+  xy: 973, 155
+  size: 99, 46
+  orig: 99, 46
+  offset: 0, 0
+  index: -1
+weapon_R2
+  rotate: false
+  xy: 499, 12
+  size: 98, 45
+  orig: 98, 45
   offset: 0, 0
   index: -1

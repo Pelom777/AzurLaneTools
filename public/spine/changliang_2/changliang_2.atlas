@@ -4,6 +4,13 @@ size: 1024,256
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
+bag
+  rotate: true
+  xy: 702, 94
+  size: 39, 66
+  orig: 39, 66
+  offset: 0, 0
+  index: -1
 body
   rotate: false
   xy: 516, 96
@@ -12,8 +19,8 @@ body
   offset: 0, 0
   index: -1
 body_w
-  rotate: false
-  xy: 658, 112
+  rotate: true
+  xy: 770, 88
   size: 45, 48
   orig: 45, 48
   offset: 0, 0
@@ -48,63 +55,63 @@ eye_0_1
   index: -1
 eye_0_2
   rotate: false
-  xy: 334, 3
+  xy: 385, 45
   size: 26, 17
   orig: 26, 17
   offset: 0, 0
   index: -1
 eye_1_1
   rotate: false
-  xy: 385, 103
+  xy: 820, 99
   size: 41, 30
   orig: 41, 30
   offset: 0, 0
   index: -1
 eye_1_2
   rotate: false
-  xy: 658, 81
+  xy: 961, 103
   size: 25, 29
   orig: 25, 29
   offset: 0, 0
   index: -1
 eye_4_1
-  rotate: false
-  xy: 425, 66
+  rotate: true
+  xy: 988, 103
   size: 29, 22
   orig: 29, 22
   offset: 0, 0
   index: -1
 eye_4_2
   rotate: false
-  xy: 539, 72
+  xy: 525, 72
   size: 23, 22
   orig: 23, 22
   offset: 0, 0
   index: -1
 eye_5_1
-  rotate: false
-  xy: 487, 63
+  rotate: true
+  xy: 361, 16
   size: 26, 25
   orig: 26, 25
   offset: 0, 0
   index: -1
 eye_5_2
   rotate: false
-  xy: 515, 69
+  xy: 501, 63
   size: 22, 25
   orig: 22, 25
   offset: 0, 0
   index: -1
 eye_7_1
   rotate: true
-  xy: 385, 75
+  xy: 385, 64
   size: 26, 38
   orig: 26, 38
   offset: 0, 0
   index: -1
 eye_7_2
-  rotate: false
-  xy: 334, 22
+  rotate: true
+  xy: 425, 62
   size: 26, 38
   orig: 26, 38
   offset: 0, 0
@@ -160,28 +167,28 @@ hair_R2
   index: -1
 hand_L
   rotate: true
-  xy: 780, 107
+  xy: 465, 62
   size: 26, 34
   orig: 26, 34
   offset: 0, 0
   index: -1
 hand_L2
   rotate: true
-  xy: 705, 102
+  xy: 863, 98
   size: 31, 37
   orig: 31, 37
   offset: 0, 0
   index: -1
 hand_R
-  rotate: true
-  xy: 622, 79
+  rotate: false
+  xy: 902, 95
   size: 25, 34
   orig: 25, 34
   offset: 0, 0
   index: -1
 hand_R2
-  rotate: true
-  xy: 744, 103
+  rotate: false
+  xy: 929, 98
   size: 30, 34
   orig: 30, 34
   offset: 0, 0
@@ -201,15 +208,15 @@ jiji
   offset: 0, 0
   index: -1
 leg_L1
-  rotate: true
-  xy: 385, 135
+  rotate: false
+  xy: 334, 16
   size: 25, 44
   orig: 25, 44
   offset: 0, 0
   index: -1
 leg_L2
-  rotate: true
-  xy: 704, 78
+  rotate: false
+  xy: 361, 44
   size: 22, 30
   orig: 22, 30
   offset: 0, 0
@@ -222,22 +229,22 @@ leg_R1
   offset: 0, 0
   index: -1
 leg_R2
-  rotate: true
-  xy: 456, 66
+  rotate: false
+  xy: 388, 14
   size: 22, 29
   orig: 22, 29
   offset: 0, 0
   index: -1
 lingdang1
-  rotate: false
-  xy: 357, 62
+  rotate: true
+  xy: 820, 86
   size: 11, 12
   orig: 11, 12
   offset: 0, 0
   index: -1
 lingdang2
   rotate: false
-  xy: 564, 83
+  xy: 834, 86
   size: 12, 11
   orig: 12, 11
   offset: 0, 0
@@ -286,7 +293,7 @@ meimao_4
   index: -1
 peishi1
   rotate: false
-  xy: 685, 88
+  xy: 550, 72
   size: 17, 22
   orig: 17, 22
   offset: 0, 0
@@ -314,8 +321,22 @@ sleep3
   index: -1
 taoershao
   rotate: false
-  xy: 578, 92
+  xy: 334, 2
   size: 42, 12
   orig: 42, 12
+  offset: 0, 0
+  index: -1
+weapon1
+  rotate: true
+  xy: 658, 86
+  size: 74, 42
+  orig: 74, 42
+  offset: 0, 0
+  index: -1
+weapon2
+  rotate: true
+  xy: 385, 92
+  size: 68, 44
+  orig: 68, 44
   offset: 0, 0
   index: -1

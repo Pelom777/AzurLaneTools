@@ -75,29 +75,29 @@ hair_R2
   offset: 0, 0
   index: -1
 hand_L
-  rotate: false
-  xy: 609, 52
+  rotate: true
+  xy: 697, 75
   size: 28, 34
   orig: 28, 34
   offset: 0, 0
   index: -1
 hand_L2
   rotate: false
-  xy: 388, 37
+  xy: 469, 28
   size: 31, 43
   orig: 31, 43
   offset: 0, 0
   index: -1
 hand_R1
   rotate: true
-  xy: 427, 10
+  xy: 733, 74
   size: 28, 34
   orig: 28, 34
   offset: 0, 0
   index: -1
 hand_R2
-  rotate: true
-  xy: 421, 40
+  rotate: false
+  xy: 609, 44
   size: 31, 41
   orig: 31, 41
   offset: 0, 0
@@ -125,28 +125,28 @@ laba
   index: -1
 leg_L1
   rotate: true
-  xy: 603, 88
+  xy: 651, 78
   size: 25, 44
   orig: 25, 44
   offset: 0, 0
   index: -1
 leg_L2
   rotate: false
-  xy: 402, 5
+  xy: 642, 46
   size: 23, 30
   orig: 23, 30
   offset: 0, 0
   index: -1
 leg_R1
   rotate: true
-  xy: 464, 45
+  xy: 603, 87
   size: 26, 46
   orig: 26, 46
   offset: 0, 0
   index: -1
 leg_R2
-  rotate: true
-  xy: 609, 28
+  rotate: false
+  xy: 667, 47
   size: 22, 29
   orig: 22, 29
   offset: 0, 0
@@ -228,6 +228,13 @@ sleep5
   orig: 86, 48
   offset: 0, 0
   index: -1
+weapon1
+  rotate: false
+  xy: 304, 2
+  size: 63, 38
+  orig: 63, 38
+  offset: 0, 0
+  index: -1
 xiuzi_L
   rotate: false
   xy: 750, 147
@@ -236,23 +243,30 @@ xiuzi_L
   offset: 0, 0
   index: -1
 xiuzi_L2
-  rotate: true
-  xy: 373, 2
+  rotate: false
+  xy: 769, 75
   size: 33, 27
   orig: 33, 27
   offset: 0, 0
   index: -1
 xunzhang
   rotate: false
-  xy: 639, 72
+  xy: 369, 26
   size: 13, 14
   orig: 13, 14
   offset: 0, 0
   index: -1
 yulei
-  rotate: true
-  xy: 304, 4
+  rotate: false
+  xy: 388, 13
   size: 36, 67
   orig: 36, 67
+  offset: 0, 0
+  index: -1
+yulei2
+  rotate: false
+  xy: 426, 20
+  size: 41, 51
+  orig: 41, 51
   offset: 0, 0
   index: -1

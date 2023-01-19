@@ -26,8 +26,8 @@ body-t
   offset: 0, 0
   index: -1
 body_t1
-  rotate: true
-  xy: 363, 3
+  rotate: false
+  xy: 1493, 155
   size: 24, 31
   orig: 24, 31
   offset: 0, 0
@@ -62,7 +62,7 @@ daimao(2)
   index: -1
 ear
   rotate: false
-  xy: 1497, 155
+  xy: 1519, 159
   size: 27, 31
   orig: 27, 31
   offset: 0, 0
@@ -208,15 +208,15 @@ hand_L2
   offset: 0, 0
   index: -1
 hand_R1
-  rotate: true
-  xy: 1421, 157
+  rotate: false
+  xy: 436, 55
   size: 29, 38
   orig: 29, 38
   offset: 0, 0
   index: -1
 hand_R2
   rotate: true
-  xy: 1461, 156
+  xy: 1421, 156
   size: 30, 34
   orig: 30, 34
   offset: 0, 0
@@ -226,6 +226,20 @@ ji
   xy: 1174, 151
   size: 32, 49
   orig: 32, 49
+  offset: 0, 0
+  index: -1
+jz_L1
+  rotate: false
+  xy: 437, 95
+  size: 39, 19
+  orig: 39, 19
+  offset: 0, 0
+  index: -1
+jz_L2
+  rotate: false
+  xy: 2001, 173
+  size: 45, 31
+  orig: 45, 31
   offset: 0, 0
   index: -1
 leg_L1
@@ -250,8 +264,8 @@ leg_R1
   offset: 0, 0
   index: -1
 leg_R2
-  rotate: false
-  xy: 1561, 157
+  rotate: true
+  xy: 1548, 168
   size: 22, 33
   orig: 22, 33
   offset: 0, 0
@@ -342,14 +356,14 @@ wenshen
   index: -1
 xing
   rotate: false
-  xy: 1585, 170
+  xy: 1583, 170
   size: 20, 20
   orig: 20, 20
   offset: 0, 0
   index: -1
 xing2
-  rotate: false
-  xy: 1526, 156
+  rotate: true
+  xy: 1457, 153
   size: 33, 34
   orig: 33, 34
   offset: 0, 0

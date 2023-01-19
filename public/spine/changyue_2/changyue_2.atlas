@@ -26,15 +26,15 @@ body
   offset: 0, 0
   index: -1
 body_w
-  rotate: false
-  xy: 825, 65
+  rotate: true
+  xy: 902, 61
   size: 43, 46
   orig: 43, 46
   offset: 0, 0
   index: -1
 ear
-  rotate: true
-  xy: 870, 40
+  rotate: false
+  xy: 858, 39
   size: 25, 30
   orig: 25, 30
   offset: 0, 0
@@ -54,8 +54,8 @@ erduoR
   offset: 0, 0
   index: -1
 eye _L
-  rotate: true
-  xy: 870, 67
+  rotate: false
+  xy: 950, 69
   size: 44, 30
   orig: 44, 30
   offset: 0, 0
@@ -69,35 +69,35 @@ eye_L2
   index: -1
 eye_L3
   rotate: true
-  xy: 727, 32
+  xy: 639, 11
   size: 29, 25
   orig: 29, 25
   offset: 0, 0
   index: -1
 eye_L4
   rotate: false
-  xy: 825, 2
+  xy: 684, 6
   size: 27, 26
   orig: 27, 26
   offset: 0, 0
   index: -1
 eye_L5
-  rotate: false
-  xy: 972, 65
+  rotate: true
+  xy: 828, 7
   size: 26, 27
   orig: 26, 27
   offset: 0, 0
   index: -1
 eye_R
   rotate: false
-  xy: 653, 44
+  xy: 654, 44
   size: 36, 27
   orig: 36, 27
   offset: 0, 0
   index: -1
 eye_R2
   rotate: true
-  xy: 950, 78
+  xy: 666, 16
   size: 26, 16
   orig: 26, 16
   offset: 0, 0
@@ -132,7 +132,7 @@ face
   index: -1
 fashi_L
   rotate: false
-  xy: 902, 47
+  xy: 614, 42
   size: 38, 29
   orig: 38, 29
   offset: 0, 0
@@ -153,14 +153,14 @@ hair_R
   index: -1
 hand_L
   rotate: false
-  xy: 825, 30
+  xy: 800, 26
   size: 26, 33
   orig: 26, 33
   offset: 0, 0
   index: -1
 hand_L2
   rotate: true
-  xy: 614, 44
+  xy: 692, 34
   size: 27, 37
   orig: 27, 37
   offset: 0, 0
@@ -173,8 +173,8 @@ hand_R
   offset: 0, 0
   index: -1
 hand_R2
-  rotate: true
-  xy: 691, 33
+  rotate: false
+  xy: 828, 35
   size: 28, 34
   orig: 28, 34
   offset: 0, 0
@@ -202,7 +202,7 @@ hounaodai
   index: -1
 hudiejie
   rotate: false
-  xy: 969, 94
+  xy: 825, 71
   size: 50, 40
   orig: 50, 40
   offset: 0, 0
@@ -229,8 +229,8 @@ leg_L2
   offset: 0, 0
   index: -1
 leg_R1
-  rotate: true
-  xy: 902, 78
+  rotate: false
+  xy: 996, 53
   size: 26, 46
   orig: 26, 46
   offset: 0, 0
@@ -272,21 +272,21 @@ mao_R
   index: -1
 maozhua _L
   rotate: true
-  xy: 790, 28
+  xy: 765, 28
   size: 31, 33
   orig: 31, 33
   offset: 0, 0
   index: -1
 maozhua _R 2
-  rotate: false
-  xy: 942, 46
+  rotate: true
+  xy: 607, 12
   size: 28, 30
   orig: 28, 30
   offset: 0, 0
   index: -1
 maozhua_R
-  rotate: true
-  xy: 754, 27
+  rotate: false
+  xy: 731, 27
   size: 32, 34
   orig: 32, 34
   offset: 0, 0
@@ -347,6 +347,13 @@ wash
   orig: 136, 129
   offset: 0, 0
   index: -1
+weapon_pao
+  rotate: false
+  xy: 969, 101
+  size: 50, 33
+  orig: 50, 33
+  offset: 0, 0
+  index: -1
 weiba
   rotate: false
   xy: 2, 2
@@ -362,8 +369,8 @@ xiuzi
   offset: 0, 0
   index: -1
 xiuzi_R
-  rotate: true
-  xy: 972, 40
+  rotate: false
+  xy: 877, 83
   size: 23, 28
   orig: 23, 28
   offset: 0, 0
@@ -411,8 +418,8 @@ zui4
   offset: 0, 0
   index: -1
 嘴 副本
-  rotate: true
-  xy: 80, 42
+  rotate: false
+  xy: 589, 20
   size: 16, 4
   orig: 16, 4
   offset: 0, 0

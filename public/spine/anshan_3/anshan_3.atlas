@@ -13,7 +13,7 @@ bao
   index: -1
 bei
   rotate: true
-  xy: 464, 79
+  xy: 497, 79
   size: 25, 40
   orig: 25, 40
   offset: 0, 0
@@ -27,21 +27,21 @@ body
   index: -1
 body_w
   rotate: false
-  xy: 326, 51
+  xy: 274, 6
   size: 45, 48
   orig: 45, 48
   offset: 0, 0
   index: -1
 ear
   rotate: true
-  xy: 991, 172
+  xy: 991, 96
   size: 27, 31
   orig: 27, 31
   offset: 0, 0
   index: -1
 eye_
-  rotate: false
-  xy: 278, 101
+  rotate: true
+  xy: 991, 125
   size: 74, 22
   orig: 74, 22
   offset: 0, 0
@@ -83,14 +83,14 @@ eye_33
   index: -1
 eye_44
   rotate: false
-  xy: 278, 125
+  xy: 558, 116
   size: 74, 25
   orig: 74, 25
   offset: 0, 0
   index: -1
 fabian
   rotate: false
-  xy: 274, 2
+  xy: 409, 64
   size: 38, 41
   orig: 38, 41
   offset: 0, 0
@@ -124,15 +124,15 @@ hair_R
   offset: 0, 0
   index: -1
 han
-  rotate: false
-  xy: 378, 2
+  rotate: true
+  xy: 380, 2
   size: 14, 23
   orig: 14, 23
   offset: 0, 0
   index: -1
 hand_L1
-  rotate: true
-  xy: 506, 75
+  rotate: false
+  xy: 349, 9
   size: 29, 36
   orig: 29, 36
   offset: 0, 0
@@ -145,15 +145,15 @@ hand_L2
   offset: 0, 0
   index: -1
 hand_R1
-  rotate: false
-  xy: 991, 99
+  rotate: true
+  xy: 410, 2
   size: 25, 35
   orig: 25, 35
   offset: 0, 0
   index: -1
 hand_R2
   rotate: false
-  xy: 991, 136
+  xy: 380, 18
   size: 28, 34
   orig: 28, 34
   offset: 0, 0
@@ -167,7 +167,7 @@ hat
   index: -1
 he
   rotate: true
-  xy: 404, 33
+  xy: 539, 77
   size: 27, 24
   orig: 27, 24
   offset: 0, 0
@@ -187,29 +187,29 @@ jianzhuang
   offset: 0, 0
   index: -1
 leg_L1
-  rotate: false
-  xy: 373, 59
+  rotate: true
+  xy: 449, 78
   size: 26, 46
   orig: 26, 46
   offset: 0, 0
   index: -1
 leg_L2
-  rotate: false
-  xy: 329, 17
+  rotate: true
+  xy: 444, 29
   size: 23, 32
   orig: 23, 32
   offset: 0, 0
   index: -1
 leg_R1
   rotate: false
-  xy: 401, 62
+  xy: 321, 2
   size: 26, 43
   orig: 26, 43
   offset: 0, 0
   index: -1
 leg_R2
-  rotate: false
-  xy: 354, 16
+  rotate: true
+  xy: 449, 54
   size: 22, 33
   orig: 22, 33
   offset: 0, 0
@@ -271,37 +271,58 @@ sleep4
   offset: 0, 0
   index: -1
 star
-  rotate: true
-  xy: 378, 27
+  rotate: false
+  xy: 447, 3
   size: 30, 24
   orig: 30, 24
   offset: 0, 0
   index: -1
 texiao_1
   rotate: false
-  xy: 544, 86
+  xy: 634, 123
   size: 17, 18
   orig: 17, 18
   offset: 0, 0
   index: -1
 texiao_2
-  rotate: true
-  xy: 429, 73
+  rotate: false
+  xy: 410, 29
   size: 32, 33
   orig: 32, 33
   offset: 0, 0
   index: -1
 texiao_3
   rotate: false
-  xy: 274, 45
+  xy: 274, 56
   size: 50, 54
   orig: 50, 54
   offset: 0, 0
   index: -1
+weapon1
+  rotate: true
+  xy: 326, 47
+  size: 63, 38
+  orig: 63, 38
+  offset: 0, 0
+  index: -1
 yulei
   rotate: true
-  xy: 314, 8
+  xy: 346, 115
   size: 35, 13
   orig: 35, 13
+  offset: 0, 0
+  index: -1
+yulei1
+  rotate: true
+  xy: 278, 112
+  size: 38, 66
+  orig: 38, 66
+  offset: 0, 0
+  index: -1
+yulei2
+  rotate: false
+  xy: 366, 54
+  size: 41, 51
+  orig: 41, 51
   offset: 0, 0
   index: -1

@@ -96,8 +96,8 @@ hair_R
   offset: 0, 0
   index: -1
 hand_L1
-  rotate: false
-  xy: 578, 110
+  rotate: true
+  xy: 846, 140
   size: 26, 33
   orig: 26, 33
   offset: 0, 0
@@ -111,42 +111,56 @@ hand_L2
   index: -1
 hand_R1
   rotate: false
-  xy: 567, 28
+  xy: 543, 105
   size: 24, 34
   orig: 24, 34
   offset: 0, 0
   index: -1
 hand_R2
   rotate: true
-  xy: 543, 101
+  xy: 811, 138
   size: 28, 33
   orig: 28, 33
   offset: 0, 0
   index: -1
+jz_L1
+  rotate: true
+  xy: 1003, 149
+  size: 39, 19
+  orig: 39, 19
+  offset: 0, 0
+  index: -1
+jz_L2
+  rotate: false
+  xy: 280, 8
+  size: 45, 31
+  orig: 45, 31
+  offset: 0, 0
+  index: -1
 leg_L1
   rotate: true
-  xy: 328, 16
+  xy: 728, 141
   size: 25, 44
   orig: 25, 44
   offset: 0, 0
   index: -1
 leg_L2
   rotate: false
-  xy: 606, 112
+  xy: 569, 112
   size: 26, 31
   orig: 26, 31
   offset: 0, 0
   index: -1
 leg_R1
   rotate: true
-  xy: 280, 13
+  xy: 327, 15
   size: 26, 46
   orig: 26, 46
   offset: 0, 0
   index: -1
 leg_R2
-  rotate: true
-  xy: 634, 104
+  rotate: false
+  xy: 597, 112
   size: 25, 31
   orig: 25, 31
   offset: 0, 0
@@ -236,8 +250,8 @@ tangyuan2
   offset: 0, 0
   index: -1
 tie
-  rotate: false
-  xy: 556, 64
+  rotate: true
+  xy: 774, 135
   size: 31, 35
   orig: 31, 35
   offset: 0, 0
