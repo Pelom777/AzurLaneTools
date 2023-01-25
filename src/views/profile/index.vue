@@ -93,8 +93,8 @@ const handleSwitch = (name: string) => {
             }
             else {
               container = composeSprite(resources[`${file}Png`].texture, resources[`${file}Obj`].data.split('\r\n'))
-              container.scale.set(size[0] / rawSize[0], size[1] / rawSize[1])
             }
+            container.scale.set(size[0] / rawSize[0], size[1] / rawSize[1])
             if (file == name) {
               baseSize = size
               baseOffset = [size[0] / 2 + position[0], size[1] / 2 + position[1]]
