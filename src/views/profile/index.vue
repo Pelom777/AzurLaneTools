@@ -5,11 +5,12 @@ import { load } from '@/axios/data'
 import { Application, Sprite, Container, Rectangle, Texture } from './pixi'
 import { Spine } from '@pixi-spine/all-3.8'
 
+const cdn = 'https://cdn.al.pelom.cn'
 const route = useRoute()
 const loading = ref(true)
 const ship = ref({}), skin = ref({})
 const name = route.params.name as string
-let currentName: string
+let cur: string
 const option = ref([])
 const app = new Application({ resolution: 2 })
 const spineContainer = new Container()
@@ -22,8 +23,8 @@ let back: Sprite, spineBase: Sprite, spineChar: Spine
   skin.value = (await load('skin'))[name]
   const rarity = ship.value['rarity']
   app.loader
-    .add('back', `https://cdn.al.pelom.cn/shipbackground/${rarity}.png`)
-    .add('spineBase', `https://cdn.al.pelom.cn/spinebase/${rarity > 6 ? rarity - 2 : rarity}.png`)
+    .add('back', `${cdn}/shipbackground/${rarity}.png`)
+    .add('spineBase', `${cdn}/spinebase/${rarity > 6 ? rarity - 2 : rarity}.png`)
     .load((loader, resources) => {
       back = new Sprite(resources.back.texture)
       back.anchor.set(0.5)
@@ -36,7 +37,7 @@ let back: Sprite, spineBase: Sprite, spineChar: Spine
       spineContainer.addChild(spineBase)
       spineContainer.position.set(130, app.screen.height - 100)
 
-      handleSwitch(name)
+      handleSwitch(route.params.cur as string ?? name)
     })
 })()
 
@@ -60,23 +61,23 @@ const composeSprite = (texture: Texture, mesh: string[]) => {
 }
 
 const handleSwitch = (name: string) => {
-  if (name == currentName)
+  if (name == cur)
     return
-  currentName = name
+  cur = name
   loading.value = true
   app.loader
     .reset()
-    .add('paintingJson',`https://cdn.al.pelom.cn/painting/${name}/${name}.json`)
-    .add('spineChar', `https://cdn.al.pelom.cn/spine/${name}/${name}.skel`)
+    .add('paintingJson',`${cdn}/painting/${name}/${name}.json`)
+    .add('spineChar', `${cdn}/spine/${name}/${name}.skel`)
     .load((loader, resources) => {
       paintingContainer?.destroy(true)
       paintingContainer = new Container()
       let paintingJson: Object = resources.paintingJson.data
       Object.keys(paintingJson).forEach((file) => {
-        app.loader.add(`${file}Png`, `https://cdn.al.pelom.cn/painting/${name}/${file}.png`)
+        app.loader.add(`${file}Png`, `${cdn}/painting/${name}/${file}.png`)
         if(paintingJson[file]['raw'] === true)
           return
-        app.loader.add(`${file}Obj`, `https://cdn.al.pelom.cn/painting/${name}/${file}-mesh.obj`)
+        app.loader.add(`${file}Obj`, `${cdn}/painting/${name}/${file}-mesh.obj`)
       })
       app.loader
         .load((loader, resources) => {
