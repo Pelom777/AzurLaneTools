@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import icon from './icon.vue'
 import { load } from '@/axios/data'
+import icon from '@/components/icon.vue'
 
 const option = ref({}), ship = ref({}), skin = ref({})
 ;(async () => {

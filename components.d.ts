@@ -47,6 +47,7 @@ declare module '@vue/runtime-core' {
     ElTag: typeof import('element-plus/es')['ElTag']
     ElTimeline: typeof import('element-plus/es')['ElTimeline']
     ElTimelineItem: typeof import('element-plus/es')['ElTimelineItem']
+    Icon: typeof import('./src/components/icon.vue')['default']
     IEpArrowDownBold: typeof import('~icons/ep/arrow-down-bold')['default']
     IEpArrowUpBold: typeof import('~icons/ep/arrow-up-bold')['default']
     IEpCellphone: typeof import('~icons/ep/cellphone')['default']
