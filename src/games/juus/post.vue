@@ -14,7 +14,7 @@ const option = ref({}), ship = ref({}), name = ref({})
   ship.value = await load('ship')
   name.value = await load('nickname')
 })()
-const cdn = 'https://cdn.al.pelom.cn'
+const cdn = import.meta.env.VITE_CDN
 const screenshot = ref(false)
 const showDrawer = ref(false)
 const showDialog = ref(false)
@@ -22,15 +22,15 @@ const input = ref('')
 let cur: any
 
 const avatar = (name: string) => {
-  return name == 'commader'
+  return name == 'commander'
     ? `${cdn}/juusui/txdi_3.png`
     : `${cdn}/squareicon/${name}.png`
 }
 
 const addComment = (target: {}[]) => {
   target.push({
-    name: 'commader',
-    text: input.value === '' ? 'Add a comment' : input.value,
+    name: 'commander',
+    text: input.value === '' ? 'Add a comment...' : input.value,
     reply: []
   })
   input.value = ''
@@ -140,7 +140,7 @@ const handleCheck = (name: string) => {
           <el-main class="text-wrapper">
             <div
               class="text"
-              contenteditable="true"
+              contenteditable
               @blur="list[id].text = ($event.target as HTMLDivElement).textContent"
             >
               {{ list[id].text }}
@@ -160,7 +160,7 @@ const handleCheck = (name: string) => {
                 <div class="text">
                   <span>{{ name[comment.name] ?? comment.name }}.</span>
                   <span
-                    contenteditable="true"
+                    contenteditable
                     @blur="comment.text = ($event.target as HTMLSpanElement).textContent"
                   >
                     {{ comment.text }}
@@ -173,7 +173,7 @@ const handleCheck = (name: string) => {
                 <span>
                   <el-image
                     :src="`${cdn}/juusui/qipao.png`"
-                    @click="comment.reply.push({ name: 'commader', text: 'Add a reply...' })"
+                    @click="comment.reply.push({ name: 'commander', text: 'Add a reply...' })"
                   />
                   {{ comment.reply.length }}
                 </span>
@@ -190,7 +190,7 @@ const handleCheck = (name: string) => {
                 <div class="text">
                   <span>{{ name[reply.name] ?? reply.name }}.</span>
                   <span
-                    contenteditable="true"
+                    contenteditable
                     @blur="reply.text = ($event.target as HTMLSpanElement).textContent"
                   >
                     {{ reply.text }}
@@ -233,22 +233,22 @@ const handleCheck = (name: string) => {
       v-model="showDialog"
       width="30%"
     >
-    <el-button
-      size="large"
-      type="primary"
-      round
-      @click="handleDowload(true)"
-    >
-      截取全屏
-    </el-button>
-    <el-button
-      size="large"
-      type="primary"
-      round
-      @click="handleDowload(false)"
-    >
-      截取对话
-    </el-button>
+      <el-button
+        size="large"
+        type="primary"
+        round
+        @click="handleDowload(true)"
+      >
+        截取全屏
+      </el-button>
+      <el-button
+        size="large"
+        type="primary"
+        round
+        @click="handleDowload(false)"
+      >
+        截取对话
+      </el-button>
     </el-dialog>
   </el-card>
 </template>
@@ -402,7 +402,7 @@ const handleCheck = (name: string) => {
     }
   }
 
-  &:hover>.del {
+  &:hover>.del, &:focus-within>.del {
     opacity: 1;
   }
 }
@@ -421,7 +421,7 @@ const handleCheck = (name: string) => {
     right: -6px;
   }
 
-  &:hover>.del {
+  &:hover>.del, &:focus-within>.del {
     opacity: 1;
   }
 }
@@ -490,5 +490,9 @@ const handleCheck = (name: string) => {
 
 .screenshot {
   height: auto;
+
+  &>.comment-wrapper {
+    overflow: hidden;
+  }
 }
 </style>

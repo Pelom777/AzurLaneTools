@@ -10,6 +10,7 @@ const show = computed({
   get: () => props.show,
   set: (value) => emits('update:show', value)
 })
+const cdn = import.meta.env.VITE_CDN
 const showOption = ref(false)
 const input = ref('')
 const filter = ref({})
@@ -77,8 +78,8 @@ watchEffect(() => {
             :title="item[name]['name']"
           >
             <el-image
-              :src="`https://cdn.al.pelom.cn/${dir}/${item[name]['painting']}.png`"
-              :style="{ backgroundImage: `url(https://cdn.al.pelom.cn/squareback/${[2, 2, 3, 4, 5, 6, 5, 6][item[name]['rarity'] - 1]}.png)` }"
+              :src="`${cdn}/${dir}/${item[name]['painting']}.png`"
+              :style="{ backgroundImage: `url(${cdn}/squareback/${[2, 2, 3, 4, 5, 6, 5, 6][item[name]['rarity'] - 1]}.png)` }"
               loading="lazy"
               @click="$emit('check', name)"
             />

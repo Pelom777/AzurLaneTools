@@ -8,6 +8,7 @@ const props = defineProps<{
 }>()
 defineEmits(['remove'])
 const { user } = useStore()
+const cdn = import.meta.env.VITE_CDN
 const type = props.ship['rarity'] > 6 ? 1 : 0
 const from = ref(1), to = ref(1), base = ref(0)
 const range = computed(() => {
@@ -27,7 +28,7 @@ const time = computed(() => {
 <template>
   <el-card>
     <h1>
-      <el-avatar size="large" :src="`https://cdn.al.pelom.cn/squareicon/${ship['painting']}.png`" />
+      <el-avatar size="large" :src="`${cdn}/squareicon/${ship['painting']}.png`" />
       <el-divider direction="vertical" />
       <span>{{ ship['name'] }}</span>
       <el-button circle type="danger" size="small" @click="$emit('remove', index)">

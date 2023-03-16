@@ -9,6 +9,7 @@ const props = defineProps<{
 }>()
 defineEmits(['remove'])
 const { user } = useStore()
+const cdn = import.meta.env.VITE_CDN
 const slot = ref(['', '', ''])
 const list = ref({})
 const cur = ref(0)
@@ -47,7 +48,7 @@ const handleCheck = (name: string) =>{
 <template>
   <el-card>
     <h1>
-      <el-avatar size="large" :src="`https://cdn.al.pelom.cn/squareicon/${ship['painting']}.png`" />
+      <el-avatar size="large" :src="`${cdn}/squareicon/${ship['painting']}.png`" />
       <el-divider direction="vertical" />
       <span>{{ ship['name'] }}</span>
       <el-button circle type="danger" size="small" @click="$emit('remove', index)">
@@ -62,7 +63,7 @@ const handleCheck = (name: string) =>{
         size="large"
         fit="contain"
         v-for="(item, index) in slot"
-        :src="`https://cdn.al.pelom.cn/equipicon/${equip[item]?.['painting'] ?? 'empty'}.png`"
+        :src="`${cdn}/equipicon/${equip[item]?.['painting'] ?? 'empty'}.png`"
         @click="handleClick(index)"
       />
       <el-divider direction="vertical" />
@@ -70,7 +71,7 @@ const handleCheck = (name: string) =>{
         shape="square"
         size="large"
         fit="contain"
-        :src="`https://cdn.al.pelom.cn/equipicon/${beacon ? '680' : 'empty'}.png`"
+        :src="`${cdn}/equipicon/${beacon ? '680' : 'empty'}.png`"
         @click="beacon = !beacon"
       />
     </h1>

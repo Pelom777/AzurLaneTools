@@ -5,7 +5,7 @@ import { load } from '@/axios/data'
 import { Application, Sprite, Container, Rectangle, Texture } from './pixi'
 import { Spine } from '@pixi-spine/all-3.8'
 
-const cdn = 'https://cdn.al.pelom.cn'
+const cdn = import.meta.env.VITE_CDN
 const route = useRoute()
 const loading = ref(true)
 const ship = ref({}), skin = ref({})

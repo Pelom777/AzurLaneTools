@@ -6,7 +6,7 @@ const template = {
   text: '因为今天是情人节，所以普利茅斯带来了慰问品。希望您能高兴，指挥官大人♪',
   comment: [
     {
-      name: 'commader',
+      name: 'commander',
       text: '谢谢你，普利茅斯。',
       reply: [
         {

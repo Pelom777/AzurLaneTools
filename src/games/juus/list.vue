@@ -7,7 +7,7 @@ const name = ref({})
 ;(async () => {
   name.value = await load('nickname')
 })()
-const cdn = 'https://cdn.al.pelom.cn'
+const cdn = import.meta.env.VITE_CDN
 const { juus: { list, add } } = useStore()
 const showDialog = ref(false)
 </script>

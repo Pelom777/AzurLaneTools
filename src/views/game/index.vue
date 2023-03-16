@@ -7,8 +7,16 @@
     <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
       <el-card @click="$router.push({ name: 'juus' })">
         <h1>
-          <el-icon><i-ep-ChatDotRound /></el-icon>
+          <el-icon><i-ep-Camera /></el-icon>
           JUUs
+        </h1>
+      </el-card>
+    </el-col>
+    <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+      <el-card @click="$router.push({ name: 'chat' })">
+        <h1>
+          <el-icon><i-ep-ChatDotRound /></el-icon>
+          JuuChat
         </h1>
       </el-card>
     </el-col>

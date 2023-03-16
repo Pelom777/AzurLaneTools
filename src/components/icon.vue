@@ -5,7 +5,7 @@ const props = defineProps<{
   skin: {},
   cur?: string
 }>()
-const cdn = 'https://cdn.al.pelom.cn'
+const cdn = import.meta.env.VITE_CDN
 const index = ref(!!props.cur ? Object.keys(props.skin).findIndex(e => e == props.cur) : 0)
 const count = Object.keys(props.skin).length
 const icon = computed(() => {

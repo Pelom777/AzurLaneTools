@@ -2,7 +2,7 @@
 import list from './list.vue'
 import post from './post.vue'
 
-const cdn = 'https://cdn.al.pelom.cn'
+const cdn = import.meta.env.VITE_CDN
 const width = ref(window.innerWidth), height = ref(window.innerHeight)
 const scale = computed(() => {
   return Math.min(width.value / 1280, height.value / 720)
