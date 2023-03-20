@@ -4,34 +4,33 @@ const props = defineProps<{
   ship: {},
   skin: {}
 }>()
+const emits = defineEmits(['switch'])
+
+const value = ref(props.name)
 </script>
 
 <template>
-<el-card>
-  <template #header>
-    {{ ship['name'] }}
-  </template>
-  <el-row v-for="(item, name) in skin">
-    <el-col :span="24">
-      <el-button
-        size="large"
-        @click="$emit('switch', name)"
-      >
-        {{ item['name'] }}
-      </el-button>
-    </el-col>
-  </el-row>
-</el-card>
+  <el-select
+    v-model="value"
+    size="large"
+    @change="$emit('switch', $event)"
+  >
+    <template #prefix>
+      <el-icon color="deeppink">
+        <i-ep-MagicStick />
+      </el-icon>
+    </template>
+    <el-option
+      v-for="(item, name) in skin"
+      :label="item['name']"
+      :value="name"
+    />
+  </el-select>
 </template>
 
 <style lang="scss" scoped>
-.el-card {
-  width: 20vw;
-  margin: 10vh 0 auto;
-
-  &:deep(.el-card__body) {
-    max-height: 25vh;
-    padding: 0;
-  }
+.el-select {
+  width: 16em;
+  box-shadow: var(--el-box-shadow-light);
 }
 </style>

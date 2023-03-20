@@ -10,6 +10,7 @@ export * from '@pixi/core'
 export * from '@pixi/sprite'
 export * from '@pixi/app'
 export * from '@pixi/interaction'
+export * from '@pixi/loaders'
 
 // Renderer plugins
 import { BatchRenderer } from '@pixi/core'

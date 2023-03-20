@@ -5,37 +5,48 @@ const props = defineProps<{
 </script>
 
 <template>
-<el-card>
-  <template #header>
-    <el-page-header
-      title="返回"
-      content="Spine"
-      @back="$emit('back')"
-    />
-  </template>
-  <el-row>
-    <el-col
-      :span="12"
-      v-for="opt in option"
-    >
-      <el-button
-        size="large"
-        @click="$emit('action', opt)"
+  <el-card>
+    <template #header>
+      <el-page-header
+        title="返回"
+        content="Spine"
+        @back="$emit('back')"
+      />
+    </template>
+    <el-row>
+      <el-col
+        :span="12"
+        v-for="opt in option"
       >
-        {{ opt }}
-      </el-button>
-    </el-col>
-  </el-row>
-</el-card>
+        <el-button
+          size="large"
+          @click="$emit('action', opt)"
+        >
+          {{ opt }}
+        </el-button>
+      </el-col>
+    </el-row>
+  </el-card>
 </template>
 
 <style lang="scss" scoped>
 .el-card {
-  width: 24vw;
-  margin: auto 4vw auto auto;
+  width: 24em;
+  max-width: 100%;
+  margin-left: auto;
+  background: #fff8;
+  backdrop-filter: blur(5px);
 
-  &:deep(.el-card__body) {
-    height: 75vh;
+  &:deep(.el-card__header) {
+    background: #fffa;
+  }
+
+  & .el-col {
+    padding: 5px;
+  }
+
+  & .el-button {
+    width: 100%;
   }
 }
 </style>
