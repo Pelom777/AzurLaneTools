@@ -10,13 +10,13 @@ const route = useRoute()
 const loading = ref(true)
 const ship = ref({}), skin = ref({})
 const name = route.params.name as string
-let cur = route.params.cur as string ?? name
+const cur = ref(route.params.cur as string ?? name)
 const option = ref([])
 const app = new Application({ resolution: 2 })
 const spineContainer = new Container()
-let paintingContainer: Container
+const paintingContainer = new Container()
 const container = ref<HTMLDivElement>()
-let back: Sprite, spineBase: Sprite, spineChar: Spine
+let back: Sprite, spineBase: Sprite, spineChar: Spine, paintingFace: Container
 
 ;(async () => {
   ship.value = (await load('ship'))[name]
@@ -33,12 +33,12 @@ let back: Sprite, spineBase: Sprite, spineChar: Spine
     spineBase.position.set(spineContainer.width / 2, spineContainer.height)
     spineContainer.addChild(spineBase)
     spineContainer.position.set(130, app.screen.height - 100)
-  }).load(() => handleSwitch(cur))
+  }).load(() => handleChange(cur.value))
 })()
 
 const composeSprite = (texture: Texture, mesh: string[]) => {
-  let container = new Container()
-  let count = mesh.reduce((t, c) => t + (c[1] == 't' ? 1 : 0), 0)
+  const layer = new Container()
+  const count = mesh.reduce((t, c) => t + (c[1] == 't' ? 1 : 0), 0)
   for (let i = 1; i <= count; i += 4) {
     let v0: number[] = mesh[i].split(' ').slice(1).map(e => Number(e));
     let v1: number[] = mesh[i + 2].split(' ').slice(1).map(e => Number(e));
@@ -50,60 +50,76 @@ const composeSprite = (texture: Texture, mesh: string[]) => {
     let sprite = new Sprite(new Texture(texture.baseTexture, rectangle))
     sprite.scale.set(1, -1)
     sprite.position.set(-v0[0], v1[1])
-    container.addChild(sprite)
+    layer.addChild(sprite)
   }
-  return container
+  return layer
 }
 
 const loadPainting = async (name: string, json: {}) => {
   const loader = new Loader()
-  const paintingContainer = new Container()
+  const painting = new Container()
   const baseSize = json[name]['size'], baseScale = app.screen.height / json[name]['view'][1] * 0.8;
   for (let file of Object.keys(json)) {
     let size = json[file]['size'], rawSize = json[file]['rawSize'], pivot = json[file]['pivot'], position = json[file]['position']
-    let container: Container
+    let layer: Container
+    if (file === 'face') {
+      paintingFace = new Container()
+      paintingFace.scale.set(size[0] / rawSize[0], size[1] / rawSize[1])
+      paintingFace.position.set(baseSize[0] / 2 - size[0] * pivot[0] + position[0], baseSize[1] / 2 - size[1] * pivot[1] + position[1])
+      painting.addChild(paintingFace)
+      await changeFace(json[file]['list'][0])
+      continue
+    }
     const png: any = await new Promise(resolve => {
       loader.add(`${cdn}/painting/${name}/${file}.png`, res => resolve(res)).load()
     })
     if (json[file]['raw'] === true) {
-      container = new Container()
+      layer = new Container()
       let sprite = new Sprite(png.texture)
       sprite.position.set(0, sprite.height)
       sprite.scale.set(1, -1)
-      container.addChild(sprite)
+      layer.addChild(sprite)
     }
     else {
       const obj: any = await new Promise(resolve => {
         loader.add(`${cdn}/painting/${name}/${file}-mesh.obj`, res => resolve(res)).load()
       })
-      container = composeSprite(png.texture, obj.data.split('\r\n'))
+      layer = composeSprite(png.texture, obj.data.split('\r\n'))
     }
-    container.scale.set(size[0] / rawSize[0], size[1] / rawSize[1])
+    layer.scale.set(size[0] / rawSize[0], size[1] / rawSize[1])
     if (file !== name) {
-      container.position.set(baseSize[0] / 2 - size[0] * pivot[0] + position[0], baseSize[1] / 2 - size[1] * pivot[1] + position[1])
+      layer.position.set(baseSize[0] / 2 - size[0] * pivot[0] + position[0], baseSize[1] / 2 - size[1] * pivot[1] + position[1])
     }
-    paintingContainer.addChild(container)
+    painting.addChild(layer)
   }
-  paintingContainer.scale.set(baseScale, -baseScale)
-  paintingContainer.position.set(app.screen.width / 2 - (baseSize[0] / 2 + json[name]['position'][0]) * baseScale, app.screen.height / 2 + (baseSize[1] / 2 + json[name]['position'][1]) * baseScale)
-  return paintingContainer
+  loader.destroy()
+  painting.pivot.set(baseSize[0] / 2 + json[name]['position'][0], baseSize[1] / 2 + json[name]['position'][1])
+  painting.scale.set(baseScale, -baseScale)
+  painting.position.set(0, 0)
+  return painting
 }
 
-const handleSwitch = (name: string) => {
+const changeFace = async (index: number) => {
+  const loader = new Loader()
+  const png: any = await new Promise(resolve => {
+    loader.reset().add(`${cdn}/paintingface/${cur.value}/${index}.png`, res => resolve(res)).load()
+  })
+  loader.destroy()
+  let sprite = new Sprite(png.texture)
+  sprite.position.set(0, sprite.height)
+  sprite.scale.set(1, -1)
+  paintingFace.removeChildren()
+  paintingFace.addChild(sprite)
+}
+
+const handleChange = (name: string) => {
   loading.value = true
   app.loader.reset().add(`${cdn}/painting/${name}/${name}.json`,async res => {
-    paintingContainer?.destroy(true)
-    paintingContainer = await loadPainting(name, res.data)
-    paintingContainer.interactive = true
-    paintingContainer.on('pointerdown', e => {
-      let { x, y } = e.data.global
-      paintingContainer.on('pointermove', e => {
-        paintingContainer.position.set(paintingContainer.position.x + e.data.global.x - x, paintingContainer.position.y + e.data.global.y - y)
-        x = e.data.global.x, y = e.data.global.y
-      }).on('pointerup', () => {
-        paintingContainer.off('pointermove')
-      })
-    })
+    paintingContainer.removeChildren()
+    paintingContainer.addChild(await loadPainting(name, res.data))
+    paintingContainer.pivot.set(0)
+    paintingContainer.scale.set(1)
+    paintingContainer.position.set(app.screen.width / 2, app.screen.height / 2)
     app.stage.addChild(paintingContainer)
     app.stage.addChild(spineContainer)
     loading.value = false
@@ -114,19 +130,10 @@ const handleSwitch = (name: string) => {
     spineChar.position.set(spineContainer.width / 2, spineContainer.height - 25)
     spineContainer.addChild(spineChar)
     spineChar.state.setAnimation(0, 'stand', true)
-    spineChar.interactive = true
-    spineChar.on('pointertap', () => {
-      paintingContainer.visible = false
-      spineBase.visible = false
-      spineChar.scale.set(1)
-      spineContainer.position.set(app.screen.width / 3, app.screen.height / 2 + spineContainer.height / 3)
-      spineChar.state.setAnimation(0, 'normal', true)
-      option.value = spineChar.state.data.skeletonData.animations.map((item) => {
-        return item.name
-      })
-    })
   }).load()
 }
+
+watch(cur, () => handleChange(cur.value))
 
 const handleBack = () => {
   option.value = []
@@ -144,6 +151,37 @@ const handleAction = (opt: string) => {
 onMounted(() => {
   container.value.appendChild(app.view)
   app.renderer.resize(container.value.offsetWidth, container.value.offsetHeight)
+
+  container.value.onwheel = e => {
+    paintingContainer.pivot.x += (e.offsetX / 2 - paintingContainer.position.x) / paintingContainer.scale.x
+    paintingContainer.pivot.y += (e.offsetY / 2 - paintingContainer.position.y) / paintingContainer.scale.y
+    paintingContainer.position.set(e.offsetX / 2, e.offsetY / 2)
+    paintingContainer.scale.set(Math.min(Math.max(paintingContainer.scale.x + e.deltaY * -0.005, 0.25), 4))
+  }
+
+  paintingContainer.interactive = true
+  paintingContainer.on('pointerdown', e => {
+    let { x, y } = e.data.global
+    paintingContainer.on('pointermove', e => {
+      paintingContainer.position.x += e.data.global.x - x
+      paintingContainer.position.y += e.data.global.y - y
+      x = e.data.global.x, y = e.data.global.y
+    }).on('pointerup', () => {
+      paintingContainer.off('pointermove')
+    })
+  })
+  
+  spineContainer.interactive = true
+  spineContainer.on('pointertap', () => {
+    paintingContainer.visible = false
+    spineBase.visible = false
+    spineChar.scale.set(1)
+    spineContainer.position.set(app.screen.width / 3, app.screen.height / 2 + spineContainer.height / 3)
+    spineChar.state.setAnimation(0, 'normal', true)
+    option.value = spineChar.state.data.skeletonData.animations.map((item) => {
+      return item.name
+    })
+  })
 })
 
 onUnmounted(() => {
@@ -153,13 +191,17 @@ onUnmounted(() => {
 
 <template>
   <div>
-    <div id="pixi" ref="container" v-loading="loading"></div>
+    <div
+      id="pixi"
+      ref="container"
+      v-loading="loading"
+      @contextmenu.prevent
+    ></div>
     <selector
       v-show="option.length == 0"
-      :name="cur"
+      v-model:name="cur"
       :ship="ship"
       :skin="skin"
-      @switch="handleSwitch"
     />
     <controller
       v-show="option.length != 0"

@@ -4,7 +4,7 @@ const props = defineProps<{
   ship: {},
   skin: {}
 }>()
-const emits = defineEmits(['switch'])
+const emits = defineEmits(['update:name'])
 
 const value = ref(props.name)
 </script>
@@ -13,7 +13,7 @@ const value = ref(props.name)
   <el-select
     v-model="value"
     size="large"
-    @change="$emit('switch', $event)"
+    @change="$emit('update:name', $event)"
   >
     <template #prefix>
       <el-icon color="deeppink">
