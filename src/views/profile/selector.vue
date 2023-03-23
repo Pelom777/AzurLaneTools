@@ -1,19 +1,19 @@
 <script lang="ts" setup>
 const props = defineProps<{
   name: string,
-  ship: {},
   skin: {}
 }>()
 const emits = defineEmits(['update:name'])
-
-const value = ref(props.name)
+const name = computed({
+  get: () => props.name,
+  set: value => emits('update:name', value)
+})
 </script>
 
 <template>
   <el-select
-    v-model="value"
+    v-model="name"
     size="large"
-    @change="$emit('update:name', $event)"
   >
     <template #prefix>
       <el-icon color="deeppink">

@@ -4,7 +4,7 @@ const router = useRouter()
 
 const name = computed({
   get: () => route.path.split('/')[2],
-  set: (value) => router.push({ name: value })
+  set: value => router.push({ name: value })
 })
 </script>
 

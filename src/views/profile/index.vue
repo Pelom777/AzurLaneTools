@@ -200,7 +200,6 @@ onUnmounted(() => {
     <selector
       v-show="option.length == 0"
       v-model:name="cur"
-      :ship="ship"
       :skin="skin"
     />
     <controller
