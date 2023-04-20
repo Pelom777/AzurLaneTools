@@ -39,10 +39,8 @@ const name = computed({
   bottom: 0;
   left: 0;
 
-  &:deep(.el-tabs__item) {
-    &:first-child {
-      margin-left: 40px;
-    }
+  &:deep(.el-tabs__nav) {
+    margin-left: 40px;
   }
 }
 

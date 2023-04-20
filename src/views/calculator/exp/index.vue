@@ -4,24 +4,21 @@ import card from './card.vue'
 import { useStore } from '@/store'
 import { load } from '@/axios/data'
 
-const { user } = useStore()
+const { user, calc: { exp: { list } } } = useStore()
 const option = ref({}), ship = ref({}), exp = ref([])
+const ready = ref(false)
 ;(async () => {
   option.value = await load('option')
   ship.value = await load('ship')
   exp.value = await load('exp')
+  
+  ready.value = true
 })()
 const showDrawer = ref(false)
 const showDialog = ref(true)
-const list = ref({})
-let cnt = 0
-
-const handleRemove = (index: number) =>{
-  delete list.value[index]
-}
 
 const handleCheck = (name: string) =>{
-  list.value[cnt++] = name
+  list.push({ name, from: 1, to: 1, base: 0 })
   showDrawer.value = false
 }
 </script>
@@ -31,25 +28,24 @@ const handleCheck = (name: string) =>{
     size="large"
     type="primary"
     circle
-    @click="showDialog=true"
+    @click="showDialog = true"
   >
     <el-icon><i-ep-Setting /></el-icon>
   </el-button>
-  <el-row>
+  <el-row v-if="ready">
     <el-col :sm="12" :lg="8" :xl="6"
-      v-for="(name, index) in list"
-      :key="index"
+      v-for="item, index in list"
     >
       <card
-        :index="index"
-        :ship="ship[name]"
-        :exp="exp"
-        @remove="handleRemove"
+        :info="item"
+        :ship="ship[item.name]"
+        :exp="exp[ship[item.name]['rarity'] > 6 ? 1 : 0]"
+        @delete="list.splice(index, 1)"
       />
     </el-col>
     <el-col :sm="12" :lg="8" :xl="6">
       <el-card>
-        <el-avatar size="large" @click="showDrawer=true">
+        <el-avatar size="large" @click="showDrawer = true">
           <i-ep-Plus/>
         </el-avatar>
       </el-card>

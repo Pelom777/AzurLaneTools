@@ -195,7 +195,6 @@ onUnmounted(() => {
       id="pixi"
       ref="container"
       v-loading="loading"
-      @contextmenu.prevent
     ></div>
     <selector
       v-show="option.length == 0"

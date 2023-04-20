@@ -1,31 +1,31 @@
 <script lang="ts" setup>
 import { useStore } from '@/store'
+import { use } from 'echarts/core';
 
 const props = defineProps<{
-  index: string,
+  info: {},
   ship: {},
   equip: {},
   shipEquip: {}
 }>()
-defineEmits(['remove'])
+const emits = defineEmits(['delete'])
 const { user } = useStore()
 const cdn = import.meta.env.VITE_CDN
-const slot = ref(['', '', ''])
 const list = ref({})
 const cur = ref(0)
-const loading = ref(100), buff = ref(0), beacon = ref(false)
 const showDrawer = ref(false)
 const cd = computed(() => {
   let cd = 0, count = 0
-  slot.value.forEach((item, index) => {
+  props.info['slot'].forEach((item, index) => {
     cd += props.equip[item]?.['cd'] * props.shipEquip['base'][index]
     count += props.shipEquip['base'][index]
   })
+  const loading = user.technology.loading + user.cat.loading
   cd /= count
-  cd *= Math.sqrt(200 / ((loading.value + user.loading) * (1 + buff.value / 100) + 100))
+  cd *= Math.sqrt(200 / ((props.info['loading'] + loading) * (1 + props.info['buff'] / 100) + 100))
   cd *= 2.2
   cd += 0.1
-  cd *= beacon.value ? 0.96 : 1
+  cd *= props.info['beacon'] ? 0.96 : 1
   return cd.toFixed(4)
 })
 
@@ -40,7 +40,7 @@ const handleClick = (index: number) => {
 }
 
 const handleCheck = (name: string) =>{
-  slot.value[cur.value] = name
+  props.info['slot'][cur.value] = name
   showDrawer.value = false
 }
 </script>
@@ -51,7 +51,7 @@ const handleCheck = (name: string) =>{
       <el-avatar size="large" :src="`${cdn}/squareicon/${ship['painting']}.png`" />
       <el-divider direction="vertical" />
       <span>{{ ship['name'] }}</span>
-      <el-button circle type="danger" size="small" @click="$emit('remove', index)">
+      <el-button circle type="danger" size="small" @click="$emit('delete')">
         <el-icon>
           <i-ep-Close />
         </el-icon>
@@ -62,7 +62,7 @@ const handleCheck = (name: string) =>{
         shape="square"
         size="large"
         fit="contain"
-        v-for="(item, index) in slot"
+        v-for="item, index in info['slot']"
         :src="`${cdn}/equipicon/${equip[item]?.['painting'] ?? 'empty'}.png`"
         @click="handleClick(index)"
       />
@@ -71,17 +71,17 @@ const handleCheck = (name: string) =>{
         shape="square"
         size="large"
         fit="contain"
-        :src="`${cdn}/equipicon/${beacon ? '680' : 'empty'}.png`"
-        @click="beacon = !beacon"
+        :src="`${cdn}/equipicon/${info['beacon'] ? '680' : 'empty'}.png`"
+        @click="info['beacon'] = !info['beacon']"
       />
     </h1>
     <h3>
       <span>装填</span>
-      <el-slider v-model="loading" :min="0" :max="200" show-input size="small" />
+      <el-slider v-model="info['loading']" :min="0" :max="200" show-input size="small" />
     </h3>
     <h3>
       <span>buff%</span>
-      <el-slider v-model="buff" :min="0" :max="100" show-input size="small" />
+      <el-slider v-model="info['buff']" :min="0" :max="100" show-input size="small" />
     </h3>
     <h3>射速：{{ cd }}s</h3>
   </el-card>

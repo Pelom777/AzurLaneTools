@@ -4,8 +4,9 @@ import card from './card.vue'
 import { useStore } from '@/store'
 import { load } from '@/axios/data'
 
-const { user } = useStore()
+const { user, calc: { cd: { list } } } = useStore()
 const ship = ref({}), equip = ref({}), shipEquip = ref({})
+const ready = ref(false)
 ;(async () => {
   ship.value = await load('ship')
   equip.value = await load('equip')
@@ -14,19 +15,15 @@ const ship = ref({}), equip = ref({}), shipEquip = ref({})
   Object.keys(ship.value).forEach((name) => {
     if (ship.value[name]['type'] != 7)
       delete ship.value[name]
+  
+  ready.value = true
   })
 })()
 const showDrawer = ref(false)
 const showDialog = ref(true)
-const list = ref({})
-let cnt = 0
-
-const handleRemove = (index: number) =>{
-  delete list.value[index]
-}
 
 const handleCheck = (name: string) =>{
-  list.value[cnt++] = name
+  list.push({ name, slot: ['', '', ''], loading: 100, buff: 0, beacon: false })
   showDrawer.value = false
 }
 </script>
@@ -36,26 +33,25 @@ const handleCheck = (name: string) =>{
     size="large"
     type="primary"
     circle
-    @click="showDialog=true"
+    @click="showDialog = true"
   >
     <el-icon><i-ep-Setting /></el-icon>
   </el-button>
-  <el-row>
+  <el-row v-if="ready">
     <el-col :sm="12" :lg="8" :xl="6"
-      v-for="(name, index) in list"
-      :key="index"
+      v-for="item, index in list"
     >
       <card
-        :index="index"
-        :ship="ship[name]"
+        :info="item"
+        :ship="ship[item.name]"
         :equip="equip"
-        :ship-equip="shipEquip[name]"
-        @remove="handleRemove"
+        :ship-equip="shipEquip[item.name]"
+        @delete="list.splice(index, 1)"
       />
     </el-col>
     <el-col :sm="12" :lg="8" :xl="6">
       <el-card>
-        <el-avatar size="large" @click="showDrawer=true">
+        <el-avatar size="large" @click="showDrawer = true">
           <i-ep-Plus/>
         </el-avatar>
       </el-card>
