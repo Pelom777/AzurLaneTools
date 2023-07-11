@@ -3,7 +3,7 @@ import selector from './selector.vue'
 import controller from './controller.vue'
 import { load } from '@/axios/data'
 import { Application, Sprite, Container, Rectangle, Texture, Loader } from './pixi'
-import { Spine } from '@pixi-spine/all-3.8'
+import { Spine } from 'pixi-spine'
 
 const cdn = import.meta.env.VITE_CDN
 const route = useRoute()
