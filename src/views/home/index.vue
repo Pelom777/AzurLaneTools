@@ -29,7 +29,7 @@ const info = ref({}), ship = ref({}), skin = ref({})
   </el-carousel>
   <el-row class="showFrame">
     <el-col
-      :xs="6" :sm="4" :md="3" :lg="2" :xl="1"
+      :xs="6" :sm="4" :md="3" :lg="2" :xl="2"
       v-for="name in info['ship']"
       :key="name"
     >
@@ -42,7 +42,7 @@ const info = ref({}), ship = ref({}), skin = ref({})
   </el-row>
   <el-row class="showFrame">
     <el-col
-      :xs="6" :sm="4" :md="3" :lg="2" :xl="1"
+      :xs="6" :sm="4" :md="3" :lg="2" :xl="2"
       v-for="val, key in info['skin'] as {}"
       :key="key"
     >
