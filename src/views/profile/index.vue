@@ -1,14 +1,15 @@
 <script lang="ts" setup>
 import selector from './selector.vue'
 import controller from './controller.vue'
+import attribute from './attribute.vue'
 import { load } from '@/axios/data'
 import { Application, Sprite, Container, Rectangle, Texture, Loader } from './pixi'
 import { Spine } from 'pixi-spine'
 
 const cdn = import.meta.env.VITE_CDN
 const route = useRoute()
-const loading = ref(true)
-const ship = ref({}), skin = ref({})
+const loading = ref(true), showAlert = ref(true)
+const ship = ref({}), skin = ref({}), attr = ref()
 const name = route.params.name as string
 const cur = ref(route.params.cur as string ?? name)
 const option = ref([])
@@ -21,6 +22,7 @@ let back: Sprite, spineBase: Sprite, spineChar: Spine, paintingFace: Container
 ;(async () => {
   ship.value = (await load('ship'))[name]
   skin.value = (await load('skin'))[name]
+  attr.value = (await load('ship-attr'))[name]
   const rarity = ship.value['rarity']
   app.loader.add(`${cdn}/shipbackground/${rarity}.png`, res => {
     back = new Sprite(res.texture)
@@ -33,7 +35,7 @@ let back: Sprite, spineBase: Sprite, spineChar: Spine, paintingFace: Container
     spineBase.position.set(spineContainer.width / 2, spineContainer.height)
     spineContainer.addChild(spineBase)
     spineContainer.position.set(130, app.screen.height - 100)
-  }).load(() => handleChange(cur.value))
+  }).load(() => loading.value = false)
 })()
 
 const composeSprite = (texture: Texture, mesh: string[]) => {
@@ -114,6 +116,7 @@ const changeFace = async (index: number) => {
 
 const handleChange = (name: string) => {
   loading.value = true
+  showAlert.value = false
   app.loader.reset().add(`${cdn}/painting/${name}/${name}.json`,async res => {
     paintingContainer.removeChildren()
     paintingContainer.addChild(await loadPainting(name, res.data))
@@ -196,6 +199,14 @@ onUnmounted(() => {
       ref="container"
       v-loading="loading"
     ></div>
+    <el-alert
+      v-show="showAlert"
+      @click="handleChange(cur)"
+      title="点击此处加载立绘"
+      type="info"
+      :closable="false"
+      show-icon
+    />
     <selector
       v-show="option.length == 0"
       v-model:name="cur"
@@ -206,6 +217,11 @@ onUnmounted(() => {
       :option="option"
       @back="handleBack"
       @action="handleAction"
+    />
+    <attribute
+      v-if="!!attr"
+      v-show="option.length == 0"
+      :attr="attr"
     />
   </div>
 </template>
@@ -223,5 +239,14 @@ onUnmounted(() => {
     transform-origin: 0 0;
     scale: .5;
   }
+}
+
+.el-alert {
+  position: absolute;
+  width: fit-content;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%);
+  cursor: pointer;
 }
 </style>

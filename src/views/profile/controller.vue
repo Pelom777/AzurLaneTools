@@ -33,7 +33,7 @@ const props = defineProps<{
 .el-card {
   width: 24em;
   max-width: 100%;
-  margin-left: auto;
+  float: right;
   background: #fff8;
   backdrop-filter: blur(5px);
 
