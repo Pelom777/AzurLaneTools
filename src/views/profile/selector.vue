@@ -1,12 +1,17 @@
 <script lang="ts" setup>
 const props = defineProps<{
   name: string,
+  ex: boolean,
   skin: {}
 }>()
-const emits = defineEmits(['update:name'])
+const emits = defineEmits(['update:name', 'update:ex'])
 const name = computed({
   get: () => props.name,
   set: value => emits('update:name', value)
+})
+const ex = computed({
+  get: () => props.ex,
+  set: value => emits('update:ex', value)
 })
 </script>
 
@@ -17,7 +22,8 @@ const name = computed({
   >
     <template #prefix>
       <el-icon color="deeppink">
-        <i-ep-MagicStick />
+        <i-ep-Switch v-if="skin[name]?.['ex']" @click.stop="ex = !ex" />
+        <i-ep-MagicStick v-else />
       </el-icon>
     </template>
     <el-option

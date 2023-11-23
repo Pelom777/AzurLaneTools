@@ -12,6 +12,7 @@ const loading = ref(true), showAlert = ref(true)
 const ship = ref({}), skin = ref({}), attr = ref()
 const name = route.params.name as string
 const cur = ref(route.params.cur as string ?? name)
+const ex = ref(false)
 const option = ref([])
 const app = new Application({ resolution: 2 })
 const spineContainer = new Container()
@@ -117,7 +118,7 @@ const changeFace = async (index: number) => {
 const handleChange = (name: string) => {
   loading.value = true
   showAlert.value = false
-  app.loader.reset().add(`${cdn}/painting/${name}/${name}.json`,async res => {
+  app.loader.reset().add(`${cdn}/painting/${name}/${name}${ex.value ? '_ex' : ''}.json`,async res => {
     paintingContainer.removeChildren()
     paintingContainer.addChild(await loadPainting(name, res.data))
     paintingContainer.pivot.set(0)
@@ -136,7 +137,7 @@ const handleChange = (name: string) => {
   }).load()
 }
 
-watch(cur, () => handleChange(cur.value))
+watch([cur, ex], () => handleChange(cur.value))
 
 const handleBack = () => {
   option.value = []
@@ -210,6 +211,7 @@ onUnmounted(() => {
     <selector
       v-show="option.length == 0"
       v-model:name="cur"
+      v-model:ex="ex"
       :skin="skin"
     />
     <controller

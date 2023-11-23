@@ -86,6 +86,7 @@ declare module '@vue/runtime-core' {
     IEpSearch: typeof import('~icons/ep/search')['default']
     IEpSetting: typeof import('~icons/ep/setting')['default']
     IEpStarFilled: typeof import('~icons/ep/star-filled')['default']
+    IEpSwitch: typeof import('~icons/ep/switch')['default']
     IEpSwitchFilled: typeof import('~icons/ep/switch-filled')['default']
     IEpTimer: typeof import('~icons/ep/timer')['default']
     IEpTrophy: typeof import('~icons/ep/trophy')['default']
