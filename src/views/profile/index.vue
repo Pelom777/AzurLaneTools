@@ -152,6 +152,15 @@ const handleAction = (opt: string) => {
   spineChar.state.setAnimation(0, opt, true)
 }
 
+const handleDownload = () => {
+  const img = app.renderer.plugins.extract.image(paintingContainer)
+  const a = document.createElement('a')
+  a.href = img.src
+  a.download = cur.value
+  a.click()
+  a.remove()
+}
+
 onMounted(() => {
   container.value.appendChild(app.view)
   app.renderer.resize(container.value.offsetWidth, container.value.offsetHeight)
@@ -214,6 +223,14 @@ onUnmounted(() => {
       v-model:ex="ex"
       :skin="skin"
     />
+    <el-button
+      v-show="!showAlert"
+      @click="handleDownload"
+      type="info"
+      circle
+    >
+      <el-icon><i-ep-Download /></el-icon>
+    </el-button>
     <controller
       v-show="option.length != 0"
       :option="option"
@@ -250,5 +267,11 @@ onUnmounted(() => {
   left: 50%;
   transform: translate(-50%);
   cursor: pointer;
+}
+
+.el-button {
+  position: relative;
+  margin-left: 1em;
+  z-index: 1;
 }
 </style>

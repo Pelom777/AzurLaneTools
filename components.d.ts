@@ -65,6 +65,7 @@ declare module '@vue/runtime-core' {
     IEpCompass: typeof import('~icons/ep/compass')['default']
     IEpCrop: typeof import('~icons/ep/crop')['default']
     IEpDataLine: typeof import('~icons/ep/data-line')['default']
+    IEpDownload: typeof import('~icons/ep/download')['default']
     IEpElementPlus: typeof import('~icons/ep/element-plus')['default']
     IEpExpand: typeof import('~icons/ep/expand')['default']
     IEpFilter: typeof import('~icons/ep/filter')['default']
