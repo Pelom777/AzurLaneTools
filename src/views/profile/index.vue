@@ -3,7 +3,7 @@ import selector from './selector.vue'
 import controller from './controller.vue'
 import attribute from './attribute.vue'
 import { load } from '@/axios/data'
-import { Application, Sprite, Container, Rectangle, Texture, Loader } from './pixi'
+import { Application, Sprite, Container, Rectangle, Texture, Loader, RenderTexture } from './pixi'
 import { Spine } from 'pixi-spine'
 
 const cdn = import.meta.env.VITE_CDN
@@ -61,7 +61,7 @@ const composeSprite = (texture: Texture, mesh: string[]) => {
 const loadPainting = async (name: string, json: {}) => {
   const loader = new Loader()
   const painting = new Container()
-  const baseSize = json[name]['size'], baseScale = app.screen.height / json[name]['view'][1] * 0.8;
+  const baseSize = json[name]['size'], baseScale = app.screen.height / json[name]['view'][1] * 0.8
   for (let file of Object.keys(json)) {
     let size = json[file]['size'], rawSize = json[file]['rawSize'], pivot = json[file]['pivot'], position = json[file]['position']
     let layer: Container
@@ -123,7 +123,7 @@ const handleChange = (name: string) => {
     paintingContainer.addChild(await loadPainting(name, res.data))
     paintingContainer.pivot.set(0)
     paintingContainer.scale.set(1)
-    paintingContainer.position.set(app.screen.width / 2, app.screen.height / 2)
+    paintingContainer.position.set(app.screen.width / 3, app.screen.height / 2)
     app.stage.addChild(paintingContainer)
     app.stage.addChild(spineContainer)
     loading.value = false
@@ -153,7 +153,27 @@ const handleAction = (opt: string) => {
 }
 
 const handleDownload = () => {
-  const img = app.renderer.plugins.extract.image(paintingContainer)
+  const bounds = paintingContainer.getLocalBounds()
+  const originalPivot = paintingContainer.pivot.clone()
+  const originalPosition = paintingContainer.position.clone()
+  const originalScale = paintingContainer.scale.clone()
+  paintingContainer.pivot.set(bounds.x, bounds.y)
+  paintingContainer.position.set(0)
+  paintingContainer.scale.set(1)
+  paintingContainer.updateTransform()
+  const renderTexture = RenderTexture.create({
+    width: paintingContainer.width,
+    height: paintingContainer.height,
+    resolution: app.renderer.resolution
+  })
+  app.renderer.render(paintingContainer, { renderTexture })
+  const img = app.renderer.plugins.extract.image(renderTexture, 'image/png', 1.0)
+  renderTexture.destroy(true)
+  paintingContainer.pivot.copyFrom(originalPivot)
+  paintingContainer.position.copyFrom(originalPosition)
+  paintingContainer.scale.copyFrom(originalScale)
+  paintingContainer.updateTransform()
+
   const a = document.createElement('a')
   a.href = img.src
   a.download = cur.value

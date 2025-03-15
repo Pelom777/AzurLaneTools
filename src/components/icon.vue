@@ -47,6 +47,7 @@ const icon = computed(() => {
   background-size: 100% 100%;
   overflow: visible;
   user-select: none;
+  cursor: pointer;
 
   .hideBack & {
     background: none !important;
