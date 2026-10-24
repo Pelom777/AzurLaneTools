@@ -18,14 +18,25 @@ const app = new Application({ resolution: 2 })
 const spineContainer = new Container()
 const paintingContainer = new Container()
 const container = ref<HTMLDivElement>()
-let back: Sprite, spineBase: Sprite, spineChar: Spine, paintingFace: Container
+let back: Sprite, spineBase: Sprite, paintingFace: Container
+let spineChar: Spine | null = null
+
+const assetLoader = new Loader()
+const mediaLoader = new Loader()
+
+const destroyOptions = { children: true, texture: true, baseTexture: true }
+
+const destroyChildren = (container: Container) => {
+  if (!container || container.destroyed) return
+  container.removeChildren().forEach(child => child.destroy(destroyOptions))
+}
 
 ;(async () => {
   ship.value = (await load('ship'))[name]
   skin.value = (await load('skin'))[name]
   attr.value = (await load('ship-attr'))[name]
   const rarity = ship.value['rarity']
-  app.loader.add(`${cdn}/shipbackground/${rarity}.png`, res => {
+  assetLoader.add(`${cdn}/shipbackground/${rarity}.png`, res => {
     back = new Sprite(res.texture)
     back.anchor.set(0.5)
     back.scale.set(Math.max(app.screen.width / back.width, app.screen.height / back.height))
@@ -111,15 +122,15 @@ const changeFace = async (index: number) => {
   let sprite = new Sprite(png.texture)
   sprite.position.set(0, sprite.height)
   sprite.scale.set(1, -1)
-  paintingFace.removeChildren()
+  destroyChildren(paintingFace)
   paintingFace.addChild(sprite)
 }
 
 const handleChange = (name: string) => {
   loading.value = true
   showAlert.value = false
-  app.loader.reset().add(`${cdn}/painting/${name}/${name}${ex.value ? '_ex' : ''}.json`,async res => {
-    paintingContainer.removeChildren()
+  mediaLoader.reset().add(`${cdn}/painting/${name}/${name}${ex.value ? '_ex' : ''}.json`,async res => {
+    destroyChildren(paintingContainer)
     paintingContainer.addChild(await loadPainting(name, res.data))
     paintingContainer.pivot.set(0)
     paintingContainer.scale.set(1)
@@ -128,7 +139,7 @@ const handleChange = (name: string) => {
     app.stage.addChild(spineContainer)
     loading.value = false
   }).add(`${cdn}/spine/${name}/${name}.skel`, res => {
-    spineChar?.destroy()
+    spineChar?.destroy(destroyOptions)
     spineChar = new Spine(res.spineData)
     spineChar.scale.set(0.5)
     spineChar.position.set(spineContainer.width / 2, spineContainer.height - 25)
@@ -143,13 +154,14 @@ const handleBack = () => {
   option.value = []
   paintingContainer.visible = true
   spineBase.visible = true
+  if (!spineChar) return
   spineChar.scale.set(0.5)
   spineContainer.position.set(160, app.screen.height - 100)
   spineChar.state.setAnimation(0, 'stand', true)
 }
 
 const handleAction = (opt: string) => {
-  spineChar.state.setAnimation(0, opt, true)
+  spineChar?.state.setAnimation(0, opt, true)
 }
 
 const handleDownload = () => {
@@ -166,19 +178,22 @@ const handleDownload = () => {
     height: paintingContainer.height,
     resolution: app.renderer.resolution
   })
-  app.renderer.render(paintingContainer, { renderTexture })
-  const img = app.renderer.plugins.extract.image(renderTexture, 'image/png', 1.0)
-  renderTexture.destroy(true)
-  paintingContainer.pivot.copyFrom(originalPivot)
-  paintingContainer.position.copyFrom(originalPosition)
-  paintingContainer.scale.copyFrom(originalScale)
-  paintingContainer.updateTransform()
+  try {
+    app.renderer.render(paintingContainer, { renderTexture })
+    const img = app.renderer.plugins.extract.image(renderTexture, 'image/png', 1.0)
 
-  const a = document.createElement('a')
-  a.href = img.src
-  a.download = cur.value
-  a.click()
-  a.remove()
+    const a = document.createElement('a')
+    a.href = img.src
+    a.download = cur.value
+    a.click()
+    a.remove()
+  } finally {
+    renderTexture.destroy(true)
+    paintingContainer.pivot.copyFrom(originalPivot)
+    paintingContainer.position.copyFrom(originalPosition)
+    paintingContainer.scale.copyFrom(originalScale)
+    paintingContainer.updateTransform()
+  }
 }
 
 onMounted(() => {
@@ -206,6 +221,7 @@ onMounted(() => {
   
   spineContainer.interactive = true
   spineContainer.on('pointertap', () => {
+    if (!spineChar) return
     paintingContainer.visible = false
     spineBase.visible = false
     spineChar.scale.set(1)
@@ -218,6 +234,10 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
+  destroyChildren(paintingContainer)
+  destroyChildren(spineContainer)
+  assetLoader.destroy()
+  mediaLoader.destroy()
   app.destroy(true, true)
 })
 </script>
