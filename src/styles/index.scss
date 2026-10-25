@@ -1,6 +1,25 @@
 @import "@/styles/variables.scss";
 @import 'element-plus/theme-chalk/el-loading.css';
 
+html:root {
+  --el-color-primary: #{$color-primary};
+  --el-color-primary-light-3: #4d91db;
+  --el-color-primary-light-5: #80b1e6;
+  --el-color-primary-light-7: #b3d0f0;
+  --el-color-primary-light-8: #cce0f5;
+  --el-color-primary-light-9: #e6effa;
+  --el-color-primary-dark-2: #004ea3;
+
+  --app-azure: #{$color-azure};
+  --app-gold: #{$color-gold};
+  --app-header-bg: #{$color-azure};
+  --app-bg: #{$color-bg};
+  --app-surface: #{$color-surface};
+  --app-text: #{$color-text};
+  --app-text-2: #{$color-text-2};
+  --app-border: #{$color-border};
+}
+
 html,
 body {
   height: 100%;
@@ -11,6 +30,8 @@ body {
   text-rendering: optimizeLegibility;
   font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
     Microsoft YaHei, Arial, sans-serif;
+  color: $color-text;
+  background-color: $color-bg;
 }
 
 #app {

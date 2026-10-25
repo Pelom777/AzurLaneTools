@@ -1,73 +1,239 @@
+<script lang="ts" setup>
+import Vue from '~icons/logos/vue'
+import Vite from '~icons/logos/vitejs'
+import TypeScript from '~icons/logos/typescript-icon'
+import Sass from '~icons/logos/sass'
+import ElementPlus from '~icons/ep/element-plus'
+import ECharts from '~icons/simple-icons/apacheecharts'
+import Pixi from '~icons/logos/pixijs'
+import Python from '~icons/logos/python'
+import Flask from '~icons/logos/flask'
+import Gunicorn from '~icons/logos/gunicorn'
+import MySQL from '~icons/logos/mysql-icon'
+import Docker from '~icons/logos/docker-icon'
+import Nginx from '~icons/logos/nginx'
+import Github from '~icons/logos/github-icon'
+import Coffee from '~icons/simple-icons/buymeacoffee'
+import Link from '~icons/ep/link'
+
+const stacks = [
+  {
+    label: '前端',
+    items: [
+      { label: 'Vue 3', icon: Vue },
+      { label: 'Vite', icon: Vite },
+      { label: 'TypeScript', icon: TypeScript },
+      { label: 'Sass', icon: Sass },
+      { label: 'Element Plus', icon: ElementPlus },
+      { label: 'ECharts', icon: ECharts },
+      { label: 'PixiJS', icon: Pixi },
+    ],
+  },
+  {
+    label: '后端',
+    items: [
+      { label: 'Python', icon: Python },
+      { label: 'Flask', icon: Flask },
+      { label: 'Gunicorn', icon: Gunicorn },
+      { label: 'MySQL', icon: MySQL },
+    ],
+  },
+  {
+    label: '部署',
+    items: [
+      { label: 'Docker', icon: Docker },
+      { label: 'Nginx', icon: Nginx },
+    ],
+  },
+]
+
+const links = [
+  { label: 'GitHub', href: 'https://github.com/Pelom777/AzurLaneTools', icon: Github },
+  { label: 'Buy Me a Coffee', href: 'https://www.buymeacoffee.com/pelom', icon: Coffee },
+  { label: '爱发电', href: 'https://afdian.com/a/pelom', icon: Link },
+]
+</script>
+
 <template>
-  <h1>欢迎来到碧蓝航线工具箱</h1>
-  <h3>此应用仅供学习，请勿用作其他用途</h3>
-  <el-divider />
-  <h1><ruby>作者<rt>author</rt></ruby></h1>
-  <h3>
-    <a href="https://pelom.cn" target="_blank">
-      <el-avatar size="large" src="https://avatars.githubusercontent.com/u/48827064" href="https://pelom.cn" />
-    </a>
-  </h3>
-  <h3><el-link href="https://pelom.cn" target="_blank">Pelom</el-link></h3>
-  <el-divider />
-  <h1><ruby>技术栈<rt>technology stack</rt></ruby></h1>
-  <h3>
-    <el-icon><i-logos-docker-icon /></el-icon>
-    <el-icon><i-logos-mysql-icon /></el-icon>
-    <el-icon><i-logos-python /></el-icon>
-    <el-icon><i-logos-flask /></el-icon>
-    <el-icon><i-logos-gunicorn /></el-icon>
-    <el-icon><i-logos-nginx /></el-icon>
-    <el-icon><i-logos-vitejs /></el-icon>
-    <el-icon><i-logos-vue /></el-icon>
-    <el-icon><svg viewBox="0 0 319 477" width="319" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><linearGradient id="a"><stop offset="0" stop-color="#52ce63"/><stop offset="1" stop-color="#51a256"/></linearGradient><linearGradient id="b" x1="55.342075%" x2="42.816933%" xlink:href="#a" y1="0%" y2="42.862855%"/><linearGradient id="c" x1="55.348642%" x2="42.808103%" xlink:href="#a" y1="0%" y2="42.862855%"/><linearGradient id="d" x1="50%" x2="50%" y1="0%" y2="58.811243%"><stop offset="0" stop-color="#8ae99c"/><stop offset="1" stop-color="#52ce63"/></linearGradient><linearGradient id="e" x1="51.37763%" x2="44.584719%" y1="17.472551%" y2="100%"><stop offset="0" stop-color="#ffe56c"/><stop offset="1" stop-color="#ffc63a"/></linearGradient><g fill="none" fill-rule="evenodd" transform="translate(-34 -24)"><g transform="matrix(.99254615 .12186934 -.12186934 .99254615 33.922073 .976691)"><path d="m103.950535 258.274149c44.361599-4.360825 60.014503-40.391282 65.353094-94.699444s-30.93219-103.451001-46.020347-101.9678079c-15.088156 1.4831932-63.0385313 58.9051239-68.3771222 113.2132869-5.3385908 54.308162 4.6827754 87.814791 49.0443752 83.453965z" fill="url(#b)" transform="matrix(.70710678 -.70710678 .70710678 .70710678 -80.496332 125.892944)"/><path d="m275.876752 258.273992c44.3616 4.360826 53.167133-29.265322 47.828542-83.573485-5.338591-54.308162-52.073133-111.6105744-67.16129-113.0937675-15.088156-1.4831931-52.57477 47.5401275-47.236179 101.8482895s22.207328 90.458137 66.568927 94.818963z" fill="url(#c)" transform="matrix(.70710678 .70710678 -.70710678 .70710678 191.403399 -141.861963)"/><path d="m188.370027 216.876305c39.941834 0 50.95265-38.251987 50.95265-97.89874 0-59.6467532-37.367733-118.10125956-50.95265-118.10125956s-52.04735 58.45450636-52.04735 118.10125956c0 59.646753 12.105516 97.89874 52.04735 97.89874z" fill="url(#d)"/></g><path d="m184.473473 501c83.118854 0 150.526527-24.145148 150.526527-133.645148s-67.407673-199.354852-150.526527-199.354852c-83.118855 0-150.473473 89.854852-150.473473 199.354852s67.354618 133.645148 150.473473 133.645148z" fill="url(#e)"/><ellipse cx="260.5" cy="335" fill="#eaadcc" rx="21.5" ry="10"/><ellipse cx="102.5" cy="329" fill="#eaadcc" rx="21.5" ry="10" transform="matrix(.99254615 .12186934 -.12186934 .99254615 40.859033 -10.039292)"/><g transform="matrix(-.99939083 .0348995 .0348995 .99939083 269.284825 271.027667)"><path d="m73.1046985 58.2728794c6.7372416 4.9130333 14.3132632 6.6640587 22.7280649 5.2530761 8.4148016-1.4109825 14.5054466-5.2535769 18.2719346-11.527783" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" transform="matrix(.9998477 .01745241 -.01745241 .9998477 1.026464 -1.624794)"/><path d="m154.501124 3c-5.937545 0-11.312782 2.40629805-15.203644 6.29680621-3.89094 3.89058529-6.29748 9.26545449-6.29748 15.20263179 0 5.9376888 2.406488 11.3127422 6.297291 15.2034272 3.890886 3.8907673 9.266197 6.2971348 15.203833 6.2971348 5.937109 0 11.311896-2.4063889 15.202387-6.2972348 3.890299-3.8906535 6.296489-9.2656636 6.296489-15.2033272 0-5.9371521-2.406242-11.3119781-6.296677-15.20253181-3.890469-3.89058674-9.265181-6.29690619-15.202199-6.29690619z" fill="#000"/><path d="m154 21c0-3.865549 3.135362-7 6.999413-7 3.866399 0 7.000587 3.134451 7.000587 7s-3.134188 7-7.000587 7c-3.864051-.0011735-6.999413-3.134451-6.999413-7z" fill="#fff"/><path d="m24.5 13c-5.9375292 0-11.312426 2.406268-15.20299427 6.2967181-3.89069464 3.8905765-6.29700573 9.2654765-6.29700573 15.2027199 0 5.9377549 2.40625962 11.3128391 6.29681766 15.2035153 3.89059104 3.8907092 9.26556184 6.2970467 15.20318234 6.2970467 5.9371249 0 11.3122514-2.406419 15.2030371-6.2973229 3.8905441-3.8906623 6.2969629-9.2656416 6.2969629-15.2032391 0-5.937086-2.4064703-11.3118811-6.297151-15.2024437-3.890763-3.8906448-9.2658154-6.2969943-15.202849-6.2969943z" fill="#000"/><g fill="#fff"><path d="m136 24.499438c0 10.2185232 8.282911 18.500562 18.501124 18.500562 10.217089 0 18.498876-8.2820388 18.498876-18.500562 0-10.2173992-8.281787-18.499438-18.498876-18.499438-10.218213 0-18.501124 8.2820388-18.501124 18.499438zm-6 0c0-13.5311954 10.96929-24.499438 24.501124-24.499438 13.530838 0 24.498876 10.9683711 24.498876 24.499438 0 13.5319607-10.967808 24.500562-24.498876 24.500562-13.532064 0-24.501124-10.9684728-24.501124-24.500562z" fill-rule="nonzero" stroke="#fff" stroke-width="3"/><path d="m6 34.499438c0 10.2185232 8.2817873 18.500562 18.5 18.500562 10.2170889 0 18.5-8.2820388 18.5-18.500562 0-10.2173992-8.2829111-18.499438-18.5-18.499438-10.2182127 0-18.5 8.2820388-18.5 18.499438zm-6 0c0-13.531297 10.9682681-24.499438 24.5-24.499438 13.5309398 0 24.5 10.9684728 24.5 24.499438 0 13.5318591-10.96883 24.500562-24.5 24.500562-13.531962 0-24.5-10.9683711-24.5-24.500562z" fill-rule="nonzero" stroke="#fff" stroke-width="3"/><path d="m24 31c0-3.865549 3.134451-7 7-7s7 3.134451 7 7-3.134451 7-7 7-7-3.134451-7-7z"/></g></g><g stroke-linecap="round" stroke-width="11"><g stroke="#ecb732"><path d="m70.5 377.5 74 77"/><path d="m134.5 386.5-47 50"/></g><g stroke="#ecb732" transform="matrix(-1 0 0 1 298 377)"><path d="m.5.5 74 77"/><path d="m64.5 9.5-47 50"/></g><g stroke="#ffc73b" transform="matrix(0 1 -1 0 215 207)"><path d="m.5.5 49 49"/><path d="m.5 10.5 49 49" transform="matrix(-1 0 0 1 50 0)"/></g></g></g></svg></el-icon>
-    <el-icon><i-logos-typescript-icon /></el-icon>
-    <el-icon><i-logos-sass /></el-icon>
-    <el-icon color="#409EFC"><i-ep-element-plus /></el-icon>
-    <el-icon color="#AA344D"><i-simple-icons-apacheecharts /></el-icon>
-    <el-icon><i-logos-pixijs /></el-icon>
-  </h3>
-  <el-divider />
-  <h1>Github</h1>
-  <h3>
-    <a href="https://github.com/Pelom777/AzurLaneTools" target="_blank">
-      <el-icon><i-logos-github-icon /></el-icon>
-    </a>
-  </h3>
-  <el-divider />
-  <h1><ruby>赞助<rt>sponsor</rt></ruby></h1>
-  <h3>
-    <a href="https://www.buymeacoffee.com/pelom" target="_blank">
-      <el-icon><svg viewBox="0 0 25 35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.0672 8.1281L22.0437 8.11426L21.9893 8.09766C22.0112 8.11614 22.0386 8.12685 22.0672 8.1281Z" fill="black" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill=""></path> <path d="M22.4111 10.5781L22.3848 10.5855L22.4111 10.5781Z" fill="black" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill=""></path> <path d="M22.0735 8.11128C22.0708 8.11093 22.0681 8.11029 22.0655 8.10938C22.0654 8.11115 22.0654 8.11293 22.0655 8.1147C22.0685 8.11432 22.0712 8.11313 22.0735 8.11128Z" fill="black" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill=""></path> <path d="M22.3877 10.5647L22.4274 10.5421L22.4421 10.5338L22.4555 10.5195C22.4303 10.5304 22.4074 10.5457 22.3877 10.5647Z" fill="black" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill=""></path> <path d="M22.1334 8.1762L22.0947 8.1393L22.0684 8.125C22.0825 8.14993 22.1058 8.16832 22.1334 8.1762Z" fill="black" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill=""></path> <path d="M12.3836 31.9453C12.3526 31.9587 12.3255 31.9796 12.3047 32.0062L12.3291 31.9905C12.3457 31.9753 12.3693 31.9573 12.3836 31.9453Z" fill="black" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill=""></path> <path d="M18.0497 30.8309C18.0497 30.7958 18.0326 30.8023 18.0368 30.9268C18.0368 30.9167 18.0409 30.9065 18.0428 30.8969C18.0451 30.8747 18.0469 30.853 18.0497 30.8309Z" fill="black" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill=""></path> <path d="M17.4617 31.9453C17.4307 31.9587 17.4036 31.9796 17.3828 32.0062L17.4073 31.9905C17.4239 31.9753 17.4474 31.9573 17.4617 31.9453Z" fill="black" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill=""></path> <path d="M8.39845 32.2145C8.37496 32.1941 8.34619 32.1807 8.31543 32.1758C8.34034 32.1878 8.36524 32.1998 8.38185 32.209L8.39845 32.2145Z" fill="black" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill=""></path> <path d="M7.50541 31.3533C7.50173 31.317 7.49058 31.2818 7.47266 31.25C7.48535 31.2831 7.49598 31.317 7.50448 31.3515L7.50541 31.3533Z" fill="black" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill=""></path> <path d="M13.5278 15.9814C12.2963 16.5086 10.8987 17.1064 9.08736 17.1064C8.32963 17.1048 7.57558 17.0009 6.8457 16.7973L8.09845 29.6592C8.14279 30.1968 8.38769 30.698 8.78452 31.0634C9.18134 31.4288 9.70106 31.6316 10.2405 31.6315C10.2405 31.6315 12.0167 31.7237 12.6094 31.7237C13.2474 31.7237 15.1601 31.6315 15.1601 31.6315C15.6995 31.6315 16.2191 31.4286 16.6158 31.0633C17.0125 30.6979 17.2574 30.1967 17.3017 29.6592L18.6435 15.4463C18.0439 15.2415 17.4387 15.1055 16.7565 15.1055C15.5767 15.105 14.626 15.5114 13.5278 15.9814Z" fill="#FFDD00" style="--darkreader-inline-fill: #ffe01a;" data-darkreader-inline-fill=""></path> <path d="M2.96582 10.5039L2.98704 10.5237L3.00088 10.532C2.99022 10.5215 2.97847 10.512 2.96582 10.5039Z" fill="black" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill=""></path> <path d="M24.4376 9.31226L24.249 8.36071C24.0797 7.50694 23.6955 6.70022 22.8191 6.39164C22.5382 6.29294 22.2195 6.2505 22.0041 6.04617C21.7887 5.84184 21.725 5.5245 21.6752 5.23023C21.583 4.6901 21.4963 4.14952 21.4017 3.61033C21.3201 3.14677 21.2555 2.62602 21.0428 2.20075C20.7661 1.62973 20.1918 1.29579 19.6208 1.07485C19.3282 0.965622 19.0296 0.873222 18.7265 0.798101C17.2998 0.421723 15.7999 0.283349 14.3322 0.204476C12.5705 0.107269 10.8042 0.136556 9.04673 0.292113C7.73863 0.411114 6.36089 0.555024 5.11783 1.00751C4.6635 1.1731 4.19533 1.37189 3.84986 1.7229C3.42597 2.15417 3.2876 2.82113 3.5971 3.35894C3.81711 3.74086 4.1898 4.01069 4.58509 4.18919C5.09997 4.41919 5.63769 4.5942 6.18931 4.71132C7.72526 5.0508 9.3161 5.1841 10.8853 5.24083C12.6245 5.31103 14.3665 5.25414 16.0974 5.07063C16.5254 5.02359 16.9527 4.96716 17.3792 4.90136C17.8815 4.82433 18.2039 4.16751 18.0558 3.70995C17.8787 3.16292 17.4027 2.95074 16.8644 3.0333C16.7851 3.04576 16.7062 3.05729 16.6269 3.06882L16.5697 3.07712C16.3873 3.10019 16.205 3.12171 16.0226 3.1417C15.646 3.18229 15.2683 3.2155 14.8898 3.24133C14.042 3.30037 13.192 3.32758 12.3423 3.32896C11.5075 3.32896 10.6722 3.30544 9.83916 3.25055C9.45909 3.22564 9.07994 3.19397 8.70172 3.15553C8.52967 3.13755 8.35809 3.11864 8.18651 3.09742L8.02322 3.07666L7.98771 3.07159L7.81843 3.04714C7.4725 2.99502 7.12656 2.93506 6.78431 2.86264C6.74978 2.85498 6.71889 2.83577 6.69675 2.80818C6.67461 2.78059 6.66254 2.74627 6.66254 2.71089C6.66254 2.67552 6.67461 2.6412 6.69675 2.61361C6.71889 2.58602 6.74978 2.5668 6.78431 2.55914H6.79077C7.08735 2.49595 7.38624 2.44199 7.68605 2.39494C7.78599 2.37926 7.88623 2.36388 7.98679 2.34881H7.98955C8.17728 2.33636 8.36593 2.30269 8.55274 2.28055C10.178 2.11149 11.813 2.05386 13.4461 2.10804C14.239 2.13111 15.0314 2.17769 15.8206 2.25795C15.9903 2.27548 16.1592 2.29393 16.328 2.31468C16.3926 2.32252 16.4576 2.33175 16.5226 2.33959L16.6536 2.3585C17.0355 2.41539 17.4154 2.48442 17.7934 2.5656C18.3533 2.68737 19.0724 2.72704 19.3215 3.3405C19.4008 3.53514 19.4368 3.75147 19.4806 3.9558L19.5364 4.2164C19.5379 4.22108 19.5389 4.22586 19.5396 4.2307C19.6716 4.8457 19.8036 5.46069 19.9359 6.07569C19.9455 6.12112 19.9458 6.16806 19.9365 6.21359C19.9273 6.25911 19.9087 6.30224 19.8821 6.34028C19.8554 6.37832 19.8212 6.41046 19.7816 6.4347C19.7419 6.45893 19.6977 6.47474 19.6517 6.48113H19.648L19.5673 6.4922L19.4875 6.50281C19.2348 6.53571 18.9817 6.56646 18.7283 6.59506C18.2292 6.65194 17.7294 6.70114 17.2288 6.74265C16.234 6.82537 15.2373 6.87965 14.2385 6.90548C13.7296 6.919 13.2209 6.92531 12.7123 6.92439C10.6878 6.92279 8.66519 6.80513 6.65424 6.57199C6.43653 6.54616 6.21883 6.51849 6.00112 6.49035C6.16993 6.51203 5.87843 6.47375 5.81939 6.46545C5.68101 6.44607 5.54264 6.42593 5.40426 6.40502C4.93979 6.33537 4.47808 6.24958 4.01453 6.1744C3.45411 6.08215 2.91814 6.12827 2.41123 6.40502C1.99513 6.63272 1.65836 6.98188 1.44584 7.40593C1.22721 7.85795 1.16217 8.3501 1.06439 8.8358C0.966604 9.32149 0.814392 9.84408 0.872048 10.3427C0.996123 11.4188 1.74842 12.2933 2.8305 12.4889C3.84848 12.6734 4.87198 12.8228 5.89826 12.9501C9.9297 13.4439 14.0025 13.5029 18.0466 13.1263C18.3759 13.0956 18.7048 13.062 19.0332 13.0258C19.1358 13.0145 19.2396 13.0263 19.337 13.0604C19.4344 13.0944 19.523 13.1498 19.5962 13.2225C19.6694 13.2952 19.7255 13.3834 19.7602 13.4805C19.795 13.5777 19.8075 13.6814 19.797 13.7841L19.6946 14.7794C19.4883 16.7908 19.282 18.802 19.0756 20.813C18.8604 22.9249 18.6437 25.0366 18.4257 27.1482C18.3642 27.7429 18.3027 28.3375 18.2412 28.9319C18.1822 29.5172 18.1739 30.121 18.0627 30.6994C17.8875 31.609 17.2717 32.1675 16.3732 32.3719C15.55 32.5592 14.7091 32.6575 13.8649 32.6652C12.929 32.6703 11.9936 32.6288 11.0578 32.6338C10.0587 32.6394 8.83502 32.5471 8.06381 31.8036C7.38624 31.1505 7.29261 30.1279 7.20036 29.2437C7.07736 28.073 6.95544 26.9025 6.83459 25.7322L6.15656 19.2245L5.71791 15.0137C5.71053 14.9441 5.70315 14.8754 5.69623 14.8053C5.64365 14.303 5.28803 13.8113 4.72761 13.8366C4.24792 13.8579 3.70272 14.2656 3.759 14.8053L4.08417 17.927L4.75667 24.3844C4.94824 26.2187 5.13935 28.0532 5.33 29.888C5.3669 30.2395 5.40149 30.5919 5.44024 30.9434C5.65103 32.864 7.11779 33.899 8.93419 34.1906C9.99506 34.3612 11.0818 34.3963 12.1583 34.4138C13.5384 34.4359 14.9322 34.489 16.2897 34.239C18.3012 33.87 19.8104 32.5268 20.0258 30.4434C20.0873 29.8419 20.1488 29.2403 20.2103 28.6385C20.4148 26.6484 20.619 24.6581 20.8228 22.6677L21.4898 16.1641L21.7956 13.1835C21.8108 13.0357 21.8733 12.8968 21.9736 12.7872C22.0739 12.6776 22.2069 12.6033 22.3528 12.5751C22.928 12.463 23.4778 12.2716 23.8869 11.8339C24.5382 11.137 24.6678 10.2283 24.4376 9.31226ZM2.80098 9.95524C2.80975 9.95109 2.7936 10.0263 2.78669 10.0613C2.7853 10.0083 2.78807 9.96124 2.80098 9.95524ZM2.8568 10.387C2.86141 10.3837 2.87524 10.4022 2.88954 10.4243C2.86786 10.404 2.85403 10.3888 2.85633 10.387H2.8568ZM2.91168 10.4594C2.93152 10.4931 2.94213 10.5143 2.91168 10.4594V10.4594ZM3.02192 10.5489H3.02469C3.02469 10.5521 3.02976 10.5553 3.03161 10.5586C3.02855 10.555 3.02515 10.5518 3.02146 10.5489H3.02192ZM22.326 10.4151C22.1194 10.6116 21.8081 10.7029 21.5004 10.7486C18.0503 11.2606 14.5499 11.5198 11.0619 11.4054C8.56565 11.3201 6.09567 11.0429 3.62431 10.6937C3.38215 10.6596 3.11971 10.6153 2.9532 10.4368C2.63955 10.1001 2.7936 9.42204 2.87524 9.01522C2.94997 8.64253 3.09295 8.14577 3.53621 8.09272C4.22808 8.01155 5.03158 8.30352 5.71607 8.4073C6.54016 8.53306 7.36733 8.63377 8.19758 8.70941C11.7409 9.03229 15.3437 8.98201 18.8713 8.50969C19.5143 8.42329 20.1549 8.32289 20.7933 8.2085C21.362 8.10656 21.9926 7.91515 22.3362 8.50416C22.5719 8.90544 22.6033 9.44233 22.5668 9.89574C22.5556 10.0933 22.4693 10.2791 22.3256 10.4151H22.326Z" fill="black" style="--darkreader-inline-fill: #000000;" data-darkreader-inline-fill=""></path></svg></el-icon>
-    </a>
-    <el-divider direction="vertical" />
-    <a href="https://afdian.com/a/pelom" target="_blank">
-      <el-image src="https://afdian.com/static/img/logo/logo.png" />
-    </a>
-  </h3>
+  <div class="about">
+    <section class="hero">
+      <h1>碧蓝航线工具箱</h1>
+      <p class="tagline">舰船图鉴 · 立绘浏览 · 数据工具</p>
+      <el-tag type="info" effect="plain">此应用仅供学习，请勿用作其他用途</el-tag>
+    </section>
+
+    <section class="card">
+      <h2>技术栈</h2>
+      <div v-for="group in stacks" :key="group.label" class="stack-group">
+        <h3>{{ group.label }}</h3>
+        <ul>
+          <li v-for="item in group.items" :key="item.label">
+            <el-icon :size="20"><component :is="item.icon" /></el-icon>
+            <span>{{ item.label }}</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>作者</h2>
+      <div class="author">
+        <a class="author-info" href="https://pelom.cn" target="_blank" rel="noopener">
+          <el-avatar :size="52" src="https://avatars.githubusercontent.com/u/48827064" />
+          <span class="author-text">
+            <strong>Pelom</strong>
+            <em>pelom.cn</em>
+          </span>
+        </a>
+        <div class="author-links">
+          <a
+            v-for="link in links"
+            :key="link.label"
+            class="link"
+            :href="link.href"
+            target="_blank"
+            rel="noopener"
+          >
+            <el-icon :size="18"><component :is="link.icon" /></el-icon>
+            <span>{{ link.label }}</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-* {
-  font-family: consolas;
-  vertical-align: middle;
+.about {
+  max-width: $reading-max;
+  margin: 0 auto;
 }
 
-h1, h3 {
+.hero {
+  padding: $space-6 0;
   text-align: center;
-  line-height: 1.5;
+
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: $color-azure-darker;
+  }
+
+  .tagline {
+    margin-top: $space-3;
+    font-size: 13px;
+    color: $color-text-2;
+    letter-spacing: 2px;
+  }
+
+  .el-tag {
+    margin-top: $space-4;
+  }
 }
 
-.el-link {
-  font-size: 1rem;
+.card {
+  @include card-surface;
+  margin-bottom: $space-4;
+  padding: $space-5 $space-6;
+
+  h2 {
+    margin-bottom: $space-4;
+    font-size: 15px;
+    font-weight: 600;
+    color: $color-text;
+  }
 }
 
-.el-icon {
-  font-size: 48px;
-  margin: 0 8px;
+.stack-group {
+  & + & {
+    margin-top: $space-4;
+  }
+
+  h3 {
+    margin-bottom: $space-2;
+    font-size: 12px;
+    font-weight: 500;
+    color: $color-text-2;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-2;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: $space-2;
+    padding: $space-2 $space-3;
+    font-size: 13px;
+    color: $color-text;
+    background: $color-bg;
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
+  }
 }
 
-.el-image {
-  height: 64px;
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-5;
+  flex-wrap: wrap;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+
+  &:hover strong {
+    color: $color-primary;
+  }
+}
+
+.author-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  strong {
+    font-size: 16px;
+    font-weight: 600;
+    color: $color-text;
+    transition: color .2s;
+  }
+
+  em {
+    font-size: 12px;
+    font-style: normal;
+    color: $color-text-2;
+  }
+}
+
+.author-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: $space-2;
+  padding: $space-2 $space-4;
+  font-size: 13px;
+  color: $color-text;
+  background: $color-bg;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  transition: border-color .2s, color .2s;
+
+  &:hover {
+    color: $color-primary;
+    border-color: $color-gold;
+  }
 }
 </style>

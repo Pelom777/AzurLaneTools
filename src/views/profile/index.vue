@@ -20,6 +20,7 @@ const paintingContainer = new Container()
 const container = ref<HTMLDivElement>()
 let back: Sprite, spineBase: Sprite, paintingFace: Container
 let spineChar: Spine | null = null
+let ro: ResizeObserver | undefined
 
 const assetLoader = new Loader()
 const mediaLoader = new Loader()
@@ -200,6 +201,11 @@ onMounted(() => {
   container.value.appendChild(app.view)
   app.renderer.resize(container.value.offsetWidth, container.value.offsetHeight)
 
+  ro = new ResizeObserver(() => {
+    app.renderer.resize(container.value.offsetWidth, container.value.offsetHeight)
+  })
+  ro.observe(container.value)
+
   container.value.onwheel = e => {
     paintingContainer.pivot.x += (e.offsetX / 2 - paintingContainer.position.x) / paintingContainer.scale.x
     paintingContainer.pivot.y += (e.offsetY / 2 - paintingContainer.position.y) / paintingContainer.scale.y
@@ -234,6 +240,7 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
+  ro?.disconnect()
   destroyChildren(paintingContainer)
   destroyChildren(spineContainer)
   assetLoader.destroy()
@@ -243,7 +250,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div>
+  <div class="profile">
     <div
       id="pixi"
       ref="container"
@@ -286,6 +293,13 @@ onUnmounted(() => {
 </template>
 
 <style lang="scss" scoped>
+.profile {
+  position: relative;
+  height: 100%;
+  padding: $main-padding-y $main-padding-x;
+  box-sizing: border-box;
+}
+
 #pixi {
   position: absolute;
   top: 0;
@@ -313,5 +327,11 @@ onUnmounted(() => {
   position: relative;
   margin-left: 1em;
   z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .profile {
+    padding: $space-4;
+  }
 }
 </style>

@@ -53,6 +53,7 @@ const id = ref(0)
     v-model:current-page="page"
     :total="list.length"
     :page-size="30"
+    :pager-count="5"
     background
     hide-on-single-page
   />
@@ -79,8 +80,10 @@ const id = ref(0)
 }
 
 .el-card {
-  margin: 0 20px;
+  margin: 0 20px 8px;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .el-button {
@@ -88,6 +91,6 @@ const id = ref(0)
 }
 
 .el-pagination {
-  justify-content: space-evenly;
+  justify-content: center;
 }
 </style>

@@ -1,72 +1,70 @@
 <script lang="ts" setup>
-import Menu from './Menu/index.vue'
+import Header from './Header/index.vue'
 
-const hideSidebar = ref(false)
+const route = useRoute()
+const fullBleed = computed(() => route.name === 'profile')
 </script>
 
 <template>
-  <el-container>
-    <el-aside :class="{ hideSidebar: hideSidebar }">
-      <Menu v-model:hide="hideSidebar" />
-    </el-aside>
-    <el-main>
-      <router-view v-slot="{ Component }">
-        <keep-alive>
-          <component :is="Component" :key="$route.path.split('/')[1]" v-if="$route.meta.keepAlive" />
-        </keep-alive>
-        <component :is="Component" v-if="!$route.meta.keepAlive" />
-      </router-view>
+  <el-container class="app-shell">
+    <el-header height="auto">
+      <Header />
+    </el-header>
+    <el-main :class="{ 'is-full': fullBleed }">
+      <div class="page">
+        <router-view v-slot="{ Component }">
+          <keep-alive>
+            <component :is="Component" :key="$route.path.split('/')[1]" v-if="$route.meta.keepAlive" />
+          </keep-alive>
+          <component :is="Component" v-if="!$route.meta.keepAlive" />
+        </router-view>
+      </div>
     </el-main>
-    <el-affix>
-      <el-button
-        type="primary"
-        circle
-        @click="hideSidebar=!hideSidebar"
-      >
-        <el-icon><i-ep-menu /></el-icon>
-      </el-button>
-    </el-affix>
   </el-container>
 </template>
 
 <style lang="scss" scoped>
-$sidebarWidth: 199px;
-$hideSidebarWidth: 63.2px;
-
-.el-aside {
-  width: $sidebarWidth;
-  transition: .3s;
+.app-shell {
+  flex-direction: column;
+  height: 100%;
   overflow: hidden;
+}
 
-  &.hideSidebar {
-    width: $hideSidebarWidth;
-  }
+.el-header {
+  display: block;
+  flex-shrink: 0;
+  padding: 0;
+  height: auto;
 }
 
 .el-main {
   position: relative;
+  flex: 1 1 0;
+  height: auto;
+  min-height: 0;
+  width: 100%;
+  padding: $main-padding-y $main-padding-x;
+  overflow: auto;
 }
 
-.el-affix {
-  display: none;
-  position: absolute;
-  margin: 5px;
-  z-index: 99;
+.page {
+  position: relative;
+  height: 100%;
+  max-width: $container-max;
+  margin: 0 auto;
+}
+
+.el-main.is-full {
+  padding: 0;
+
+  .page {
+    max-width: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .el-aside {
-    position: absolute;
-    margin-left: 0;
-    z-index: 100;
-
-    &.hideSidebar {
-      margin-left: -100%;
-    }
-  }
-
-  .el-affix {
-    display: block;
+  .el-main {
+    padding: $space-4;
   }
 }
 </style>

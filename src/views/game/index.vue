@@ -1,40 +1,13 @@
 <script lang="ts" setup>
-
+import Camera from '~icons/ep/camera'
+import ChatDotRound from '~icons/ep/chat-dot-round'
 </script>
 
 <template>
-  <el-row>
-    <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
-      <el-card @click="$router.push({ name: 'juus' })">
-        <h1>
-          <el-icon><i-ep-Camera /></el-icon>
-          JUUs
-        </h1>
-      </el-card>
-    </el-col>
-    <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
-      <el-card @click="$router.push({ name: 'chat' })">
-        <h1>
-          <el-icon><i-ep-ChatDotRound /></el-icon>
-          JuuChat
-        </h1>
-      </el-card>
-    </el-col>
-  </el-row>
+  <EntryGrid
+    :items="[
+      { name: 'juus', label: 'JUUs', icon: Camera },
+      { name: 'chat', label: 'JuuChat', icon: ChatDotRound },
+    ]"
+  />
 </template>
-
-<style lang="scss" scoped>
-.el-col {
-  padding: 10px;
-}
-
-.el-card {
-  height: 0;
-  padding-bottom: 60%;
-  cursor: pointer;
-}
-
-.el-icon {
-  vertical-align: middle;
-}
-</style>

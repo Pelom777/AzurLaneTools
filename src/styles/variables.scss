@@ -1,0 +1,35 @@
+$color-azure: #007FFF;
+$color-azure-deep: #0062CC;
+$color-azure-darker: #004EA3;
+$color-primary: $color-azure-deep;
+$color-gold: #D4AF37;
+$color-bg: #F5F7FA;
+$color-surface: #FFFFFF;
+$color-text: #1F2733;
+$color-text-2: #6B7785;
+$color-border: #E4E8EF;
+
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 12px;
+$space-4: 16px;
+$space-5: 24px;
+$space-6: 32px;
+$space-7: 48px;
+
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 12px;
+
+$header-height: 64px;
+$main-padding-x: 32px;
+$main-padding-y: 24px;
+$container-max: 1400px;
+$reading-max: 800px;
+
+@mixin card-surface {
+  box-sizing: border-box;
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+}
