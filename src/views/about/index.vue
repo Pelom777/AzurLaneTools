@@ -1,59 +1,3 @@
-<script lang="ts" setup>
-import Vue from '~icons/logos/vue'
-import Vite from '~icons/logos/vitejs'
-import TypeScript from '~icons/logos/typescript-icon'
-import Sass from '~icons/logos/sass'
-import ElementPlus from '~icons/ep/element-plus'
-import ECharts from '~icons/simple-icons/apacheecharts'
-import Pixi from '~icons/logos/pixijs'
-import Python from '~icons/logos/python'
-import Flask from '~icons/logos/flask'
-import Gunicorn from '~icons/logos/gunicorn'
-import MySQL from '~icons/logos/mysql-icon'
-import Docker from '~icons/logos/docker-icon'
-import Nginx from '~icons/logos/nginx'
-import Github from '~icons/logos/github-icon'
-import Coffee from '~icons/simple-icons/buymeacoffee'
-import Link from '~icons/ep/link'
-
-const stacks = [
-  {
-    label: '前端',
-    items: [
-      { label: 'Vue 3', icon: Vue },
-      { label: 'Vite', icon: Vite },
-      { label: 'TypeScript', icon: TypeScript },
-      { label: 'Sass', icon: Sass },
-      { label: 'Element Plus', icon: ElementPlus },
-      { label: 'ECharts', icon: ECharts },
-      { label: 'PixiJS', icon: Pixi },
-    ],
-  },
-  {
-    label: '后端',
-    items: [
-      { label: 'Python', icon: Python },
-      { label: 'Flask', icon: Flask },
-      { label: 'Gunicorn', icon: Gunicorn },
-      { label: 'MySQL', icon: MySQL },
-    ],
-  },
-  {
-    label: '部署',
-    items: [
-      { label: 'Docker', icon: Docker },
-      { label: 'Nginx', icon: Nginx },
-    ],
-  },
-]
-
-const links = [
-  { label: 'GitHub', href: 'https://github.com/Pelom777/AzurLaneTools', icon: Github },
-  { label: 'Buy Me a Coffee', href: 'https://www.buymeacoffee.com/pelom', icon: Coffee },
-  { label: '爱发电', href: 'https://afdian.com/a/pelom', icon: Link },
-]
-</script>
-
 <template>
   <div class="about">
     <section class="hero">
@@ -64,12 +8,70 @@ const links = [
 
     <section class="card">
       <h2>技术栈</h2>
-      <div v-for="group in stacks" :key="group.label" class="stack-group">
-        <h3>{{ group.label }}</h3>
+      <div class="stack-group">
+        <h3>前端</h3>
         <ul>
-          <li v-for="item in group.items" :key="item.label">
-            <el-icon :size="20"><component :is="item.icon" /></el-icon>
-            <span>{{ item.label }}</span>
+          <li>
+            <el-icon :size="20"><i-logos-Vue /></el-icon>
+            <span>Vue 3</span>
+          </li>
+          <li>
+            <el-icon :size="20"><i-logos-Vitejs /></el-icon>
+            <span>Vite</span>
+          </li>
+          <li>
+            <el-icon :size="20"><i-logos-TypescriptIcon /></el-icon>
+            <span>TypeScript</span>
+          </li>
+          <li>
+            <el-icon :size="20"><i-logos-Sass /></el-icon>
+            <span>Sass</span>
+          </li>
+          <li>
+            <el-icon :size="20"><i-ep-ElementPlus /></el-icon>
+            <span>Element Plus</span>
+          </li>
+          <li>
+            <el-icon :size="20"><i-simple-icons-Apacheecharts /></el-icon>
+            <span>ECharts</span>
+          </li>
+          <li>
+            <el-icon :size="20"><i-logos-Pixijs /></el-icon>
+            <span>PixiJS</span>
+          </li>
+        </ul>
+      </div>
+      <div class="stack-group">
+        <h3>后端</h3>
+        <ul>
+          <li>
+            <el-icon :size="20"><i-logos-Python /></el-icon>
+            <span>Python</span>
+          </li>
+          <li>
+            <el-icon :size="20"><i-logos-Flask /></el-icon>
+            <span>Flask</span>
+          </li>
+          <li>
+            <el-icon :size="20"><i-logos-Gunicorn /></el-icon>
+            <span>Gunicorn</span>
+          </li>
+          <li>
+            <el-icon :size="20"><i-logos-MysqlIcon /></el-icon>
+            <span>MySQL</span>
+          </li>
+        </ul>
+      </div>
+      <div class="stack-group">
+        <h3>部署</h3>
+        <ul>
+          <li>
+            <el-icon :size="20"><i-logos-DockerIcon /></el-icon>
+            <span>Docker</span>
+          </li>
+          <li>
+            <el-icon :size="20"><i-logos-Nginx /></el-icon>
+            <span>Nginx</span>
           </li>
         </ul>
       </div>
@@ -86,16 +88,17 @@ const links = [
           </span>
         </a>
         <div class="author-links">
-          <a
-            v-for="link in links"
-            :key="link.label"
-            class="link"
-            :href="link.href"
-            target="_blank"
-            rel="noopener"
-          >
-            <el-icon :size="18"><component :is="link.icon" /></el-icon>
-            <span>{{ link.label }}</span>
+          <a class="link" href="https://github.com/Pelom777/AzurLaneTools" target="_blank" rel="noopener">
+            <el-icon :size="18"><i-logos-GithubIcon /></el-icon>
+            <span>GitHub</span>
+          </a>
+          <a class="link" href="https://www.buymeacoffee.com/pelom" target="_blank" rel="noopener">
+            <el-icon :size="18"><i-simple-icons-Buymeacoffee /></el-icon>
+            <span>Buy Me a Coffee</span>
+          </a>
+          <a class="link" href="https://afdian.com/a/pelom" target="_blank" rel="noopener">
+            <el-icon :size="18"><i-ep-Link /></el-icon>
+            <span>爱发电</span>
           </a>
         </div>
       </div>

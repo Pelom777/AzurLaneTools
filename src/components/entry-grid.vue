@@ -1,8 +1,6 @@
 <script lang="ts" setup>
-import type { Component } from 'vue'
-
 withDefaults(defineProps<{
-  items: { name: string, label: string, icon: Component }[]
+  items: { name: string, label: string }[]
   min?: number
 }>(), {
   min: 300,
@@ -17,7 +15,7 @@ withDefaults(defineProps<{
       :to="{ name: item.name }"
       class="entry"
     >
-      <el-icon :size="30"><component :is="item.icon" /></el-icon>
+      <el-icon :size="30"><slot :name="item.name" /></el-icon>
       <h3>{{ item.label }}</h3>
     </router-link>
   </div>

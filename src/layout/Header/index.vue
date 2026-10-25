@@ -11,8 +11,9 @@ const menus = [
   { index: '/rank', label: '排行榜' },
   { index: '/record', label: '记录' },
   { index: '/game', label: '小游戏' },
-  { index: '/about', label: '关于' },
 ]
+
+const about = { index: '/about', label: '关于' }
 </script>
 
 <template>
@@ -31,6 +32,10 @@ const menus = [
       <el-menu-item v-for="item in menus" :key="item.index" :index="item.index">
         {{ item.label }}
       </el-menu-item>
+      <li class="flex-grow" />
+      <el-menu-item class="about" :index="about.index">
+        {{ about.label }}
+      </el-menu-item>
     </el-menu>
 
     <el-button class="burger" text @click="drawer = true">
@@ -40,7 +45,7 @@ const menus = [
 
   <el-drawer v-model="drawer" direction="rtl" size="220px" :with-header="false">
     <el-menu :default-active="active" router @select="drawer = false">
-      <el-menu-item v-for="item in menus" :key="item.index" :index="item.index">
+      <el-menu-item v-for="item in [...menus, about]" :key="item.index" :index="item.index">
         {{ item.label }}
       </el-menu-item>
     </el-menu>
@@ -55,6 +60,7 @@ const menus = [
   height: $header-height;
   padding: 0 $main-padding-x;
   background: $color-azure;
+  box-shadow: var(--el-box-shadow-light);
   box-sizing: border-box;
 }
 
@@ -81,6 +87,7 @@ const menus = [
 
   &.el-menu--horizontal > .el-menu-item {
     font-size: 15px;
+    border-bottom: 3px solid transparent;
 
     &:hover {
       background-color: var(--el-menu-hover-bg-color);
@@ -88,6 +95,7 @@ const menus = [
 
     &.is-active {
       font-weight: 600;
+      border-bottom-color: #fff;
     }
   }
 }
@@ -98,7 +106,7 @@ const menus = [
   color: #fff;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .app-header {
     gap: $space-4;
     padding: 0 $space-4;

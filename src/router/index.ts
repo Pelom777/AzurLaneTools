@@ -29,16 +29,18 @@ const routes: Array<RouteRecordRaw> = [
         path: 'collection',
         name: 'collection',
         component: () => import('@/views/collection/index.vue'),
-      },
-      {
-        path: 'collection/illustration',
-        name: 'illustration',
-        component: () => import('@/views/illustration/index.vue'),
-      },
-      {
-        path: 'collection/music',
-        name: 'music',
-        component: () => import('@/views/music/index.vue'),
+        children: [
+          {
+            path: 'illustration',
+            name: 'illustration',
+            component: () => import('@/views/illustration/index.vue'),
+          },
+          {
+            path: 'music',
+            name: 'music',
+            component: () => import('@/views/music/index.vue'),
+          },
+        ],
       },
       {
         path: 'calculator',
@@ -47,7 +49,6 @@ const routes: Array<RouteRecordRaw> = [
           keepAlive: true,
         },
         component: () => import('@/views/calculator/index.vue'),
-        redirect: { name: 'exp' },
         children: [
           {
             path: 'exp',
@@ -76,7 +77,6 @@ const routes: Array<RouteRecordRaw> = [
         path: 'record',
         name: 'record',
         component: () => import('@/views/record/index.vue'),
-        redirect: { name: 'vote' },
         children: [
           {
             path: 'vote',

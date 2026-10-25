@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { vVisible } from '@/directives/visible'
+
 const props = defineProps<{
   show: boolean,
   option: {},
@@ -15,6 +17,7 @@ const showOption = ref(false)
 const input = ref('')
 const filter = ref({})
 const list = ref([])
+const seen = reactive(new Set<string>())
 
 watchEffect(() => {
   list.value = []
@@ -28,6 +31,9 @@ watchEffect(() => {
     ) list.value.push(name)
   })
 })
+
+const reveal = (name: string) => seen.add(name)
+const bgOf = (item: any) => `${cdn}/squareback/${[2, 2, 3, 4, 5, 6, 5, 6][item['rarity'] - 1]}.png`
 </script>
 
 <template>
@@ -63,8 +69,8 @@ watchEffect(() => {
         >
           <el-col>
             <el-checkbox-group v-model="filter[key]">
-              <el-checkbox-button v-for="item in opt" :label="item[0]">
-                {{ item[1] }}
+              <el-checkbox-button v-for="optItem in opt" :label="optItem[0]">
+                {{ optItem[1] }}
               </el-checkbox-button>
             </el-checkbox-group>
           </el-col>
@@ -77,12 +83,18 @@ watchEffect(() => {
             :key="name"
             :title="item[name]['name']"
           >
-            <el-image
-              :src="`${cdn}/${dir}/${item[name]['painting']}.png`"
-              :style="{ backgroundImage: `url(${cdn}/squareback/${[2, 2, 3, 4, 5, 6, 5, 6][item[name]['rarity'] - 1]}.png)` }"
-              loading="lazy"
+            <div
+              class="cell"
+              v-visible="() => reveal(name)"
+              :style="{ backgroundImage: `url(${bgOf(item[name])})` }"
               @click="$emit('check', name)"
-            />
+            >
+              <el-image
+                v-if="seen.has(name)"
+                :src="`${cdn}/${dir}/${item[name]['painting']}.png`"
+                fit="contain"
+              />
+            </div>
           </el-col>
         </el-row>
       </el-main>
@@ -108,7 +120,21 @@ watchEffect(() => {
 :deep(.el-main) {
   & .el-col {
     padding: 2px;
-    display: flex;
+  }
+
+  & .cell {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    background-size: 100% 100%;
+    cursor: pointer;
+  }
+
+  & .el-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
   }
 
   & img {

@@ -1,51 +1,38 @@
 <script lang="ts" setup>
 const route = useRoute()
-const router = useRouter()
-
-const name = computed({
-  get: () => route.path.split('/')[2],
-  set: value => router.push({ name: value })
-})
+const active = computed(() => route.name === 'vote' || route.name === 'vote-chart' || route.name === 'statistic')
 </script>
 
 <template>
-  <el-tabs type="border-card" v-model="name">
-    <el-tab-pane name="vote">
-      <template #label>
-        <el-icon><i-ep-Trophy /></el-icon>
-        人气投票
-      </template>
-    </el-tab-pane>
-    <el-tab-pane name="statistic">
-      <template #label>
-        <el-icon><i-ep-DataLine /></el-icon>
-        统计
-      </template>
-    </el-tab-pane>
-    <router-view />
-  </el-tabs>
+  <EntryGrid
+    v-if="!active"
+    :items="[
+      { name: 'vote', label: '人气投票' },
+      { name: 'statistic', label: '统计' },
+    ]"
+  >
+    <template #vote><i-ep-Trophy /></template>
+    <template #statistic><i-ep-DataLine /></template>
+  </EntryGrid>
+  <div v-else class="sub">
+    <BackLink to="/record" />
+    <div class="body">
+      <router-view />
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-.el-tabs {
+.sub {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  &:deep(.el-tabs__nav) {
-    margin-left: 40px;
-  }
-
-  &:deep(.el-tabs__content) {
-    height: 100%;
-  }
+  height: 100%;
+  min-height: 0;
 }
 
-.el-icon {
-  vertical-align: middle;
+.body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
 }
 </style>

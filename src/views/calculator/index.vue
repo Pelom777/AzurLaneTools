@@ -1,50 +1,43 @@
 <script lang="ts" setup>
 const route = useRoute()
-const router = useRouter()
-
-const name = computed({
-  get: () => route.path.split('/')[2],
-  set: value => router.push({ name: value })
-})
+const active = computed(() => route.name === 'exp' || route.name === 'cd')
 </script>
 
 <template>
-  <el-tabs type="border-card" v-model="name">
-    <el-tab-pane name="exp">
-      <template #label>
-        <el-icon><i-ep-Plus /></el-icon>
-        舰船经验
-      </template>
-    </el-tab-pane>
-    <el-tab-pane name="cd">
-      <template #label>
-        <el-icon><i-ep-Timer /></el-icon>
-        舰船射速
-      </template>
-    </el-tab-pane>
-    <router-view v-slot="{ Component }">
-      <keep-alive>
-        <component :is="Component" :key="$route.name" v-if="$route.meta.keepAlive" />
-      </keep-alive>
-      <component :is="Component" v-if="!$route.meta.keepAlive" />
-    </router-view>
-  </el-tabs>
+  <EntryGrid
+    v-if="!active"
+    :items="[
+      { name: 'exp', label: '舰船经验' },
+      { name: 'cd', label: '舰船射速' },
+    ]"
+  >
+    <template #exp><i-ep-Plus /></template>
+    <template #cd><i-ep-Timer /></template>
+  </EntryGrid>
+  <div v-else class="sub">
+    <BackLink to="/calculator" />
+    <div class="body">
+      <router-view v-slot="{ Component }">
+        <keep-alive>
+          <component :is="Component" :key="$route.name" v-if="$route.meta.keepAlive" />
+        </keep-alive>
+        <component :is="Component" v-if="!$route.meta.keepAlive" />
+      </router-view>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-.el-tabs {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  &:deep(.el-tabs__nav) {
-    margin-left: 40px;
-  }
+.sub {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
 }
 
-.el-icon {
-  vertical-align: middle;
+.body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
 }
 </style>

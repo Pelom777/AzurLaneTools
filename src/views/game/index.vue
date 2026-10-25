@@ -1,13 +1,11 @@
-<script lang="ts" setup>
-import Camera from '~icons/ep/camera'
-import ChatDotRound from '~icons/ep/chat-dot-round'
-</script>
-
 <template>
   <EntryGrid
     :items="[
-      { name: 'juus', label: 'JUUs', icon: Camera },
-      { name: 'chat', label: 'JuuChat', icon: ChatDotRound },
+      { name: 'juus', label: 'JUUs' },
+      { name: 'chat', label: 'JuuChat' },
     ]"
-  />
+  >
+    <template #juus><i-ep-Camera /></template>
+    <template #chat><i-ep-ChatDotRound /></template>
+  </EntryGrid>
 </template>

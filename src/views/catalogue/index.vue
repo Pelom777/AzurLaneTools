@@ -6,11 +6,7 @@ import { useStore } from '@/store'
 const option = ref({}), ship = ref({}), skin = ref({})
 const ready = ref(false)
 
-// 「风帆」这类筛选项把多个取值合并成一组展示（如 [22, 23, 24]）。
-// el-checkbox 的 label 必须是标量：传数组会走 isEqual 深比较，永远匹配不上。
-// 故取首项作为代表值存入 filter，筛选时再按整组展开匹配。
 const scalar = (v: any) => Array.isArray(v) ? v[0] : v
-// 取值的所有同组成员，如 23 -> [22, 23, 24]；普通取值 -> [自身]
 const groupsOf = computed(() => {
   const map = {}
   Object.entries(option.value).forEach(([key, opts]) => {
@@ -197,13 +193,41 @@ const { catalogue } = useStore()
 .search :deep(.el-input-group__prepend),
 .search :deep(.el-input-group__append) {
   background-color: $color-bg;
-  box-shadow: 0 0 0 1px $color-border inset;
+  box-shadow: none;
+  border: 1px solid $color-border;
+  transition: border-color .2s;
+}
+
+.search :deep(.el-input-group__prepend) {
+  border-right: none;
+  border-radius: $radius-sm 0 0 $radius-sm;
+}
+
+.search :deep(.el-input-group__append) {
+  border-left: none;
+  border-radius: 0 $radius-sm $radius-sm 0;
 }
 
 .search :deep(.el-input-group__prepend .el-button),
 .search :deep(.el-input-group__append .el-button) {
   background-color: $color-surface;
   border: none;
+}
+
+.search :deep(.el-input__wrapper) {
+  border-top: 1px solid $color-border;
+  border-bottom: 1px solid $color-border;
+  box-shadow: none;
+  border-radius: 0;
+  transition: border-color .2s;
+}
+
+.search:focus-within {
+  :deep(.el-input-group__prepend),
+  :deep(.el-input-group__append),
+  :deep(.el-input__wrapper) {
+    border-color: var(--el-color-primary);
+  }
 }
 
 :deep(.el-badge__content) {
