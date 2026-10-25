@@ -1,31 +1,54 @@
 <script lang="ts" setup>
 import { load } from '@/axios/data'
 import icon from '@/components/icon.vue'
+import { useStore } from '@/store'
 
 const option = ref({}), ship = ref({}), skin = ref({})
+const ready = ref(false)
+
+// 「风帆」这类筛选项把多个取值合并成一组展示（如 [22, 23, 24]）。
+// el-checkbox 的 label 必须是标量：传数组会走 isEqual 深比较，永远匹配不上。
+// 故取首项作为代表值存入 filter，筛选时再按整组展开匹配。
+const scalar = (v: any) => Array.isArray(v) ? v[0] : v
+// 取值的所有同组成员，如 23 -> [22, 23, 24]；普通取值 -> [自身]
+const groupsOf = computed(() => {
+  const map = {}
+  Object.entries(option.value).forEach(([key, opts]) => {
+    map[key] = {}
+    ;(opts as [any, string][]).forEach(([v]) => {
+      const group = Array.isArray(v) ? v : [v]
+      group.forEach(x => { map[key][x] = group })
+    })
+  })
+  return map
+})
+
 ;(async () => {
-  option.value = await load('option')
-  ship.value = await load('ship')
-  skin.value = await load('skin')
+  const [o, s, k] = await Promise.all([load('option'), load('ship'), load('skin')])
+  option.value = o
+  ship.value = s
+  skin.value = k
 
   watchEffect(() => {
     list.value = []
     Object.keys(ship.value).forEach((name) => {
       if (
         Object.keys(filter.value).every((key) => {
-          return filter.value[key].length == 0
-            || filter.value[key].includes(ship.value[name][key])
+          if (filter.value[key].length == 0) return true
+          const groups = groupsOf.value[key] ?? {}
+          return filter.value[key].some(v => (groups[v] ?? [v]).includes(ship.value[name][key]))
         })
         && ship.value[name]['name'].includes(input.value)
       ) list.value.push(name)
     })
     count.value = list.value.length
+    ready.value = true
   })
 })()
 
 const showOption = ref(false)
 const input = ref(''), filter = ref({ 'type': [], 'rarity': [], 'nationality': [] }), list = ref([]), count = ref(0)
-const showSkin = ref(false), showBack = ref(false), showFrame = ref(false)
+const { catalogue } = useStore()
 </script>
 
 <template>
@@ -34,7 +57,7 @@ const showSkin = ref(false), showBack = ref(false), showFrame = ref(false)
       <div class="toolbar">
         <el-tag size="large" class="count">
           <el-icon><i-ep-Filter /></el-icon>
-          {{ count }}
+          {{ ready ? count : '—' }}
         </el-tag>
         <el-input
           class="search"
@@ -64,15 +87,15 @@ const showSkin = ref(false), showBack = ref(false), showFrame = ref(false)
           </template>
         </el-input>
         <el-button-group size="large" type="primary">
-          <el-button bg :text="!showSkin" @click="showSkin=!showSkin">
+          <el-button bg :text="!catalogue.showSkin" @click="catalogue.showSkin = !catalogue.showSkin">
             <el-icon><i-ep-MagicStick /></el-icon>
             换装
           </el-button>
-          <el-button bg :text="!showBack" @click="showBack=!showBack">
+          <el-button bg :text="!catalogue.showBack" @click="catalogue.showBack = !catalogue.showBack">
             <el-icon><i-ep-Picture /></el-icon>
             背景
           </el-button>
-          <el-button bg :text="!showFrame" @click="showFrame=!showFrame">
+          <el-button bg :text="!catalogue.showFrame" @click="catalogue.showFrame = !catalogue.showFrame">
             <el-icon><i-ep-FullScreen /></el-icon>
             边框
           </el-button>
@@ -91,7 +114,7 @@ const showSkin = ref(false), showBack = ref(false), showFrame = ref(false)
             {{ {'type':'类型', 'rarity': '稀有度', 'nationality': '阵营'}[key] }}
           </el-button>
           <el-checkbox-group size="large" v-model="filter[key]">
-            <el-checkbox-button v-for="item in opt" :key="item[0]" :label="item[0]">
+            <el-checkbox-button v-for="item in opt" :key="scalar(item[0])" :label="scalar(item[0])">
               {{ item[1] }}
             </el-checkbox-button>
           </el-checkbox-group>
@@ -101,19 +124,18 @@ const showSkin = ref(false), showBack = ref(false), showFrame = ref(false)
 
     <el-main>
       <el-row :class="{
-        showSkin: showSkin,
-        hideBack: !showBack,
-        showFrame: showFrame
+        showSkin: catalogue.showSkin,
+        hideBack: !catalogue.showBack
       }">
         <el-col
           :xs="8" :sm="6" :md="4" :lg="3" :xl="2"
           v-for="name in list"
           :key="name"
         >
-          <icon :name="name" :ship="ship[name]" :skin="skin[name]" />
+          <icon :name="name" :ship="ship[name]" :skin="skin[name]" :frame="catalogue.showFrame" />
         </el-col>
       </el-row>
-      <el-empty v-show="count == 0" description="没有匹配的舰船" />
+      <el-empty v-if="ready && count == 0" description="没有匹配的舰船" />
     </el-main>
   </el-container>
 </template>

@@ -1,30 +1,40 @@
 <script lang="ts" setup>
+import { vVisible } from '@/directives/visible'
+
 const props = defineProps<{
   name: string,
   ship: {},
   skin: {},
-  cur?: string
+  cur?: string,
+  frame?: boolean
 }>()
 const cdn = import.meta.env.VITE_CDN
 const index = ref(!!props.cur ? Object.keys(props.skin).findIndex(e => e == props.cur) : 0)
 const count = Object.keys(props.skin).length
+const visible = ref(false)
 const icon = computed(() => {
   return Object.values(props.skin)[index.value]
 })
+const painting = computed(() => `${cdn}/shipicon/${icon.value['painting']}.png`)
+const frameSrc = computed(() => `${cdn}/iconframe/${props.ship['nationality'] == 97 ? '1' : ''}${!!icon.value['painting'].match(/_g$/) ? props.ship['rarity'] + 1 : props.ship['rarity']}.png`)
 </script>
 
 <template>
   <el-card
-    :style="{ backgroundImage: `url(${cdn}/iconbackground/${ship['nationality'] == 97 ? '1' : ''}${!!icon['painting'].match(/_g$/) ? ship['rarity'] + 1 : ship['rarity']}.png)` }">
+    v-visible="() => (visible = true)"
+    :style="{ backgroundImage: `url(${cdn}/iconbackground/${ship['nationality'] == 97 ? '1' : ''}${!!icon['painting'].match(/_g$/) ? ship['rarity'] + 1 : ship['rarity']}.png)` }"
+  >
     <el-image
-      :src="`${cdn}/shipicon/${icon['painting']}.png`"
+      v-if="visible"
+      :src="painting"
       fit="contain"
-      loading="lazy"
       @click="$router.push({
         name: 'profile',
         params: { name, cur: icon['painting'] }
       })"
-    />
+    >
+      <template #placeholder><i /></template>
+    </el-image>
     <span
       :style="{ '--count': count, '--index': index }"
       @click="index = (index + 1) % count"
@@ -32,7 +42,9 @@ const icon = computed(() => {
       {{ icon['name'] }}
     </span>
     <el-image
-      :src="`${cdn}/iconframe/${ship['nationality'] == 97 ? '1' : ''}${!!icon['painting'].match(/_g$/) ? ship['rarity'] + 1 : ship['rarity']}.png`"
+      v-if="frame && visible"
+      class="frame"
+      :src="frameSrc"
       fit="contain"
       :style="{ scale: (ship['nationality'] == 97 && ship['rarity'] == 5 ? 1.166 : null) }"
     />
@@ -63,17 +75,16 @@ const icon = computed(() => {
   position: absolute;
   width: 100%;
 
-  &:last-child {
-    display: none;
+  &.frame {
     scale: 1.125;
     top: 0;
     bottom: 0;
     pointer-events: none;
-
-    .showFrame & {
-      display: block;
-    }
   }
+}
+
+:deep(.el-image__inner) {
+  transition: opacity .2s;
 }
 
 span {

@@ -4,6 +4,7 @@ import useUserStore from './user'
 import useCalcStore from './calc'
 import useJuusStore from './juus'
 import useChatStore from './chat'
+import useCatalogueStore from './catalogue'
 
 export const pinia = createPinia()
 pinia.use(piniaPluginPersistedstate)
@@ -14,5 +15,6 @@ export const useStore = () => {
     calc: useCalcStore(),
     juus: useJuusStore(),
     chat: useChatStore(),
+    catalogue: useCatalogueStore(),
   }
 }

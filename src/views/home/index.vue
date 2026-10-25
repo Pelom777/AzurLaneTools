@@ -39,26 +39,26 @@ onUnmounted(() => mq.removeEventListener('change', sync))
 
   <section v-if="info['ship']?.length" class="block">
     <h2 class="block-title">新增舰船</h2>
-    <el-row class="showFrame">
+    <el-row>
       <el-col
         v-for="name in info['ship']"
         :key="name"
         :xs="6" :sm="4" :md="3" :lg="2" :xl="2"
       >
-        <icon :name="name" :ship="ship[name]" :skin="skin[name]" />
+        <icon :name="name" :ship="ship[name]" :skin="skin[name]" frame />
       </el-col>
     </el-row>
   </section>
 
   <section v-if="Object.keys(info['skin'] ?? {}).length" class="block">
     <h2 class="block-title">新增换装</h2>
-    <el-row class="showFrame">
+    <el-row>
       <el-col
         v-for="val, key in info['skin'] as {}"
         :key="key"
         :xs="6" :sm="4" :md="3" :lg="2" :xl="2"
       >
-        <icon :name="val" :ship="ship[val]" :skin="skin[val]" :cur="key" />
+        <icon :name="val" :ship="ship[val]" :skin="skin[val]" :cur="key" frame />
       </el-col>
     </el-row>
   </section>
