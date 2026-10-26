@@ -9,7 +9,7 @@ const props = defineProps<{
     <template #header>
       <el-page-header
         title="返回"
-        content="Spine"
+        content="小人"
         @back="$emit('back')"
       />
     </template>

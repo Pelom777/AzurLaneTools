@@ -7,6 +7,7 @@ import { CanvasRenderer } from 'echarts/renderers'
 const props = defineProps<{
   attr: {}
 }>()
+defineEmits(['back'])
 const container = ref<HTMLDivElement>()
 const level = ref(120), strengthen = ref(true), favor = ref(4), transform = ref(!!props.attr['transform'])
 const attr = computed(() => {
@@ -53,66 +54,82 @@ const option: EChartsOption = {
   ]
 }
 
+let chart: echarts.ECharts | undefined
+let ro: ResizeObserver | undefined
+
 onMounted(() => {
-  const myChart = echarts.init(container.value)
-  
+  chart = echarts.init(container.value)
+
   watchEffect(() => {
     option.dataset[0].source = [attr.value]
-    option && myChart.setOption(option)
+    chart?.setOption(option)
   })
+
+  ro = new ResizeObserver(() => chart?.resize())
+  ro.observe(container.value)
+})
+
+onUnmounted(() => {
+  ro?.disconnect()
+  chart?.dispose()
 })
 </script>
 
 <template>
   <el-card>
     <template #header>
-      <el-row>
-        <el-col :span="6">
-          <div class="el-statistic">
-            <div class="el-statistic__head">等级</div>
-            <div class="el-statistic__content">
-              <el-input-number
-                v-model="level"
-                :min="70"
-                :max="125"
-                step-strictly
-                size="small"
-              />
-            </div>
-          </div>
-        </el-col>
-        <el-col :span="6">
-          <div class="el-statistic">
-            <div class="el-statistic__head">强化</div>
-            <div class="el-statistic__content">
-              <el-switch v-model="strengthen" size="small" />
-            </div>
-          </div>
-        </el-col>
-        <el-col :span="6">
-          <div class="el-statistic">
-            <div class="el-statistic__head">改造</div>
-            <div class="el-statistic__content">
-              <el-switch v-model="transform" size="small" :disabled="!props.attr['transform']" />
-            </div>
-          </div>
-        </el-col>
-        <el-col :span="6">
-          <div class="el-statistic">
-            <div class="el-statistic__head">好感</div>
-            <div class="el-statistic__content">
-              <el-select v-model="favor" size="small">
-                <el-option
-                  v-for="(e, i) in ['失望', '陌生', '友好', '喜欢', '爱', '誓约', '誓约200']"
-                  :value="i"
-                  :label="e"
-                />
-              </el-select>
-            </div>
-          </div>
-        </el-col>
-      </el-row>
+      <el-page-header
+        title="返回"
+        content="属性"
+        @back="$emit('back')"
+      />
     </template>
+    <el-row>
+      <el-col :span="6">
+        <div class="el-statistic">
+          <div class="el-statistic__head">等级</div>
+          <div class="el-statistic__content">
+            <el-input-number
+              v-model="level"
+              :min="70"
+              :max="125"
+              step-strictly
+              size="small"
+            />
+          </div>
+        </div>
+      </el-col>
+      <el-col :span="6">
+        <div class="el-statistic">
+          <div class="el-statistic__head">强化</div>
+          <div class="el-statistic__content">
+            <el-switch v-model="strengthen" size="small" />
+          </div>
+        </div>
+      </el-col>
+      <el-col :span="6">
+        <div class="el-statistic">
+          <div class="el-statistic__head">改造</div>
+          <div class="el-statistic__content">
+            <el-switch v-model="transform" size="small" :disabled="!props.attr['transform']" />
+          </div>
+        </div>
+      </el-col>
+      <el-col :span="6">
+        <div class="el-statistic">
+          <div class="el-statistic__head">好感</div>
+          <div class="el-statistic__content">
+            <el-select v-model="favor" size="small">
+              <el-option
+                v-for="(e, i) in ['失望', '陌生', '友好', '喜欢', '爱', '誓约', '誓约200']"
+                :value="i"
+                :label="e"
+              />
+            </el-select>
+          </div>
+        </div>
+      </el-col>
+    </el-row>
     <div id="echarts" ref="container"></div>
     <el-row>
       <el-col
@@ -140,14 +157,14 @@ onMounted(() => {
 
   &:deep(.el-card__header) {
     background: #fffa;
-
-    & .el-input-number {
-      width: auto;
-    }
   }
 
   & .el-col {
     text-align: center;
+  }
+
+  & .el-input-number {
+    width: auto;
   }
 
   & #echarts {

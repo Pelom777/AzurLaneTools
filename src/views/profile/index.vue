@@ -2,23 +2,29 @@
 import selector from './selector.vue'
 import controller from './controller.vue'
 import attribute from './attribute.vue'
+import face from './face.vue'
 import { load } from '@/axios/data'
-import { Application, Sprite, Container, Rectangle, Texture, Loader, RenderTexture } from './pixi'
+import { Application, Sprite, Container, Rectangle, Texture, Loader, RenderTexture, BaseTexture } from './pixi'
 import { Spine } from 'pixi-spine'
 
 const cdn = import.meta.env.VITE_CDN
 const route = useRoute()
-const loading = ref(true), showAlert = ref(true)
+const router = useRouter()
+const loading = ref(true)
 const ship = ref({}), skin = ref({}), attr = ref()
 const name = route.params.name as string
 const cur = ref(route.params.cur as string ?? name)
 const ex = ref(false)
 const option = ref([])
+const panel = ref('')
+const faceList = ref<number[]>([])
+const faceCur = ref(-1)
+const hasSpine = ref(false)
 const app = new Application({ resolution: 2 })
 const spineContainer = new Container()
 const paintingContainer = new Container()
 const container = ref<HTMLDivElement>()
-let back: Sprite, spineBase: Sprite, paintingFace: Container
+let back: Sprite, spineBase: Sprite, paintingFace: Container | null = null
 let spineChar: Spine | null = null
 let ro: ResizeObserver | undefined
 
@@ -27,15 +33,16 @@ const mediaLoader = new Loader()
 
 const destroyOptions = { children: true, texture: true, baseTexture: true }
 
-const destroyChildren = (container: Container) => {
+const destroyChildren = (container: Container | null) => {
   if (!container || container.destroyed) return
   container.removeChildren().forEach(child => child.destroy(destroyOptions))
 }
 
 ;(async () => {
-  ship.value = (await load('ship'))[name]
-  skin.value = (await load('skin'))[name]
-  attr.value = (await load('ship-attr'))[name]
+  const [s, k, a] = await Promise.all([load('ship'), load('skin'), load('ship-attr')])
+  ship.value = s[name]
+  skin.value = k[name]
+  attr.value = a[name]
   const rarity = ship.value['rarity']
   assetLoader.add(`${cdn}/shipbackground/${rarity}.png`, res => {
     back = new Sprite(res.texture)
@@ -47,8 +54,11 @@ const destroyChildren = (container: Container) => {
     spineBase = new Sprite(res.texture)
     spineBase.position.set(spineContainer.width / 2, spineContainer.height)
     spineContainer.addChild(spineBase)
-    spineContainer.position.set(130, app.screen.height - 100)
-  }).load(() => loading.value = false)
+    spineContainer.position.set(200, app.screen.height - 100)
+  }).load(() => {
+    loading.value = false
+    handleChange(cur.value)
+  })
 })()
 
 const composeSprite = (texture: Texture, mesh: string[]) => {
@@ -73,7 +83,8 @@ const composeSprite = (texture: Texture, mesh: string[]) => {
 const loadPainting = async (name: string, json: {}) => {
   const loader = new Loader()
   const painting = new Container()
-  const baseSize = json[name]['size'], baseScale = app.screen.height / json[name]['view'][1] * 0.8
+  const baseSize = json[name]['size'], baseView = json[name]['view'], baseScale = app.screen.height / baseView[1] * 0.9
+  paintingFace = null
   for (let file of Object.keys(json)) {
     let size = json[file]['size'], rawSize = json[file]['rawSize'], pivot = json[file]['pivot'], position = json[file]['position']
     let layer: Container
@@ -81,8 +92,6 @@ const loadPainting = async (name: string, json: {}) => {
       paintingFace = new Container()
       paintingFace.scale.set(size[0] / rawSize[0], size[1] / rawSize[1])
       paintingFace.position.set(baseSize[0] / 2 - size[0] * pivot[0] + position[0], baseSize[1] / 2 - size[1] * pivot[1] + position[1])
-      painting.addChild(paintingFace)
-      await changeFace(json[file]['list'][0])
       continue
     }
     const png: any = await new Promise(resolve => {
@@ -107,20 +116,31 @@ const loadPainting = async (name: string, json: {}) => {
     }
     painting.addChild(layer)
   }
+  if (paintingFace) painting.addChild(paintingFace)
   loader.destroy()
-  painting.pivot.set(baseSize[0] / 2 + json[name]['position'][0], baseSize[1] / 2 + json[name]['position'][1])
+  const basePos = json[name]['position']
+  painting.pivot.set(baseSize[0] / 2 + basePos[0] + baseView[0] / 2, baseSize[1] / 2 + basePos[1])
+  painting.position.set(0)
   painting.scale.set(baseScale, -baseScale)
-  painting.position.set(0, 0)
   return painting
 }
 
 const changeFace = async (index: number) => {
-  const loader = new Loader()
-  const png: any = await new Promise(resolve => {
-    loader.reset().add(`${cdn}/paintingface/${cur.value}/${index}.png`, res => resolve(res)).load()
+  if (!paintingFace) return
+  faceCur.value = index
+  if (index < 0) {
+    destroyChildren(paintingFace)
+    return
+  }
+  const old = paintingFace.children[0] as Sprite | undefined
+  const oldBase = old?.texture?.baseTexture
+  if (oldBase) BaseTexture.removeFromCache(oldBase)
+  const url = `${cdn}/paintingface/${cur.value}/${index}.png`
+  const res: any = await new Promise(resolve => {
+    new Loader().add(url, res => resolve(res)).load()
   })
-  loader.destroy()
-  let sprite = new Sprite(png.texture)
+  if (!paintingFace || paintingFace.destroyed) return
+  let sprite = new Sprite(res.texture)
   sprite.position.set(0, sprite.height)
   sprite.scale.set(1, -1)
   destroyChildren(paintingFace)
@@ -129,40 +149,57 @@ const changeFace = async (index: number) => {
 
 const handleChange = (name: string) => {
   loading.value = true
-  showAlert.value = false
+  hasSpine.value = false
+  spineChar?.destroy(destroyOptions)
+  spineChar = null
   mediaLoader.reset().add(`${cdn}/painting/${name}/${name}${ex.value ? '_ex' : ''}.json`,async res => {
+    faceList.value = res.data['face']?.['list'] ?? []
+    faceCur.value = -1
     destroyChildren(paintingContainer)
     paintingContainer.addChild(await loadPainting(name, res.data))
     paintingContainer.pivot.set(0)
     paintingContainer.scale.set(1)
-    paintingContainer.position.set(app.screen.width / 3, app.screen.height / 2)
+    paintingContainer.position.set(app.screen.width / 2, app.screen.height / 2)
     app.stage.addChild(paintingContainer)
     app.stage.addChild(spineContainer)
     loading.value = false
   }).add(`${cdn}/spine/${name}/${name}.skel`, res => {
-    spineChar?.destroy(destroyOptions)
+    if (res.error) return
     spineChar = new Spine(res.spineData)
     spineChar.scale.set(0.5)
     spineChar.position.set(spineContainer.width / 2, spineContainer.height - 25)
     spineContainer.addChild(spineChar)
     spineChar.state.setAnimation(0, 'stand', true)
+    hasSpine.value = true
   }).load()
 }
 
 watch([cur, ex], () => handleChange(cur.value))
 
 const handleBack = () => {
+  panel.value = ''
   option.value = []
   paintingContainer.visible = true
   spineBase.visible = true
   if (!spineChar) return
   spineChar.scale.set(0.5)
-  spineContainer.position.set(160, app.screen.height - 100)
+  spineContainer.position.set(200, app.screen.height - 100)
   spineChar.state.setAnimation(0, 'stand', true)
 }
 
 const handleAction = (opt: string) => {
   spineChar?.state.setAnimation(0, opt, true)
+}
+
+const showSpine = () => {
+  if (!spineChar) return
+  panel.value = 'spine'
+  paintingContainer.visible = false
+  spineBase.visible = false
+  spineChar.scale.set(1)
+  spineContainer.position.set(app.screen.width / 3 + spineContainer.width / 2, app.screen.height / 2 + spineContainer.height / 3)
+  spineChar.state.setAnimation(0, 'normal', true)
+  option.value = spineChar.state.data.skeletonData.animations.map(item => item.name)
 }
 
 const handleDownload = () => {
@@ -224,19 +261,6 @@ onMounted(() => {
       paintingContainer.off('pointermove')
     })
   })
-  
-  spineContainer.interactive = true
-  spineContainer.on('pointertap', () => {
-    if (!spineChar) return
-    paintingContainer.visible = false
-    spineBase.visible = false
-    spineChar.scale.set(1)
-    spineContainer.position.set(app.screen.width / 3, app.screen.height / 2 + spineContainer.height / 3)
-    spineChar.state.setAnimation(0, 'normal', true)
-    option.value = spineChar.state.data.skeletonData.animations.map((item) => {
-      return item.name
-    })
-  })
 })
 
 onUnmounted(() => {
@@ -256,38 +280,69 @@ onUnmounted(() => {
       ref="container"
       v-loading="loading"
     ></div>
-    <el-alert
-      v-show="showAlert"
-      @click="handleChange(cur)"
-      title="点击此处加载立绘"
-      type="info"
-      :closable="false"
-      show-icon
-    />
-    <selector
-      v-show="option.length == 0"
-      v-model:name="cur"
-      v-model:ex="ex"
-      :skin="skin"
-    />
-    <el-button
-      v-show="!showAlert"
-      @click="handleDownload"
-      type="info"
-      circle
+    <div
+      class="topbar"
+      v-show="panel == ''"
     >
-      <el-icon><i-ep-Download /></el-icon>
-    </el-button>
+      <selector
+        v-model:name="cur"
+        v-model:ex="ex"
+        :skin="skin"
+      />
+      <el-button
+        @click="router.push('/catalogue')"
+        circle
+      >
+        <el-icon><i-ep-ArrowLeftBold /></el-icon>
+      </el-button>
+      <el-button
+        @click="handleDownload"
+        circle
+      >
+        <el-icon><i-ep-Download /></el-icon>
+      </el-button>
+      <div class="flex-grow" />
+      <el-button
+        @click="panel = 'face'"
+        circle
+        :disabled="faceList.length == 0"
+      >
+        <el-icon><i-ep-PictureRounded /></el-icon>
+      </el-button>
+      <el-button
+        @click="showSpine"
+        circle
+        :disabled="!hasSpine"
+      >
+        <el-icon><i-ep-VideoPlay /></el-icon>
+      </el-button>
+      <el-button
+        @click="panel = 'attr'"
+        circle
+      >
+        <el-icon><i-ep-DataAnalysis /></el-icon>
+      </el-button>
+    </div>
     <controller
-      v-show="option.length != 0"
+      v-show="panel == 'spine'"
       :option="option"
       @back="handleBack"
       @action="handleAction"
     />
+    <face
+      v-show="panel == 'face' && faceList.length != 0"
+      :name="cur"
+      :list="faceList"
+      :current="faceCur"
+      @back="panel = ''"
+      @check="changeFace"
+      @clear="changeFace(-1)"
+    />
     <attribute
       v-if="!!attr"
-      v-show="option.length == 0"
+      v-show="panel == 'attr'"
       :attr="attr"
+      @back="panel = ''"
     />
   </div>
 </template>
@@ -314,19 +369,37 @@ onUnmounted(() => {
   }
 }
 
-.el-alert {
-  position: absolute;
-  width: fit-content;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%);
-  cursor: pointer;
+.topbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: $space-2;
+  z-index: 1;
+}
+
+.flex-grow {
+  flex: 1;
 }
 
 .el-button {
+  --el-button-bg-color: #8AC8FF;
+  --el-button-border-color: #8AC8FF;
+  --el-button-text-color: #fff;
+  --el-button-hover-bg-color: #6DB8FF;
+  --el-button-hover-border-color: #6DB8FF;
+  --el-button-hover-text-color: #fff;
+  --el-button-disabled-bg-color: #8AC8FF;
+  --el-button-disabled-border-color: #8AC8FF;
+  --el-button-disabled-text-color: #fff;
   position: relative;
-  margin-left: 1em;
   z-index: 1;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+
+  &.is-disabled {
+    opacity: .45;
+  }
 }
 
 @media screen and (max-width: 768px) {
